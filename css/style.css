@@ -1,9 +1,3 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 html, body{
 	margin:0;
 	font-size: 100%;
@@ -88,17 +82,6 @@ label{
     margin: 0 auto;
     width: 90%;
 }
-/*-- shop locator --*/
-.list_of_cities {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid rgba(47, 47, 47, 0.44);
-    color: #4d4d4d;
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 1px;
-}
-/*-- //shop locator --*/
 /*-- //Header Lists --*/
 /*-- search --*/
 .agileits_search {
