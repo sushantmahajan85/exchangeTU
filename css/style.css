@@ -1201,6 +1201,9 @@ h3.tittle-w3l:after {
 }
 /*-- //newsletter --*/
 /*-- footer --*/
+.shift-right{
+   padding-left: 140px;
+}
 p.footer-main {
     color: #383737;
     font-size: 15px;
