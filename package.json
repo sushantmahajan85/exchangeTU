@@ -25,7 +25,7 @@
     "express-validator": "^6.6.1",
     "loader": "^2.1.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.9.18",
+    "mongoose": "^5.10.10",
     "nodemon": "^2.0.4"
   }
 }
