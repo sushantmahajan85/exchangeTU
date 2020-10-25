@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
-const User = require("../schema/models/userModel");
+const User = require("../models/userModel");
 const AppError = require("../utils/appError");
 const Email = require("../utils/email");
 const random = require("../utils/utils");
@@ -61,8 +61,7 @@ exports.signUp = async (req, res) => {
           newz,
         },
       });
-    }else{
-
+    } else {
       //   /////////////////////////////////Error in Production/////////////////////////////////////////////
       //   try {
       //     const url = "amazon.in";
@@ -280,7 +279,7 @@ exports.login = async (req, res, next) => {
 };
 
 exports.logout = (req, res) => {
-  console.log('fdfdfdfdfdfd');
+  console.log("fdfdfdfdfdfd");
   res.cookie("jwt", "loggedout", {
     expires: new Date(Date.now() + 1),
     // secure: true,

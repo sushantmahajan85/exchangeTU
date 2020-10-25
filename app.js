@@ -1,11 +1,10 @@
-// Including Packages!
-const dealRoute = require("./routes/dealRoutes"),
-const userRoute = require("./routes/userRoutes"),
 var express = require("express"),
   app = express(),
   mongoose = require("mongoose"),
   routes = require("./routes/routes");
-(methodOverride = require("method-override")),
+(userRoute = require("./routes/userRoutes")),
+  (dealRoute = require("./routes/dealRoutes")),
+  (methodOverride = require("method-override")),
   (bodyParser = require("body-parser")),
   ({ check, validationResult } = require("express-validator")),
   // apiroutes = require("");
