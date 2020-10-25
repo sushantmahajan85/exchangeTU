@@ -1,21 +1,22 @@
 // Including Packages!
+const dealRoute = require("./routes/dealRoutes"),
+const userRoute = require("./routes/userRoutes"),
 var express = require("express"),
   app = express(),
   mongoose = require("mongoose"),
   routes = require("./routes/routes");
-  methodOverride = require("method-override"),
-  bodyParser = require("body-parser"),
-  { check, validationResult } = require("express-validator"),
+(methodOverride = require("method-override")),
+  (bodyParser = require("body-parser")),
+  ({ check, validationResult } = require("express-validator")),
   // apiroutes = require("");
 
-// const app = express();
-// app.use(express.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
+  // const app = express();
+  // app.use(express.json());
+  // app.use(bodyParser.urlencoded({ extended: true }));
 
-// Including Routes!
+  // Including Routes!
 
-
-app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
@@ -37,8 +38,10 @@ mongoose.connect(
 // var Team = require("./models/team.js");
 // var Recruit = require("./models/recruit.js");
 app.use("/", routes);
+app.use("/api/v1/deals", dealRoute);
+app.use("/api/v1/users", userRoute);
 // app.use("/api/recruit", apiroutes);
 
-app.listen(5000, function() {
+app.listen(5000, function () {
   console.log("Server Started!");
 });

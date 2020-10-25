@@ -15,11 +15,6 @@ const userSchema = new mongoose.Schema(
       minLength: [0, "Name Too Small"],
       //validate: [validator.isAlpha, 'Tour Name Should Not Have Numbers']
     },
-    channelName: {
-      type: String,
-      trim: true,
-      default: "Channel",
-    },
     photo: { type: String },
     email: {
       type: String,
@@ -39,14 +34,13 @@ const userSchema = new mongoose.Schema(
       minLength: [8, "Password Too Small"],
       select: false,
     },
-    gSignin: String,
     passwordConfirm: {
       type: String,
       required: [true, "Comfirm Password is Required"],
       minLength: [8, "Password Too Small"],
       select: false,
       validate: {
-        validator: function(el) {
+        validator: function (el) {
           return el === this.password;
         },
         message: "Passwords Do Not Match",
@@ -65,26 +59,10 @@ const userSchema = new mongoose.Schema(
       type: Number,
       select: false,
     },
-    rank: {
-      type: Number,
-      default: 100000,
-    },
-    rankLatest: {
-      type: Number,
-      default: 100000,
-    },
     verification_token_time: {
       type: Date,
     },
-    rank_difference: Number,
     cookies: Array,
-    r1: String,
-    r2: String,
-    r3: String,
-    r4: String,
-    r5: String,
-    groupCount: Number,
-    numberOfGroups: Number,
     reportChannelCount: { type: Number, default: 0 },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
@@ -103,7 +81,7 @@ userSchema.virtual("subscribers", {
   localField: "_id",
 });
 
-userSchema.pre("save", async function(next) {
+userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
     return next();
   }
@@ -115,7 +93,7 @@ userSchema.pre("save", async function(next) {
   next();
 });
 
-userSchema.pre("save", async function(next) {
+userSchema.pre("save", async function (next) {
   // this.password = await bcrypt.hash(this.password, 12);
   this.verification_token = random();
   this.verification_token_time = Date.now() + 10 * 60 * 1000;
@@ -123,7 +101,7 @@ userSchema.pre("save", async function(next) {
 
   next();
 });
-userSchema.post("save", async function() {
+userSchema.post("save", async function () {
   const message = `Here is your 5 digit OTP : ${this.verification_token}`;
 
   // await sendEmail({
@@ -133,7 +111,7 @@ userSchema.post("save", async function() {
   // });
 });
 
-userSchema.pre("save", function(next) {
+userSchema.pre("save", function (next) {
   if (!this.isModified("password") || this.isNew) {
     return next();
   }
@@ -142,19 +120,19 @@ userSchema.pre("save", function(next) {
   next();
 });
 
-userSchema.pre(/^find/, function(next) {
+userSchema.pre(/^find/, function (next) {
   this.find({ active: { $ne: false } });
   next();
 });
 
-userSchema.methods.verifyPassword = async function(
+userSchema.methods.verifyPassword = async function (
   LoginPassword,
   signUpPassword
 ) {
   return await bcrypt.compare(LoginPassword, signUpPassword);
 };
 
-userSchema.methods.changedPasswordAfter = function(JWTTimestamp) {
+userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
   if (this.passwordChangedAt) {
     const changedTimestamp = parseInt(
       this.passwordChangedAt.getTime() / 1000,
@@ -169,7 +147,7 @@ userSchema.methods.changedPasswordAfter = function(JWTTimestamp) {
   return false;
 };
 
-userSchema.methods.createPasswordResetToken = function() {
+userSchema.methods.createPasswordResetToken = function () {
   const resetToken = crypto.randomBytes(32).toString("hex");
 
   this.passwordResetToken = crypto
