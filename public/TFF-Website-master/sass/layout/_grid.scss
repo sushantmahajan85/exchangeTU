@@ -1,0 +1,71 @@
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+    @include clearfix;
+    
+        margin-bottom: 8rem;
+   
+   @include respond(tab-land){
+    max-width: 65rem;
+  }
+   @include respond (tab-port){
+    max-width: 60rem;
+}
+@include respond (phone){
+    max-width: 50rem;
+}
+}
+
+    .col-1-of-2{
+    
+       width:54rem;
+        
+          float: left;
+          &:not(:last-child){
+
+              margin-right: 6rem;
+              @include respond (tab-land){
+                margin-right: 0;
+            
+              }
+               }
+               @include respond (tab-land){
+                width: 100% !important;
+          }
+        
+        
+}
+.col-1-of-4{
+    
+   width: 24rem;
+    float:left;
+    @include respond (tab-land){
+        width: 100% ;
+  }
+    &:not(:last-child){
+        margin-right: 6rem;
+        @include respond (tab-land){
+            margin-right: 0;
+            margin-bottom: 6rem;
+    }
+}
+}
+.col-1-of-3{
+    
+    width: 34rem;
+    float:left;
+    @include respond (tab-land){
+        width: 100% ;
+  }
+    &:not(:last-child){
+        margin-right: 6rem;
+        @include respond (tab-land){
+            margin-right: 0;
+            margin-bottom: 6rem;
+            
+            
+    }
+    }
+
+
+}

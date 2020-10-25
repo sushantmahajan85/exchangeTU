@@ -1,0 +1,252 @@
+.core{
+    
+    &_heading{
+        margin-top: 3rem;
+        text-align: center;
+    }
+    &_card{
+        
+        transition: all 0.2s;
+        
+    box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
+    
+        &:hover{
+            transform: scale(1.1) ;
+        }
+    }
+    &_name{
+color: white;
+font-weight: 500;
+font-size: 3rem;
+text-transform: uppercase;
+    }
+    &_title{
+        color: goldenrod;
+        font-size: 1.6rem;
+        font-weight: 200;
+        margin-top: 1rem;
+        
+text-transform: uppercase;
+    }
+    &_content{
+        background-color: #333333;
+        
+        padding: 1rem;
+    }
+    &_picture{
+        background-size: contain;
+        background-position: centre;
+        display:flex;
+        overflow: hidden;
+    }
+}
+.centre_text{
+    text-align: center;
+}
+.square-box-92{
+    background-color:#ffffffe8;
+    padding: 120px;
+background-size: 100% 100%;
+    
+    @include respond(tab-land){
+      padding: 5rem 10rem 29rem 10rem;
+    }
+    @include respond (tab-port){
+      padding: 5rem 6rem 27rem 6rem;
+      
+     }
+    }
+    ::selection{
+        color: red;
+    }
+ 
+.sq1{
+    background-image: url(../img/tff-logo.png);
+}
+.sq2{
+    background-image: url(../img/tff-logo.png);
+}.sq3{
+    background-image: url(../img/tff-logo.png);
+}.sq4{
+    background-image: url(../img/tff-logo.png);
+}.sq5{
+    background-image: url(../img/tff-logo.png);
+}.sq6{
+    background-image: url(../img/tff-logo.png);
+}.sq7{
+    background-image: url(../img/tff-logo.png);
+}.sq8{
+    background-image: url(../img/tff-logo.png);
+}.sq9{
+    background-image: url(../img/tff-logo.png);
+}.sq10{
+    background-image: url(../img/tff-logo.png);
+}.sq11{
+    background-image: url(../img/tff-logo.png);
+}.sq12{
+    background-image: url(../img/tff-logo.png);
+}.sq13{
+    background-image: url(../img/tff-logo.png);
+}.sq14{
+    background-image: url(../img/tff-logo.png);
+}.sq15{
+    background-image: url(../img/tff-logo.png);
+}.sq16{
+    background-image: url(../img/tff-logo.png);
+}.sq17{
+    background-image: url(../img/tff-logo.png);
+}.sq18{
+    background-image: url(../img/tff-logo.png);
+}.sq19{
+    background-image: url(../img/tff-logo.png);
+}.sq20{
+    background-image: url(../img/tff-logo.png);
+}.sq21{
+    background-image: url(../img/tff-logo.png);
+}.sq22{
+    background-image: url(../img/tff-logo.png);
+}.sq23{
+    background-image: url(../img/tff-logo.png);
+}.sq24{
+    background-image: url(../img/tff-logo.png);
+}.sq25{
+    background-image: url(../img/tff-logo.png);
+}.sq26{
+    background-image: url(../img/tff-logo.png);
+}.sq27{
+    background-image: url(../img/tff-logo.png);
+}.sq28{
+    background-image: url(../img/tff-logo.png);
+}.sq29{
+    background-image: url(../img/tff-logo.png);
+}.sq30{
+    background-image: url(../img/tff-logo.png);
+}.sq31{
+    background-image: url(../img/tff-logo.png);
+}.sq32{
+    background-image: url(../img/tff-logo.png);
+}.sq33{
+    background-image: url(../img/tff-logo.png);
+}.sq34{
+    background-image: url(../img/tff-logo.png);
+}.sq35{
+    background-image: url(../img/tff-logo.png);
+}.sq36{
+    background-image: url(../img/tff-logo.png);
+}.sq37{
+    background-image: url(../img/tff-logo.png);
+}.sq38{
+    background-image: url(../img/tff-logo.png);
+}.sq39{
+    background-image: url(../img/tff-logo.png);
+}.sq40{
+    background-image: url(../img/tff-logo.png);
+}.sq41{
+    background-image: url(../img/tff-logo.png);
+}.sq42{
+    background-image: url(../img/tff-logo.png);
+}.sq43{
+    background-image: url(../img/tff-logo.png);
+}.sq44{
+    background-image: url(../img/tff-logo.png);
+}.sq45{
+    background-image: url(../img/tff-logo.png);
+}.sq46{
+    background-image: url(../img/tff-logo.png);
+}.sq47{
+    background-image: url(../img/tff-logo.png);
+}.sq48{
+    background-image: url(../img/tff-logo.png);
+}.sq49{
+    background-image: url(../img/tff-logo.png);
+}.sq50{
+    background-image: url(../img/tff-logo.png);
+}.sq51{
+    background-image: url(../img/tff-logo.png);
+}.sq52{
+    background-image: url(../img/tff-logo.png);
+}.sq53{
+    background-image: url(../img/tff-logo.png);
+}.sq54{
+    background-image: url(../img/tff-logo.png);
+}.sq55{
+    background-image: url(../img/tff-logo.png);
+}.sq56{
+    background-image: url(../img/tff-logo.png);
+}.sq57{
+    background-image: url(../img/tff-logo.png);
+}.sq58{
+    background-image: url(../img/tff-logo.png);
+}.sq59{
+    background-image: url(../img/tff-logo.png);
+}.sq60{
+    background-image: url(../img/tff-logo.png);
+}.sq61{
+    background-image: url(../img/tff-logo.png);
+}.sq62{
+    background-image: url(../img/tff-logo.png);
+}.sq63{
+    background-image: url(../img/tff-logo.png);
+}.sq64{
+    background-image: url(../img/tff-logo.png);
+}.sq65{
+    background-image: url(../img/tff-logo.png);
+}.sq66{
+    background-image: url(../img/tff-logo.png);
+}.sq67{
+    background-image: url(../img/tff-logo.png);
+}.sq68{
+    background-image: url(../img/tff-logo.png);
+}.sq69{
+    background-image: url(../img/tff-logo.png);
+}.sq70{
+    background-image: url(../img/tff-logo.png);
+}.sq71{
+    background-image: url(../img/tff-logo.png);
+}.sq72{
+    background-image: url(../img/tff-logo.png);
+}.sq73{
+    background-image: url(../img/tff-logo.png);
+}.sq74{
+    background-image: url(../img/tff-logo.png);
+}.sq75{
+    background-image: url(../img/tff-logo.png);
+}.sq76{
+    background-image: url(../img/tff-logo.png);
+}.sq77{
+    background-image: url(../img/tff-logo.png);
+}.sq78{
+    background-image: url(../img/tff-logo.png);
+}.sq79{
+    background-image: url(../img/tff-logo.png);
+}.sq80{
+    background-image: url(../img/tff-logo.png);
+}.sq81{
+    background-image: url(../img/tff-logo.png);
+}.sq82{
+    background-image: url(../img/tff-logo.png);
+}.sq83{
+    background-image: url(../img/tff-logo.png);
+}.sq84{
+    background-image: url(../img/tff-logo.png);
+}.sq85{
+    background-image: url(../img/tff-logo.png);
+}.sq86{
+    background-image: url(../img/tff-logo.png);
+}.sq87{
+    background-image: url(../img/tff-logo.png);
+}.sq88{
+    background-image: url(../img/tff-logo.png);
+}.sq89{
+    background-image: url(../img/tff-logo.png);
+}.sq90{
+    background-image: url(../img/tff-logo.png);
+}.sq91{
+    background-image: url(../img/tff-logo.png);
+}.sq92{
+    background-image: url(../img/tff-logo.png);
+}.sq93{
+    background-image: url(../img/tff-logo.png);
+}.sq94{
+    background-image: url(../img/tff-logo.png);
+}

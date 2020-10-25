@@ -1,0 +1,21 @@
+@keyframes moveinleft {
+    0% {
+      transform: translateX(-13rem); }
+    60% {
+      transform: translateX(3rem); }
+    100% {
+      transform: translate(0); } }
+  
+  @keyframes moveinright {
+    0% {
+      transform: translateX(13rem); }
+    60% {
+      transform: translateX(-3rem); }
+    100% {
+      transform: translate(0); } }
+      @keyframes moveinrightsmall {
+        0% {
+          transform: translateX(5rem); }
+        100% {
+          transform: translate(0); } }
+      

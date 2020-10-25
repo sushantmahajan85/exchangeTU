@@ -1,0 +1,38 @@
+.composition{
+    position: relative;
+    @include respond(phone){
+        margin-top: 5rem;
+        }
+    &-all{
+        
+width:45%;
+
+position: absolute;
+border-radius:2rem;
+box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.397);
+z-index: 10;
+outline-offset: 1.1rem;
+transition: all 0.2s;
+
+    }
+}
+.composition-all:hover{
+    z-index: 20;
+    transform: scale(1.05);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.473);
+    outline: 0.8rem solid peru;
+}
+
+.img-1{
+    left: 6rem;
+    top: -2rem;
+    
+    }
+        .img-2{
+    right:6rem;
+    top:2rem; 
+        }
+        .img-3{
+    top:6.5rem;
+    left:27%;
+        }

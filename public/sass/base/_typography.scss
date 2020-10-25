@@ -1,0 +1,485 @@
+   
+  /*.logo-box{
+          position: absolute;
+          top: 30px;
+          left: 30px;        
+  } */
+  .logo {
+    height: 3.5rem;
+    position: absolute;
+    top: 3rem;
+    left: 3rem; }
+  
+  .logo:hover {
+    animation-name: moveinrightsmall;
+    animation-duration: 0.5s; }
+  
+  .heading {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular'
+   'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+  
+  .main-heading {
+    color: #ffffff;
+    text-transform: uppercase; }
+  
+  .main-heading-upr {
+    letter-spacing: 3.5rem;
+    display: block;
+    font-weight: 700;
+    font-size: 5rem;
+    animation: moveinleft 1s;
+   @include respond (tab-port){
+     letter-spacing: 2.5rem;
+   }
+   @include respond (phone){
+    letter-spacing: 2rem;
+  }
+  }
+  
+  .main-heading-lwr {
+    display: block;
+    letter-spacing: 1.7rem;
+    font-weight: 700;
+    animation: moveinright 1s;
+    margin-bottom: 4rem;
+    @include respond (tab-port){
+      letter-spacing: 1.5rem;
+    }
+    @include respond (phone){
+     letter-spacing: 1.1rem;
+   }
+  }
+
+  
+    .heading-secondary{
+      display: inline-block;
+      font-weight: 1100;
+      font-size: 4rem;
+      font-family: 'Amaranth';
+   -webkit-background-clip: text;
+   color: transparent;
+      background-image: linear-gradient(to right ,#f12711,#f5af19);
+      text-transform: uppercase;
+      margin-bottom: 8rem;
+   transition: all 0.3s;   
+      @include respond (tab-port){
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+@include respond (phone){
+ font-weight: 300;
+ margin-bottom: 2rem;
+}
+  
+  &:hover{
+    transform:  scale(1.3);
+    text-shadow: 1rem 3rem 5rem 
+    rgba(0, 0, 0, 0.349);
+
+  } 
+
+ }
+ .heading-main-small{
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 1.8rem;
+   color:rgb(71, 69, 69);
+   letter-spacing: 0.12rem;
+   margin-bottom: 2rem;
+   font-family: 'Amaranth';
+   
+ }
+ .paragraph{
+   font-size: 1.6rem;
+   
+   font-family: 'Amaranth';
+   color: #555555;
+   line-height: 2.5rem;
+   &:not(:last-child){
+     margin-bottom: 3rem;
+   }
+ }
+ .btn-link{
+   color: #7ed56f;
+   font-size: 1.6rem;
+ }
+   .section_pic{
+     padding: 35rem 0 19rem 0;
+     background-image: url(../img/Webp.net-compress-image.jpg);
+     background-size: cover;
+   
+    //  background-image: linear-gradient(to left bottom,#c31431ce, #240b36bd);
+   color: #555555;
+    background-position: center;
+  transform: skewY(-7deg);
+  margin-top: -14rem;
+  text-align: center;
+  
+  @include respond (tab-port){
+    background-size: 100% 100%;
+    padding: 20rem 0;
+  }
+  }
+
+     .section_box_1{
+      //  background-image: url(../img/titlesponsor.png);
+       background-color:rgba(255, 255, 255, 0.918);
+       padding: 2rem;
+       background-size: 100% 100%;
+       background-position: top;
+       background-size: 100% 100%;
+       font-size: 1.5rem;
+       margin-top: -14rem;
+       
+       border-radius: 4px;
+       
+       
+     }
+     .section_box_2{
+      background-color:rgba(255, 255, 255, 0.918);
+      
+      background-size: 100% 100%;
+      background-position: top;
+      // background-image: url(../img/powersponsor.png);
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: -14rem;
+      
+      border-radius: 4px;
+    }
+    .section_box_3{
+      background-color:rgba(255, 255, 255, 0.918);
+      
+      background-size: 100% 100%;
+      background-position: top;
+      // background-image: url(../img/cosponsor.png);
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: -14rem;
+      
+      border-radius: 4px;
+    }
+    .section_box_4{
+      background-color:rgba(255, 255, 255, 0.918);
+      // background-image: url(../img/Untitled-1.png);
+      
+      background-size: 100% 100%;
+      background-position: top;
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: -14rem;
+      
+      border-radius: 4px;
+    }
+    .section_icon{
+      font-size: 6.7rem;
+      margin-bottom: 0.9rem;
+      
+         background-image: linear-gradient(to right ,#f12711,#f5af19);
+display:inline-block;
+-webkit-background-clip: text;
+color: transparent;
+      
+    }
+   [class^="section_box_"]{
+     transform: skewY(7deg);
+    //  box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
+     transition: all 0.2s;
+       
+     
+     font-size: 1.5rem;
+   font-family: "Ubuntu" ,serif;
+   
+     @include respond (tab-land){
+      margin: 2rem;
+}
+   
+
+
+     &:hover{
+      //  box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
+       transform: translateY(-1rem) scale(1.1) skewY(7deg);
+     }
+    }
+   .footer{
+     background-color: black;
+     padding: 13rem 0 2rem 0;
+     
+     font-family: 'Amaranth';
+     @include respond (phone){
+  padding: 15rem 0 0.5rem 0;
+  
+      
+     }
+     font-size: 1.7rem;
+     &_logo-box{
+margin-top: -16rem;
+       text-align: center;
+       padding: 5rem;
+     }
+     &_logo{
+height: auto;
+width: 18rem;
+
+     }
+     &_navigation{
+
+     }
+     &_list{
+list-style: none;
+text-align: center;
+border-top: 0.5px solid darkgrey;
+padding: 2rem;
+
+@include respond (tab-port){
+  display: block;
+}
+
+     }
+     &_item{
+
+display: inline-block;
+@include respond (phone){
+  letter-spacing: 0;
+
+}
+
+&:not(:last-child){margin-right: 2.5rem;
+  @include respond (phone){
+    margin-right: 1rem;
+}}
+     }
+     &_link{
+&:link,&:visited{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: gray;
+}
+&:hover,&:visited{
+  
+  background-color: whitesmoke;
+  transform: rotate(5deg) scale(1.33);
+  border-radius: 5px;
+  padding: 0.35rem 0.35rem;
+   box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
+}
+     }
+   }
+   
+   .location{
+     text-align: center;
+     color:whitesmoke;
+     
+     
+     
+    }
+    .location_text{
+      color:grey;
+      display: inline-block;
+      text-align: center;
+      
+    }
+    .patiala{
+display: block;
+text-align: center;
+
+    }
+    
+    .text{
+      position: absolute;
+      border-top: 0.5px solid darkgrey;
+      text-align: center;
+      padding: 2rem;
+      
+    }
+    .text-mini{
+      position: relative;
+    }
+    .team_section{
+      background-color: #f7f7f7;
+      background-image: url(../img/pattern1.jpg);
+      // background-position: center;
+      // background-size: fill;
+      padding: 30rem 0 10rem 0;
+      margin-top: -20vh;
+      @include respond(tab-land){
+        padding: 40rem 0 15rem 0;
+      }
+      @include respond (tab-port){
+        padding: 30rem 0 13rem 0;
+       }
+       &-paragraph{
+         font-size: 1.8rem;
+         letter-spacing: 0.1rem;
+         color: #555555;
+         text-align: center;
+         line-height: 3rem;
+         
+    font-family: 'Amaranth';
+       }
+    }
+    .team_section-meet{
+      
+      text-align: center;
+    }
+    .team_section-text{
+        display: inline-block;
+        font-weight: 1200;
+        font-size: 4rem;
+     
+   -webkit-background-clip: text;
+   color: transparent;
+      background-image: linear-gradient(to right ,#f12711,#f5af19);   
+   font-family: 'Amaranth';
+        
+        text-transform: uppercase;
+        padding-left: 1rem;
+        padding-bottom: 8rem;
+        transition: all 0.3s;
+    &:hover{
+      transform: scale(1.3);
+    }
+    }
+  .square-box-1{
+    background-image: url(../img/gallery17.jpg);
+    background-color:#ffffffe8;
+    padding: 16.5rem;                                                                                                                                              
+background-size: 100% 100%;
+background-repeat: no-repeat;
+background-position: center;
+text-align: center;
+font-size: 1.5rem;
+box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
+transition: all 0.2s;
+border-radius: 4px;
+
+&:hover{
+  box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
+transform: translateY(-1rem) scale(1.1);
+}
+    @include respond(tab-land){
+      padding: 25rem 10rem 29rem 10rem;
+    }
+    @include respond (tab-port){
+      padding:  9rem 6rem 27rem 6rem;
+     }
+    }
+  .centre{
+    text-align: center;
+  }
+  .square-box-2{
+    background-image: url(../img/gallery16.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:#ffffffe8;
+    padding: 16.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
+    transition: all 0.2s;
+    border-radius: 4px;
+    @include respond(tab-land){
+      padding: 25rem 10rem 29rem 10rem;
+    }
+    @include respond (tab-port){
+      padding:  9rem 6rem 27rem 6rem;    
+     }
+    &:hover{
+      box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
+    transform: translateY(-1rem) scale(1.1);
+    }
+  }
+  .square-box-3{
+    background-image: url(../img/gallery18.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:#ffffffe8;
+    padding: 16.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    offset: 1rem;
+    outline-offset: 4px solid white;
+    box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
+transition: all 0.2s;
+@include respond(tab-land){
+  padding: 25rem 10rem 29rem 10rem;
+}
+@include respond (tab-port){
+  padding:  9rem 6rem 27rem 6rem;
+  
+ }
+    border-radius: 4px;
+    &:hover{
+      box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
+    transform: translateY(-1rem) scale(1.1);
+    }
+  }
+  .navbar{
+    padding: 2rem 0;
+    background-color: #333333;
+  }
+  .copyright{
+    border-top: 1.5px dotted grey;
+    padding-top: 1rem;
+    
+    font-family: 'Amaranth';
+    &_text{
+      text-align: center;
+      font-size: 1.5rem;
+      color: lightgrey;
+
+display: block;
+font-weight: 500;
+@include respond (tab-port){
+  font-weight: 400;
+  letter-spacing: 0;
+ }
+    }
+    &_span{
+      display: block;
+      
+      right:0;
+    }
+    &_link{
+      &:link,&:visited{
+        
+      text-decoration: none;
+color: tan;
+     
+      transition: all 0.2s;
+      }
+      &:hover,&:active{
+        color:white;
+       transform: scale(1.1); 
+      }
+    }
+  }
+.section_text{
+  
+  font-family: 'Amaranth';
+text-decoration: none;
+color:#555555;
+  
+}
+.yellow{
+  color: #f5af19;
+}
+.center{
+  text-align: center;
+  margin-top: 3rem;
+  @include respond (tab-port){
+   margin-bottom: 2rem;
+   margin-top: 2rem;
+  }
+}

@@ -1,0 +1,16 @@
+.square-box-exbo{
+    background-color:#ffffffe8;
+    padding: 12rem;
+background-size: 100% 100%;
+    
+    @include respond(tab-land){
+      padding: 5rem 10rem 29rem 10rem;
+    }
+    @include respond (tab-port){
+      padding: 5rem 6rem 27rem 6rem;
+      
+     }
+    }
+.se1{
+    background-image: url(../img/Photo-23.jpg);
+}

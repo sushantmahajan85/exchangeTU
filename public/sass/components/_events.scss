@@ -1,0 +1,268 @@
+.events{
+    margin: -4rem;
+    &_img1{
+     padding: 15rem;
+     background-position: center;
+     background-size: cover;
+ 
+     background-image: linear-gradient(to right,rgba(21, 101, 192, 0.836),#b92c27da);
+     }
+    &_img2{
+        padding: 10rem;
+        
+     background-size: 100% 100%;
+        
+        background-image: linear-gradient(to right top,#f12711,#f5af19);
+    }
+    &_img3{
+        padding: 10rem;
+        
+     background-size: 100% 100%;
+        
+        background-image: linear-gradient(to right top,#8E2DE2,#4A00E0);
+    }&_img4{
+        padding: 10rem;
+        
+     background-size: 100% 100%;
+        
+        background-image: linear-gradient(to right top,#aa4b6b, #6b6b83,#3b8d99);
+    }&_img5{
+        padding: 10rem;
+        
+     background-size: 100% 100%;
+        
+        background-image: linear-gradient(to right top,#5433FF, #20BDFF,#A5FECB);
+    }&_img6{
+        padding: 10rem;
+        
+     background-size: 100% 100%;
+        
+        background-image: linear-gradient(to right top,#c31432, #240b36);
+    }
+    &_img7{
+        padding: 10rem;
+        
+     background-size: 100% 100%;
+        
+        background-image: linear-gradient(to right top,#dd3e54,#6be585);
+    }&_img8{
+        padding: 10rem;
+        
+     background-size: 100% 100%;
+        
+        background-image: linear-gradient(to right top,#FF416C,#FF4B2B);
+    }&_img9{
+        padding: 10rem;
+        
+     background-size: 100% 100%;
+        
+        background-image: linear-gradient(to right top,purple,pink,#f64f59);
+    }
+    &_paragraph{
+        color: white;
+        font-family: 'Amaranth';
+        font-size: 1.7rem;
+        padding-top: 1rem;
+        line-height: 2.4rem;
+       
+    }
+    &_heading-small{
+        color: white;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+        font-weight: 800;
+    }
+    &_heading{
+        color:white;
+        padding: 0.5rem 0.6rem;
+        border: 1.5px solid rgb(223, 222, 214);
+        border-radius: 2rem;
+        display: inline-block;
+        font-weight: 1000;
+        letter-spacing: 0.3rem;
+        font-family: 'Amaranth';
+        
+        font-size: 3rem;
+    }
+    &_pic{
+        box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.397);
+        outline-offset: 1rem;
+        transform: scale(1.05);
+        box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.473);
+        outline: 0.75rem solid rgb(208, 211, 212);
+    
+        &:hover{
+           
+            transform: scale(1.05);
+            box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.473);
+            outline: 1rem solid white;
+        }
+    }
+    &_header{
+        text-align: center;
+        
+    }
+    .eventos{
+        display: inline-block;
+border-radius: 2.5px;
+        margin-bottom: 3rem;
+        color: #FF416C;
+        font-size: 3rem;
+        font-weight: 800;
+        padding: 1rem;
+        background-color: white;
+    }
+    &_header-heading{
+        font-size: 2.5rem;
+        color: white;
+        font-weight: 1200;
+letter-spacing: 0.8rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 2rem;
+    }
+    &_header-heading-small{
+font-size: 1.4rem;
+font-weight: 800;
+padding: 0.5rem;
+color: rgb(34, 33, 33);
+background-color: white;
+display: inline-block;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+}
+.loader_wrapper{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.loader {
+    width: 16em;
+    height: 8em;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader::before,
+.loader::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+}
+
+.loader::before {
+    width: inherit;
+    height: 0.2em;
+    background-color: rgb(8, 3, 3);
+}
+
+.loader::after {
+    box-sizing: border-box;
+    width: 50%;
+    height: inherit;
+    border: 0.2em solid rgb(12, 8, 8);
+    border-radius: 50%;
+    left: 25%;
+}
+
+.loader span {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    background-color: #FF4B2B;
+    border-radius: 50%;
+    bottom: 0.2em;
+    left: -5%;
+    animation: 2s linear infinite;
+    transform-origin: 50% -3em;
+    animation-name: run, rotating;
+}
+
+.loader span:nth-child(2) {animation-delay: 0.075s;}
+.loader span:nth-child(3) {animation-delay: 0.15s;}
+
+@keyframes run {
+    0% {left: -5%;}
+    10%, 60% {left: calc((100% - 5%) / 2);}
+    70%, 100% {left: 100%;}
+}
+
+@keyframes rotating {
+    0%, 10% {transform: rotate(0deg);}
+    60%, 100% {transform: rotate(-1turn);}
+}
+.md1{
+    background-image: url(../img/ExchangeForChangeLogo.jpg);
+    background-size: cover;
+}
+.md2{
+    background-size: cover;
+    background-image: url(../img/OR1.jpg);
+}
+.md3{
+    background-size: cover;
+    background-image: url(../img/CO1.jpg);
+}
+.md4{
+    background-size: cover;
+    background-image: url(../img/ME1.jpg);
+}
+.md5{
+    background-size: cover;
+    background-image: url(../img/DO1.jpg);
+}
+.md6{
+    background-size: cover;
+    background-image: url(../img/MV1.jpg);
+}
+.md7{
+    background-size: cover;
+    background-image: url(../img/IT2.jpg);
+}
+.md8{
+    background-size: cover;
+    background-image: url(../img/MD2.jpg);
+}
+#loading{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #fff
+	url(../img/loader.gif)
+	 no-repeat center center;	
+    z-index: 99999999999999999999999999999999999999999;
+    display: block;
+    margin: -2rem;
+    @include respond (tab-port){
+        margin: 0%;
+       }
+}
+.wait{
+    font-weight: 1200;
+    display: inline-block;
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    color: rgb(214, 136, 18);
+    font-size: 3rem;
+    font-family: 'Cabin Sketch', cursive;
+    display: inline-block;
+    text-align: center;
+    
+}
+.ready{
+    display: block;
+    
+}

@@ -1,0 +1,186 @@
+.navigation{
+
+    &_checkbox{
+display: none;
+    }
+    &_button{
+        cursor: pointer;
+background-color: white;
+position: fixed;
+top: 5rem;
+right: 5rem;
+height: 5rem;
+width: 5rem;
+z-index: 2000;
+border-radius: 50%;
+box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.801);
+@include respond (tab-land){
+position: fixed;
+top: 4.9rem;
+right: 4.9rem;
+  }
+  @include respond (tab-port){
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+      }@include respond (phone){
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        height: 4.5rem;
+        width: 4.5rem;
+          }   
+}
+    &_back{
+height: 6rem;
+width: 6rem;
+border-radius: 50%;
+background-image: radial-gradient($light-green,
+$medium-green);
+position:fixed;
+top: 6rem;
+right: 5rem;
+z-index: 1000;
+transform: scale(70);
+opacity: 0;
+width: 0%;
+transition:all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.8s;
+    }
+    &_nav{
+height: 100vh;
+width: 100%;
+position: fixed;
+top: 0;
+right: 0;
+z-index: 1500;
+opacity: 0;
+width: 0;
+visibility: hidden;
+transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+    }
+    &_list{
+list-style: none;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+text-align: center;
+@include respond (tab-port){
+    text-align: start;
+      }
+    }
+    &_item{
+font-size: .2rem;
+text-decoration: none;
+text-transform: uppercase;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+
+margin: 0.8rem;
+
+width: 100%;
+@include respond (tab-port){
+    font-size: 1.2rem;
+      }
+}
+    &_link{
+        &:link,&:visited{
+            text-decoration: none;
+color: white;
+background-image: linear-gradient(120deg, transparent 0%,transparent 50%,white 50%);
+    background-size: 220%;
+    margin: 2rem;
+    padding: 1rem 2rem;
+    transition: all .4s;
+
+        }
+&:hover,&:active{
+    color: $light-green;
+    background-position: 100%;
+}
+    }
+    &_number{
+margin-right: 2rem;
+
+    }
+    &_checkbox:checked~&_back{
+opacity: 1;
+width: 100%;
+}
+&_checkbox:checked~&_nav{
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+    }
+   
+    
+}
+.material-icons{
+color:gray;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+
+&:hover{
+    color: red;
+}
+}
+.nav_tff{
+    text-align: start;
+    color:white;
+    font-size: 2.5rem;
+    margin-left: 4rem;
+    margin-bottom: 4rem;
+    font-family: 'Amaranth';
+    
+}
+.sidenav{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 999999999999999999999999999999999999999999999999999999999999999999999;
+}
+.follow_us{
+    text-align: start;
+    color:white;
+    font-size: 2.5rem;
+    margin-left: 4rem;
+    margin-top: 4rem;
+}
+
+.section_pic a{
+    text-decoration: none;
+    
+}
+.fas {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fas:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: rgb(199, 203, 212);
+    color: white;
+  }
+  .fa-instagram {
+    background: rgb(196, 198, 204);
+    color: white;
+  }
+  .fao{
+    background-color: unset;
+    color: tan;
+  }
+  .nav_logos{
+      background-image: none;
+      margin-top: 3.5rem;
+  }
+.fao{
+    color: tan;
+}
