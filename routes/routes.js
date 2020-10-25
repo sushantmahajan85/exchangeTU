@@ -3,35 +3,10 @@ var mongoose = require("mongoose");
 var path = require("path");
 
 var router = express.Router();
-var Team = require("../models/team");
-const recruit = require("../models/recruit");
+// var Team = require("../models/team");
+// const recruit = require("../models/recruit");
 const { check, validationResult } = require("express-validator");
 
-router.get("/attendance", function (req, res) {
-  res.render("attendance");
-});
-
-router.post("/submit", function (req, res) {
-  //some code here
-  var payas = req.body.payas;
-  var sushant = req.body.sushant;
-  var saksham = req.body.saksham;
-  var newAtd = { Payas: payas, Sushant: sushant, Saksham: saksham };
-  Team.create(newAtd, function (err, newattendance) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(newattendance);
-      res.redirect("/");
-    }
-  });
-  //after adding to db
-  // req.flash("success","Attendance Submitted!");
-});
-
-router.get("/recruit", function (req, res) {
-  res.render("recruit", { errors: "" });
-});
 router.post(
   "/recsubmit",
   [
@@ -77,9 +52,6 @@ router.get("/view", function (req, res) {
       res.render("view", { attendance: allAttendance });
     }
   });
-});
-router.get("/attendance", function (req, res) {
-  res.render("attendance");
 });
 
 router.put("/:id", async function (req, res) {
