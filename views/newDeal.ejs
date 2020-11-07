@@ -66,12 +66,14 @@
         <br>
         <br>
         <label for="img">Select image:</label>
-        <input type="file" id="img" name="img" accept="image/*" /><br /><br />
+        <input id="myFileInput" type="file" accept="image/*;capture=camera" multiple>
+        
         <div class="flex-parent jc-center">
           <input type="submit" value="Submit" />
         </div>
       </form>
     </div>
+    
 
     <script src="/js/newDeal.js"></script>
     <script
