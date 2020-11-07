@@ -2,8 +2,6 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
 const validator = require("validator");
-const random = require("../../utils/utils");
-const sendEmail = require("../../utils/email");
 
 const userSchema = new mongoose.Schema(
   {
