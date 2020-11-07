@@ -24,10 +24,6 @@ const dealSchema = new mongoose.Schema(
       type: String,
       //required: true,
     },
-    reportCount: {
-      type: Number,
-      default: 0,
-    },
     saveLater: Number,
     owner: {
       type: String,
@@ -47,18 +43,18 @@ const dealSchema = new mongoose.Schema(
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
 //virtual populate
-dealSchema.virtual("reviews", {
-  ref: "Review",
-  foreignField: "deal",
-  localField: "_id",
-});
+// dealSchema.virtual("reviews", {
+//   ref: "Review",
+//   foreignField: "deal",
+//   localField: "_id",
+// });
 
-dealSchema.post("save", async function () {
-  // const shorter = shortid.generate();
-  // this.short = shorter;
+// dealSchema.post("save", async function () {
+//   // const shorter = shortid.generate();
+//   // this.short = shorter;
 
-  this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;
-  this.save();
-});
+//   this.long = `127.0.0.1:5000/deal/${this._id}/postedBy/${this.user}`;
+//   this.save();
+// });
 const Deal = mongoose.model("Deal", dealSchema);
 module.exports = Deal;
