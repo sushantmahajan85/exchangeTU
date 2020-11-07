@@ -24,6 +24,15 @@ const dealSchema = new mongoose.Schema(
       type: String,
       //required: true,
     },
+    hostelName: {
+      type: String,
+    },
+    duration: {
+      type: String,
+    },
+    description: {
+      type: String,
+    },
     saveLater: Number,
     owner: {
       type: String,
