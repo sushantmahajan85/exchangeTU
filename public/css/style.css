@@ -1197,9 +1197,11 @@ h3.tittle-w3l:after {
   border: 1px solid #cacaca;
   padding: 20px;
   margin: 0 10px;
+ 
 }
 .speioffer-agile {
   text-align: center;
+  height: 150px;
 }
 .product-name-w3l {
   margin-top: 20px;
