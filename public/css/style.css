@@ -1478,9 +1478,9 @@ p.footer-main span {
   z-index: 999;
   width: 64px;
   height: 64px;
-  border: none;
+  border-radius: 50%;
   text-indent: 100%;
-  background: url("../images/move-up.png") no-repeat 0px 0px;
+  background: url("../images/move-up.png") no-repeat 17px 15pxpx;
 }
 #toTopHover {
   width: 64px;
