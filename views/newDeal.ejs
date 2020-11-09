@@ -157,9 +157,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="modal_body_left modal_body_left1">
 						<h3 class="agileinfo_sign">Sign Up</h3>
-						<p>
-							Come join the Grocery Shoppy! Let's set up your Account.
-						</p>
+
 						<form action="#" method="post">
 							<div class="styled-input agile-styled-input-top">
 								<input type="text" placeholder="Name" name="Name" required="">
@@ -218,19 +216,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav menu__list">
-								<li>
-									<a class="nav-stylehead" href="/">Home
-										<span class="sr-only">(current)</span>
-									</a>
-								</li>
-								<li class="">
-									<a class="nav-stylehead" href="/about">About Us</a>
-								</li>
-								
 								<li class="active">
-									<a class="" href="/contact">Contact</a>
+								  <a class="nav-stylehead" href="/">Home </a>
 								</li>
-							</ul>
+								<li class="active">
+								  <a class="nav-stylehead" href="/about">About Us</a>
+								</li>
+			  
+								<li class="active">
+								  <a class="nav-stylehead" href="/contact">Contact</a>
+								</li>
+								<li class="active">
+								  <a class="nav-stylehead" href="/newDeal">Post A Deal</a>
+								</li>
+							  </ul>
 						</div>
 					</div>
 				</nav>
@@ -248,7 +247,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="/">Home</a>
 						<i>|</i>
 					</li>
-					<li>contact Us</li>
+
+					<li>Post A Deal</li>
 				</ul>
 			</div>
 		</div>
@@ -273,23 +273,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<form action="#" method="post">
 							<div class="">
 								<label for="pname">Product Name</label>
-        <input
-          type="text"
-          id="pname"
-          name="product name"
-          placeholder="Product name"
-          required=""
-        />
+									<input
+									type="text"
+									id="pname"
+									name="product name"
+									placeholder="Product name"
+									required=""
+									/>
 							</div>
 							<div class="">
 								<label for="hname">Hostel Name</label>
-        <input
-          type="text"
-          id="hname"
-          name="hostel name"
-          placeholder="Your hostel"
-          required=""
-        />
+								<input
+								type="text"
+								id="hname"
+								name="hostel name"
+								placeholder="Your hostel"
+								required=""
+								/>
 							</div>
 							<div class="">
 								<label for="category">Product Category</label>
@@ -354,7 +354,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<!-- //contact -->
 		</div>
-	</div>
+  </div>
+  
+  <script src="/js/newDeal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+    ></script>
 	
 	
 	<!-- js-files -->
