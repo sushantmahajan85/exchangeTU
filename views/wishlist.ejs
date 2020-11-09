@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>ExchangeTU</title>
+	<title>My Wishlist</title>
 	<!--/tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -83,7 +83,7 @@
 				<form action="#" method="post" class="last">
 				  <input type="hidden" name="cmd" value="_cart" />
 				  <input type="hidden" name="display" value="1" />
-				  <a href="/wishlist">
+				  <a href="#">
 					<i style="font-size: 24px" class="fa"
 					  >&#xf08a; <span> <h4>My Wishlist</h4></span></i
 					></a
@@ -101,6 +101,7 @@
 	
 					
 	</div>
+	<!-- //shop locator (popup) -->
 	<!-- signin Model -->
 	<!-- Modal1 -->
 	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
@@ -155,13 +156,9 @@
 					</div>
 					<div class="modal_body_left modal_body_left1">
 						<h3 class="agileinfo_sign">Sign Up</h3>
-<<<<<<< HEAD
 						<p>
 							Let's set up your Account.
 						</p>
-=======
-
->>>>>>> c589822c361447e70800e54ef37e1c315e4d2acd
 						<form action="#" method="post">
 							<div class="styled-input agile-styled-input-top">
 								<input type="text" placeholder="Name" name="Name" required="">
@@ -220,35 +217,23 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav menu__list">
-								<li class="active">
-								  <a class="nav-stylehead" href="/">Home </a>
+								<li>
+									<a class="nav-stylehead" href="/">Home
+										<span class="sr-only">(current)</span>
+									</a>
 								</li>
-<<<<<<< HEAD
 								<li>
 									<a class="nav-stylehead" href="/about">About Us</a>
 								</li>
 								
 								<li>
-									<a class="nav-stylehead" href="/contact">Contact</a>
+									<a class="" href="/contact">Contact</a>
+                                </li>
+                                
+                                <li>
+									<a class="" href="/newDeal">Post a Deal</a>
 								</li>
-								<li class = "active">
-									<a class="nav-stylehead" href="/newDeal">Post a Deal</a>
-								</li>
-
 							</ul>
-=======
-								<li class="active">
-								  <a class="nav-stylehead" href="/about">About Us</a>
-								</li>
-			  
-								<li class="active">
-								  <a class="nav-stylehead" href="/contact">Contact</a>
-								</li>
-								<li class="active">
-								  <a class="nav-stylehead" href="/newDeal">Post A Deal</a>
-								</li>
-							  </ul>
->>>>>>> c589822c361447e70800e54ef37e1c315e4d2acd
 						</div>
 					</div>
 				</nav>
@@ -266,12 +251,7 @@
 						<a href="/">Home</a>
 						<i>|</i>
 					</li>
-<<<<<<< HEAD
-					<li>Post a Deal</li>
-=======
-
-					<li>Post A Deal</li>
->>>>>>> c589822c361447e70800e54ef37e1c315e4d2acd
+					<li>My Wishlist</li>
 				</ul>
 			</div>
 		</div>
@@ -281,7 +261,7 @@
 	<div class="contact-w3l">
 		<div class="container">
 			<!-- tittle heading -->
-			<h3 class="tittle-w3l">Product Details
+			<h3 class="tittle-w3l">My Wishlist
 				<span class="heading-style">
 					<i></i>
 					<i></i>
@@ -295,81 +275,22 @@
 					<div class="contact-form wthree">
 						<form action="#" method="post">
 							<div class="">
-								<label for="pname">Product Name</label>
-									<input
-									type="text"
-									id="pname"
-									name="product name"
-									placeholder="Product name"
-									required=""
-									/>
+								<input type="text" name="name" placeholder="Name" required="">
 							</div>
 							<div class="">
-								<label for="hname">Hostel Name</label>
-								<input
-								type="text"
-								id="hname"
-								name="hostel name"
-								placeholder="Your hostel"
-								required=""
-								/>
+								<input class="text" type="text" name="subject" placeholder="Subject" required="">
 							</div>
 							<div class="">
-								<label for="category">Product Category</label>
-        <select id="category" name="category">
-          <option value="select">Select</option>
-          <option value="Labcoat">Labcoat</option>
-          <option value="Cycle">Cycle</option>
-          <option value="Mattress">Mattress</option>
-          <option value="Books">Books</option>
-          <option value="Drafters">Drafter</option>
-          
-        </select>
+								<input class="email" type="email" name="email" placeholder="Email" required="">
 							</div>
 							<div class="">
-								<label for="duration"><br>Duration of use </label>
-        <input
-          type="text"
-          id="duration"
-          name="use duration"
-          placeholder="Duration"
-          required=""
-        />
-              </div>
-              
-              <div class="">
-								<label for="description">Product Description</label>
-                <textarea
-                  id="description"
-                  name="description"
-                  placeholder="About Product"
-                  required=""
-                  style="height: 200px"
-                ></textarea>
-              </div>
-              
-              <div class = "addPrice">
-                <label for="price">MRP (in Rs.)</label>
-                <input type="number" id="price" name="MRP" placeholder="Enter MRP" />
-                &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp
-                <label for="price">Selling Price (in Rs.)</label>
-                <input
-                  type="number"
-                  id="sprice"
-                  name="selling price"
-                  placeholder="Enter price"
-                /><br />
-            </div>
-            <br>
-            
-            <div class="">
-              <label for="img">Select image:</label>
-              <input id="myFileInput" type="file" accept="image/*;capture=camera" multiple> 
-            </div>
+								<textarea placeholder="Message" name="message" required=""></textarea>
+							</div>
 							<input type="submit" value="Submit">
 						</form>
 					</div>
-					<div class="contact-right wthree">						
+					<div class="contact-right wthree">
+						
 						
 						<div class="clearfix"> </div>
 					</div>
@@ -377,13 +298,7 @@
 			</div>
 			<!-- //contact -->
 		</div>
-  </div>
-  
-  <script src="/js/newDeal.js"></script>
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
-    ></script>
+	</div>
 	
 	
 	<!-- js-files -->
