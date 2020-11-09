@@ -1,880 +1,718 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>ExchangeTU</title>
+    <!--/tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="18x12" />
+    <meta name="keywords" content="website" />
+    <script>
+      addEventListener(
+        "load",
+        function () {
+          setTimeout(hideURLbar, 0);
+        },
+        false
+      );
 
-<head>
-	<title>ExchangeTU</title>
-	<!--/tags -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="icon" href="images/favicon.png" type="image/png" sizes="18x12" />
-	<meta name="keywords" content="website" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    </script>
+    <!--//tags -->
+    <link
+      href="css/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!--pop-up-box-->
+    <link
+      href="css/popuo-box.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!--//pop-up-box-->
+    <!-- price range -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui1.css" />
+    <!-- flexslider -->
+    <link
+      rel="stylesheet"
+      href="css/flexslider.css"
+      type="text/css"
+      media="screen"
+    />
+    <!-- fonts -->
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800"
+      rel="stylesheet"
+    />
+  </head>
 
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<!--//tags -->
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/font-awesome.css" rel="stylesheet">
-	<!--pop-up-box-->
-	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-	<!--//pop-up-box-->
-	<!-- price range -->
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
-	<!-- flexslider -->
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-	<!-- fonts -->
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
-</head>
+  <body>
+    <!-- header-bot-->
+    <div class="header-bot">
+      <div class="header-bot_inner_wthreeinfo_header_mid">
+        <!-- header-bot-->
+        <div class="col-md-4 logo_agile">
+          <h1>
+            <a href="index.ejs">
+              <img src="images\logo.png" alt=" " />
+            </a>
+          </h1>
+        </div>
+        <!-- header-bot -->
+        <div class="col-md-8 header">
+          <!-- header lists -->
+          <ul>
+            <li>
+              <a href="#" data-toggle="modal" data-target="#myModal1">
+                <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign
+                In
+              </a>
+            </li>
+            <li>
+              <a href="#" data-toggle="modal" data-target="#myModal2">
+                <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
+                Sign Up
+              </a>
+            </li>
+          </ul>
+          <!-- //header lists -->
+          <!-- search -->
+          <div class="agileits_search">
+            <form action="#" method="post">
+              <input
+                name="Search"
+                type="search"
+                placeholder="How can we help you today?"
+                required=""
+              />
+              <button
+                type="submit"
+                class="btn btn-default"
+                aria-label="Left Align"
+              >
+                <span class="fa fa-search" aria-hidden="true"> </span>
+              </button>
+            </form>
+          </div>
+          <!-- //search -->
+          <!-- wishlist -->
+          <div class="top_nav_right">
+            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+              <form action="#" method="post" class="last">
+                <input type="hidden" name="cmd" value="_cart" />
+                <input type="hidden" name="display" value="1" />
+                <a href="#">
+                  <i style="font-size: 24px" class="fa"
+                    >&#xf08a;
+                    <span>
+                      <h4>My Wishlist</h4>
+                      <a href="/wishlist"></a></span></i
+                ></a>
+              </form>
+            </div>
+          </div>
 
-<body>
-	<!-- header-bot-->
-	<div class="header-bot">
-		<div class="header-bot_inner_wthreeinfo_header_mid">
-			<!-- header-bot-->
-			<div class="col-md-4 logo_agile">
-				<h1>
-					<a href="index.ejs">
-						 <img src="images\logo.png" alt=" " />
-					</a>
-				</h1>
-			</div>
-			<!-- header-bot -->
-			<div class="col-md-8 header">
-				<!-- header lists -->
-				<ul>
-					<li>
-						<a href="#" data-toggle="modal" data-target="#myModal1">
-							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In </a>
-					</li>
-					<li>
-						<a href="#" data-toggle="modal" data-target="#myModal2">
-							<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Sign Up </a>
-					</li>
-				</ul>
-				<!-- //header lists -->
-				<!-- search -->
-				<div class="agileits_search">
-					<form action="#" method="post">
-						<input name="Search" type="search" placeholder="How can we help you today?" required="">
-						<button type="submit" class="btn btn-default" aria-label="Left Align">
-							<span class="fa fa-search" aria-hidden="true"> </span>
-						</button>
-					</form>
-				</div>
-				<!-- //search -->
-				<!-- cart details -->
-				<div class="top_nav_right">
-					<div class="wthreecartaits wthreecartaits2 cart cart box_1">
-						<form action="#" method="post" class="last">
-							<input type="hidden" name="cmd" value="_cart">
-							<input type="hidden" name="display" value="1">
-							<button class="w3view-cart" type="submit" name="submit" value="">
-								<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-							</button>
-						</form>
-					</div>
-				</div>
-				<!-- //cart details -->
-				<div class="clearfix"></div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-	<!-- signin Model -->
-	<!-- Modal1 -->
-	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body modal-body-sub_agile">
-					<div class="main-mailposi">
-						<span class="fa fa-envelope-o" aria-hidden="true"></span>
-					</div>
-					<div class="modal_body_left modal_body_left1">
-						<h3 class="agileinfo_sign">Sign In </h3>
-						<p>
-							Sign In now, Let's start your Grocery Shopping. Don't have an account?
-							<a href="#" data-toggle="modal" data-target="#myModal2">
-								Sign Up Now</a>
-						</p>
-						<form action="#" method="post">
-							<div class="styled-input agile-styled-input-top">
-								<input type="text" placeholder="User Name" name="Name" required="">
-							</div>
-							<div class="styled-input">
-								<input type="password" placeholder="Password" name="password" required="">
-							</div>
-							<input type="submit" value="Sign In">
-						</form>
-						<div class="clearfix"></div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-			<!-- //Modal content-->
-		</div>
-	</div>
-	<!-- //Modal1 -->
-	<!-- //signin Model -->
-	<!-- signup Model -->
-	<!-- Modal2 -->
-	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body modal-body-sub_agile">
-					<div class="main-mailposi">
-						<span class="fa fa-envelope-o" aria-hidden="true"></span>
-					</div>
-					<div class="modal_body_left modal_body_left1">
-						<h3 class="agileinfo_sign">Sign Up</h3>
-						<p>
-							Let's set up your Account.
-						</p>
-						<form action="#" method="post">
-							<div class="styled-input agile-styled-input-top">
-								<input type="text" placeholder="Name" name="Name" required="">
-							</div>
-							<div class="styled-input">
-								<input type="email" placeholder="E-mail" name="Email" required="">
-							</div>
-							<div class="styled-input">
-								<input type="password" placeholder="Password" name="password" id="password1" required="">
-							</div>
-							<div class="styled-input">
-								<input type="password" placeholder="Confirm Password" name="Confirm Password" id="password2" required="">
-							</div>
-							<input type="submit" value="Sign Up">
-						</form>
-						<p>
-							<a href="#">By clicking register, I agree to your terms</a>
-						</p>
-					</div>
-				</div>
-			</div>
-			<!-- //Modal content-->
-		</div>
-	</div>
-	<!-- //Modal2 -->
-	<!-- //signup Model -->
-	<!-- //header-bot -->
-	<!-- navigation -->
-	<div class="ban-top">
-		<div class="container">
-			<div class="agileits-navi_search">
-				<form action="#" method="post">
-					<select id="agileinfo-nav_search" name="agileinfo_search" required="">
-						<option value="">All Categories</option>
-						<option value="Drafters">Drafters</option>
-						<option value="labcoat">Lab Coats</option>
-						<option value="Bread &amp; Bakery">Cycles</option>
-						<option value="Sweets">Mattress</option>
-						<option value="others">Others</option>
-					</select>
-				</form>
-			</div>
-			<div class="top_nav_left">
-				<nav class="navbar navbar-default">
-					<div class="container-fluid">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-							    aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav menu__list">
-								<li>
-									<a class="nav-stylehead" href="index.html">Home
-										<span class="sr-only">(current)</span>
-									</a>
-								</li>
-								<li class="">
-									<a class="nav-stylehead" href="about.html">About Us</a>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle nav-stylehead" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kitchen
-										<span class="caret"></span>
-									</a>
-									<ul class="dropdown-menu multi-column columns-3">
-										<div class="agile_inner_drop_nav_info">
-											<!-- <div class="col-sm-4 multi-gd-img">
-												<ul class="multi-column-dropdown"> -->
-													<!-- <li>
-														<a href="product.html">Bakery</a>
-													</li>
-													<li>
-														<a href="product.html">Baking Supplies</a>
-													</li>
-													<li>
-														<a href="product.html">Coffee, Tea & Beverages</a>
-													</li>
-													<li>
-														<a href="product.html">Dried Fruits, Nuts</a>
-													</li>
-													<li>
-														<a href="product.html">Sweets, Chocolate</a>
-													</li>
-													<li>
-														<a href="product.html">Spices & Masalas</a>
-													</li>
-													<li>
-														<a href="product.html">Jams, Honey & Spreads</a>
-													</li> -->
-												<!-- </ul>
-											</div> -->
-											<!-- <div class="col-sm-4 multi-gd-img">
-												<ul class="multi-column-dropdown">
-													<li>
-														<a href="product.html">Pickles</a>
-													</li>
-													<li>
-														<a href="product.html">Pasta & Noodles</a>
-													</li>
-													<li>
-														<a href="product.html">Rice, Flour & Pulses</a>
-													</li>
-													<li>
-														<a href="product.html">Sauces & Cooking Pastes</a>
-													</li>
-													<li>
-														<a href="product.html">Snack Foods</a>
-													</li>
-													<li>
-														<a href="product.html">Oils, Vinegars</a>
-													</li>
-													<li>
-														<a href="product.html">Meat, Poultry & Seafood</a>
-													</li>
-												</ul>
-											</div> -->
-											<!-- <div class="col-sm-4 multi-gd-img">
-												<img src="images/nav.png" alt="">
-											</div> -->
-											<div class="clearfix"></div>
-										</div>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle nav-stylehead" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Household
-										<span class="caret"></span>
-									</a>
-									<ul class="dropdown-menu multi-column columns-3">
-										<div class="agile_inner_drop_nav_info">
-											<div class="col-sm-6 multi-gd-img">
-												<!-- <ul class="multi-column-dropdown">
-													<li>
-														<a href="product2.html">Kitchen & Dining</a>
-													</li>
-													<li>
-														<a href="product2.html">Detergents</a>
-													</li>
-													<li>
-														<a href="product2.html">Utensil Cleaners</a>
-													</li>
-													<li>
-														<a href="product2.html">Floor & Other Cleaners</a>
-													</li>
-													<li>
-														<a href="product2.html">Disposables, Garbage Bag</a>
-													</li>
-													<li>
-														<a href="product2.html">Repellents & Fresheners</a>
-													</li>
-													<li>
-														<a href="product2.html"> Dishwash</a>
-													</li>
-												</ul> -->
-											</div>
-											<!-- <div class="col-sm-6 multi-gd-img">
-												<ul class="multi-column-dropdown">
-													<li>
-														<a href="product2.html">Pet Care</a>
-													</li>
-													<li>
-														<a href="product2.html">Cleaning Accessories</a>
-													</li>
-													<li>
-														<a href="product2.html">Pooja Needs</a>
-													</li>
-													<li>
-														<a href="product2.html">Crackers</a>
-													</li>
-													<li>
-														<a href="product2.html">Festive Decoratives</a>
-													</li>
-													<li>
-														<a href="product2.html">Plasticware</a>
-													</li>
-													<li>
-														<a href="product2.html">Home Care</a>
-													</li>
-												</ul>
-											</div> -->
-											<div class="clearfix"></div>
-										</div>
-									</ul>
-								</li>
-								<li class="active">
-									<a class="nav-stylehead" href="contact.html">Contact</a>
-								  </li>
-								  <li class="active">
-									<a class="nav-stylehead" href="newDeal.ejs">Post A Deal</a>
-								  </li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</div>
-		</div>
-	</div>
-	<!-- //navigation -->
-	<!-- banner-2 -->
-	<div class="page-head_agile_info_w3l">
+          <!-- //wishlist details -->
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- signin Model -->
+    <!-- Modal1 -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body modal-body-sub_agile">
+            <div class="main-mailposi">
+              <span class="fa fa-envelope-o" aria-hidden="true"></span>
+            </div>
+            <div class="modal_body_left modal_body_left1">
+              <h3 class="agileinfo_sign">Sign In</h3>
+              <p>
+                Sign In now, Let's start your Grocery Shopping. Don't have an
+                account?
+                <a href="#" data-toggle="modal" data-target="#myModal2">
+                  Sign Up Now</a
+                >
+              </p>
+              <form action="#" method="post">
+                <div class="styled-input agile-styled-input-top">
+                  <input
+                    type="text"
+                    placeholder="User Name"
+                    name="Name"
+                    required=""
+                  />
+                </div>
+                <div class="styled-input">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    required=""
+                  />
+                </div>
+                <input type="submit" value="Sign In" />
+              </form>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!-- //Modal content-->
+      </div>
+    </div>
+    <!-- //Modal1 -->
+    <!-- //signin Model -->
+    <!-- signup Model -->
+    <!-- Modal2 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body modal-body-sub_agile">
+            <div class="main-mailposi">
+              <span class="fa fa-envelope-o" aria-hidden="true"></span>
+            </div>
+            <div class="modal_body_left modal_body_left1">
+              <h3 class="agileinfo_sign">Sign Up</h3>
+              <p>Let's set up your Account.</p>
+              <form action="#" method="post">
+                <div class="styled-input agile-styled-input-top">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    name="Name"
+                    required=""
+                  />
+                </div>
+                <div class="styled-input">
+                  <input
+                    type="email"
+                    placeholder="E-mail"
+                    name="Email"
+                    required=""
+                  />
+                </div>
+                <div class="styled-input">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    id="password1"
+                    required=""
+                  />
+                </div>
+                <div class="styled-input">
+                  <input
+                    type="password"
+                    placeholder="Confirm Password"
+                    name="Confirm Password"
+                    id="password2"
+                    required=""
+                  />
+                </div>
+                <input type="submit" value="Sign Up" />
+              </form>
+              <p>
+                <a href="#">By clicking register, I agree to your terms</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- //Modal content-->
+      </div>
+    </div>
+    <!-- //Modal2 -->
+    <!-- //signup Model -->
+    <!-- //header-bot -->
+    <!-- navigation -->
+    <div class="ban-top">
+      <div class="container">
+        <div class="agileits-navi_search">
+          <form action="#" method="post">
+            <select
+              id="agileinfo-nav_search"
+              name="agileinfo_search"
+              required=""
+            >
+              <option value="">All Categories</option>
+              <option value="Drafters">Drafters</option>
+              <option value="labcoat">Lab Coats</option>
+              <option value="Bread &amp; Bakery">Cycles</option>
+              <option value="Sweets">Mattress</option>
+              <option value="others">Others</option>
+            </select>
+          </form>
+        </div>
+        <div class="top_nav_left">
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+                >
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div
+                class="collapse navbar-collapse menu--shylock"
+                id="bs-example-navbar-collapse-1"
+              >
+                <ul class="nav navbar-nav menu__list">
+                  <li class="active">
+                    <a class="nav-stylehead" href="/">Home </a>
+                  </li>
+                  <li class="active">
+                    <a class="nav-stylehead" href="/about">About Us</a>
+                  </li>
+                  <li class="active">
+                    <a class="" href="/contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- //navigation -->
 
-	</div>
-	<!-- //banner-2 -->
-	<!-- page -->
-	<div class="services-breadcrumb">
-		<div class="agile_inner_breadcrumb">
+    <!-- page -->
+    <div class="services-breadcrumb">
+      <div class="agile_inner_breadcrumb">
+        <div class="container">
+          <ul class="w3_short">
+            <li>
+              <a href="/index">Home</a>
+              <i>|</i>
+            </li>
+            <li>Single Page</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- //page -->
+    <!-- Single Page -->
+    <div class="banner-bootom-w3-agileits">
+      <div class="container">
+        <!-- tittle heading -->
+        <h3 class="tittle-w3l">
+          Single Page
+          <span class="heading-style">
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </h3>
+        <!-- //tittle heading -->
+        <div class="col-md-5 single-right-left">
+          <div class="grid images_3_of_2">
+            <div class="flexslider">
+              <ul class="slides">
+                <li data-thumb="images/thin mattress.jpg">
+                  <div class="thumb-image">
+                    <img
+                      src="images/thin mattress.jpg"
+                      data-imagezoom="true"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </div>
+                </li>
+                <li data-thumb="images/thin mattress1.jpg">
+                  <div class="thumb-image">
+                    <img
+                      src="images/thin mattress1.jpg"
+                      data-imagezoom="true"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </div>
+                </li>
+                <li data-thumb="images/thin mattress.jpg">
+                  <div class="thumb-image">
+                    <img
+                      src="images/thin mattress.jpg"
+                      data-imagezoom="true"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </div>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 single-right-left simpleCart_shelfItem">
+          <h3>Thin Foam Mattress</h3>
+          
+          <p>
+            <span class="item_price">Rs. 100</span>
+            <del>Rs. 500</del>
+		  </p>
+          <div class="occasion-cart">
+            <div
+              class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+            >
+              <form action="#" method="post">
+                <fieldset>
+                  <input type="hidden" name="cmd" value="_cart" />
+                  <input type="hidden" name="add" value="1" />
+                  <input type="hidden" name="business" value=" " />
+                  <input
+                    type="hidden"
+                    name="item_name"
+                    value="Zeeba Premium Basmati Rice - 5 KG"
+                  />
+                  <input type="hidden" name="amount" value="950.00" />
+                  <input type="hidden" name="discount_amount" value="1.00" />
+                  <input type="hidden" name="currency_code" value="USD" />
+                  <input type="hidden" name="return" value=" " />
+                  <input type="hidden" name="cancel_return" value=" " />
+                  <input
+                    type="submit"
+                    name="submit"
+                    value="Add to cart"
+                    class="button"
+                  />
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- //Single Page -->
+    <!-- special offers -->
+    <div class="featured-section" id="projects">
+      <div class="container">
+        <!-- tittle heading -->
+        <h3 class="tittle-w3l">
+          Add More
+          <span class="heading-style">
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </h3>
+        <!-- //tittle heading -->
+        <div class="featured-section" id="projects">
 			<div class="container">
-				<ul class="w3_short">
-					<li>
-						<a href="index.html">Home</a>
-						<i>|</i>
-					</li>
-					<li>Single Page</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- //page -->
-	<!-- Single Page -->
-	<div class="banner-bootom-w3-agileits">
-		<div class="container">
-			<!-- tittle heading -->
-			<h3 class="tittle-w3l">Single Page
-				<span class="heading-style">
-					<i></i>
-					<i></i>
-					<i></i>
-				</span>
-			</h3>
-			<!-- //tittle heading -->
-			<div class="col-md-5 single-right-left ">
-				<div class="grid images_3_of_2">
-					<div class="flexslider">
-						<ul class="slides">
-							<li data-thumb="images/si.jpg">
-								<div class="thumb-image">
-									<img src="images/si.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
-							</li>
-							<li data-thumb="images/si2.jpg">
-								<div class="thumb-image">
-									<img src="images/si2.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
-							</li>
-							<li data-thumb="images/si3.jpg">
-								<div class="thumb-image">
-									<img src="images/si3.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
-							</li>
-						</ul>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-7 single-right-left simpleCart_shelfItem">
-				<h3>Zeeba Premium Basmati Rice - 5 KG</h3>
-				<div class="rating1">
-					<span class="starRating">
-						<input id="rating5" type="radio" name="rating" value="5">
-						<label for="rating5">5</label>
-						<input id="rating4" type="radio" name="rating" value="4">
-						<label for="rating4">4</label>
-						<input id="rating3" type="radio" name="rating" value="3" checked="">
-						<label for="rating3">3</label>
-						<input id="rating2" type="radio" name="rating" value="2">
-						<label for="rating2">2</label>
-						<input id="rating1" type="radio" name="rating" value="1">
-						<label for="rating1">1</label>
-					</span>
-				</div>
-				<p>
-					<span class="item_price">$950.00</span>
-					<del>$1300.00</del>
-					<label>Free delivery</label>
-				</p>
-				<div class="single-infoagile">
-					<ul>
-						<li>
-							Cash on Delivery Eligible.
-						</li>
-						<li>
-							Shipping Speed to Delivery.
-						</li>
-						<li>
-							Sold and fulfilled by Supple Tek (3.6 out of 5 | 8 ratings).
-						</li>
-						<li>
-							1 offer from
-							<span class="item_price">$950.00</span>
-						</li>
-					</ul>
-				</div>
-				<div class="product-single-w3l">
-					<p>
-						<i class="fa fa-hand-o-right" aria-hidden="true"></i>This is a
-						<label>Vegetarian</label> product.</p>
-					<ul>
-						<li>
-							Best for Biryani and Pulao.
-						</li>
-						<li>
-							After cooking, Zeeba Basmati rice grains attain an extra ordinary length of upto 2.4 cm/~1 inch.
-						</li>
-						<li>
-							Zeeba Basmati rice adheres to the highest food afety standards as your health is paramount to us.
-						</li>
-						<li>
-							Contains only the best and purest grade of basmati rice grain of Export quality.
-						</li>
-					</ul>
-					<p>
-						<i class="fa fa-refresh" aria-hidden="true"></i>All food products are
-						<label>non-returnable.</label>
-					</p>
-				</div>
-				<div class="occasion-cart">
-					<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-						<form action="#" method="post">
-							<fieldset>
-								<input type="hidden" name="cmd" value="_cart" />
-								<input type="hidden" name="add" value="1" />
-								<input type="hidden" name="business" value=" " />
-								<input type="hidden" name="item_name" value="Zeeba Premium Basmati Rice - 5 KG" />
-								<input type="hidden" name="amount" value="950.00" />
-								<input type="hidden" name="discount_amount" value="1.00" />
-								<input type="hidden" name="currency_code" value="USD" />
-								<input type="hidden" name="return" value=" " />
-								<input type="hidden" name="cancel_return" value=" " />
-								<input type="submit" name="submit" value="Add to cart" class="button" />
-							</fieldset>
-						</form>
-					</div>
-
-				</div>
-
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-	<!-- //Single Page -->
-	<!-- special offers -->
-	<div class="featured-section" id="projects">
-		<div class="container">
-			<!-- tittle heading -->
-			<h3 class="tittle-w3l">Add More
-				<span class="heading-style">
-					<i></i>
-					<i></i>
-					<i></i>
-				</span>
-			</h3>
-			<!-- //tittle heading -->
-			<div class="content-bottom-in">
+			  <div class="content-bottom-in">
 				<ul id="flexiselDemo1">
-					<li>
-						<div class="w3l-specilamk">
-							<div class="speioffer-agile">
-								<a href="single.html">
-									<img src="images/s1.jpg" alt="">
-								</a>
-							</div>
-							<div class="product-name-w3l">
-								<h4>
-									<a href="single.html">Aashirvaad, 5g</a>
-								</h4>
-								<div class="w3l-pricehkj">
-									<h6>$220.00</h6>
-									<p>Save $40.00</p>
-								</div>
-								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-									<form action="#" method="post">
-										<fieldset>
-											<input type="hidden" name="cmd" value="_cart" />
-											<input type="hidden" name="add" value="1" />
-											<input type="hidden" name="business" value=" " />
-											<input type="hidden" name="item_name" value="Aashirvaad, 5g" />
-											<input type="hidden" name="amount" value="220.00" />
-											<input type="hidden" name="discount_amount" value="1.00" />
-											<input type="hidden" name="currency_code" value="USD" />
-											<input type="hidden" name="return" value=" " />
-											<input type="hidden" name="cancel_return" value=" " />
-											<input type="submit" name="submit" value="Add to cart" class="button" />
-										</fieldset>
-									</form>
-								</div>
-							</div>
+				  <li>
+					<div class="w3l-specilamk">
+					  <div class="speioffer-agile">
+						<a href="/single">
+						  <img src="images/drafter1.jpg" alt="" />
+						</a>
+					  </div>
+					  <div class="product-name-w3l">
+						<h4>
+						  <a href="/single">Drafter</a>
+						</h4>
+						<div
+						  class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+						>
+						  <form action="#" method="post">
+							<fieldset>
+							  <input type="hidden" name="cmd" value="_wishlist" />
+							  <input type="hidden" name="add" value="1" />
+							  <input type="hidden" name="business" value=" " />
+							  <input type="hidden" name="item_name" value="Drafter" />
+							  <input type="hidden" name="amount" value="220.00" />
+							  <input
+								type="submit"
+								name="submit"
+								value="Add to wishlist"
+								class="button"
+							  />
+							</fieldset>
+						  </form>
 						</div>
-					</li>
-					<li>
-						<div class="w3l-specilamk">
-							<div class="speioffer-agile">
-								<a href="single.html">
-									<img src="images/s4.jpg" alt="">
-								</a>
-							</div>
-							<div class="product-name-w3l">
-								<h4>
-									<a href="single.html">Kissan Tomato Ketchup, 950g</a>
-								</h4>
-								<div class="w3l-pricehkj">
-									<h6>$99.00</h6>
-									<p>Save $20.00</p>
-								</div>
-								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-									<form action="#" method="post">
-										<fieldset>
-											<input type="hidden" name="cmd" value="_cart" />
-											<input type="hidden" name="add" value="1" />
-											<input type="hidden" name="business" value=" " />
-											<input type="hidden" name="item_name" value="Kissan Tomato Ketchup, 950g" />
-											<input type="hidden" name="amount" value="99.00" />
-											<input type="hidden" name="discount_amount" value="1.00" />
-											<input type="hidden" name="currency_code" value="USD" />
-											<input type="hidden" name="return" value=" " />
-											<input type="hidden" name="cancel_return" value=" " />
-											<input type="submit" name="submit" value="Add to cart" class="button" />
-										</fieldset>
-									</form>
-								</div>
-							</div>
+					  </div>
+					</div>
+				  </li>
+				  <li>
+					<div class="w3l-specilamk">
+					  <div class="speioffer-agile">
+						<a href="/single">
+						  <img src="images/cycle7.JPG" alt="" />
+						</a>
+					  </div>
+					  <div class="product-name-w3l">
+						<h4>
+						  <a href="/single">Cycle</a>
+						</h4>
+						<div
+						  class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+						>
+						  <form action="#" method="post">
+							<fieldset>
+							  <input type="hidden" name="cmd" value="_wishlist" />
+							  <input type="hidden" name="add" value="1" />
+							  <input type="hidden" name="business" value=" " />
+							  <input type="hidden" name="item_name" value="cycle" />
+							  <input type="hidden" name="amount" value="99.00" />
+							  <input
+								type="submit"
+								name="submit"
+								value="Add to wishlist"
+								class="button"
+							  />
+							</fieldset>
+						  </form>
 						</div>
-					</li>
-					<li>
-						<div class="w3l-specilamk">
-							<div class="speioffer-agile">
-								<a href="single.html">
-									<img src="images/s2.jpg" alt="">
-								</a>
-							</div>
-							<div class="product-name-w3l">
-								<h4>
-									<a href="single.html">Madhur Pure Sugar, 1g</a>
-								</h4>
-								<div class="w3l-pricehkj">
-									<h6>$69.00</h6>
-									<p>Save $20.00</p>
-								</div>
-								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-									<form action="#" method="post">
-										<fieldset>
-											<input type="hidden" name="cmd" value="_cart" />
-											<input type="hidden" name="add" value="1" />
-											<input type="hidden" name="business" value=" " />
-											<input type="hidden" name="item_name" value="Madhur Pure Sugar, 1g" />
-											<input type="hidden" name="amount" value="69.00" />
-											<input type="hidden" name="discount_amount" value="1.00" />
-											<input type="hidden" name="currency_code" value="USD" />
-											<input type="hidden" name="return" value=" " />
-											<input type="hidden" name="cancel_return" value=" " />
-											<input type="submit" name="submit" value="Add to cart" class="button" />
-										</fieldset>
-									</form>
-								</div>
-							</div>
+					  </div>
+					</div>
+				  </li>
+				  <li>
+					<div class="w3l-specilamk">
+					  <div class="speioffer-agile">
+						<a href="/single">
+						  <img src="images/labcoat1.jpg" alt="" />
+						</a>
+					  </div>
+					  <div class="product-name-w3l">
+						<h4>
+						  <a href="/single">Labcoat</a>
+						</h4>
+						<div
+						  class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+						>
+						  <form action="#" method="post">
+							<fieldset>
+							  <input type="hidden" name="cmd" value="_wishlist" />
+							  <input type="hidden" name="add" value="1" />
+							  <input type="hidden" name="business" value=" " />
+							  <input type="hidden" name="item_name" value="labcoat" />
+							  <input type="hidden" name="amount" value="69.00" />
+							  <input
+								type="submit"
+								name="submit"
+								value="Add to wishlist"
+								class="button"
+							  />
+							</fieldset>
+						  </form>
 						</div>
-					</li>
-					<li>
-						<div class="w3l-specilamk">
-							<div class="speioffer-agile">
-								<a href="single2.html">
-									<img src="images/s3.jpg" alt="">
-								</a>
-							</div>
-							<div class="product-name-w3l">
-								<h4>
-									<a href="single2.html">Surf Excel Liquid, 1.02L</a>
-								</h4>
-								<div class="w3l-pricehkj">
-									<h6>$187.00</h6>
-									<p>Save $30.00</p>
-								</div>
-								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-									<form action="#" method="post">
-										<fieldset>
-											<input type="hidden" name="cmd" value="_cart" />
-											<input type="hidden" name="add" value="1" />
-											<input type="hidden" name="business" value=" " />
-											<input type="hidden" name="item_name" value="Surf Excel Liquid, 1.02L" />
-											<input type="hidden" name="amount" value="187.00" />
-											<input type="hidden" name="discount_amount" value="1.00" />
-											<input type="hidden" name="currency_code" value="USD" />
-											<input type="hidden" name="return" value=" " />
-											<input type="hidden" name="cancel_return" value=" " />
-											<input type="submit" name="submit" value="Add to cart" class="button" />
-										</fieldset>
-									</form>
-								</div>
-							</div>
+					  </div>
+					</div>
+				  </li>
+				  <li>
+					<div class="w3l-specilamk">
+					  <div class="speioffer-agile">
+						<a href="/single2">
+						  <img src="images/cooler1.jpg" alt="" />
+						</a>
+					  </div>
+					  <div class="product-name-w3l">
+						<h4>
+						  <a href="/single2">Cooler</a>
+						</h4>
+						<div
+						  class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+						>
+						  <form action="#" method="post">
+							<fieldset>
+							  <input type="hidden" name="cmd" value="_wishlist" />
+							  <input type="hidden" name="add" value="1" />
+							  <input type="hidden" name="business" value=" " />
+							  <input type="hidden" name="item_name" value="cooler" />
+							  <input type="hidden" name="amount" value="187.00" />
+							  <input
+								type="submit"
+								name="submit"
+								value="Add to wishlist"
+								class="button"
+							  />
+							</fieldset>
+						  </form>
 						</div>
-					</li>
-					<li>
-						<div class="w3l-specilamk">
-							<div class="speioffer-agile">
-								<a href="single.html">
-									<img src="images/s8.jpg" alt="">
-								</a>
-							</div>
-							<div class="product-name-w3l">
-								<h4>
-									<a href="single.html">Cadbury Choclairs, 655.5g</a>
-								</h4>
-								<div class="w3l-pricehkj">
-									<h6>$160.00</h6>
-									<p>Save $60.00</p>
-								</div>
-								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-									<form action="#" method="post">
-										<fieldset>
-											<input type="hidden" name="cmd" value="_cart" />
-											<input type="hidden" name="add" value="1" />
-											<input type="hidden" name="business" value=" " />
-											<input type="hidden" name="item_name" value="Cadbury Choclairs, 655.5g" />
-											<input type="hidden" name="amount" value="160.00" />
-											<input type="hidden" name="discount_amount" value="1.00" />
-											<input type="hidden" name="currency_code" value="USD" />
-											<input type="hidden" name="return" value=" " />
-											<input type="hidden" name="cancel_return" value=" " />
-											<input type="submit" name="submit" value="Add to cart" class="button" />
-										</fieldset>
-									</form>
-								</div>
-							</div>
+					  </div>
+					</div>
+				  </li>
+				  <li></li>
+				  <li>
+					<div class="w3l-specilamk">
+					  <div class="speioffer-agile">
+						<a href="/single2">
+						  <img src="images/mattress1.jpg" alt="" />
+						</a>
+					  </div>
+					  <div class="product-name-w3l">
+						<h4>
+						  <a href="/single2">Mattress</a>
+						</h4>
+						<div
+						  class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+						>
+						  <form action="#" method="post">
+							<fieldset>
+							  <input type="hidden" name="cmd" value="_wishlist" />
+							  <input type="hidden" name="add" value="1" />
+							  <input type="hidden" name="business" value=" " />
+							  <input
+								type="hidden"
+								name="item_name"
+								value="Mattress
+							  "
+							  />
+							  <input type="hidden" name="amount" value="121.60" />
+							  <input
+								type="submit"
+								name="submit"
+								value="Add to wishlist"
+								class="button"
+							  />
+							</fieldset>
+						  </form>
 						</div>
-					</li>
-					<li>
-						<div class="w3l-specilamk">
-							<div class="speioffer-agile">
-								<a href="single2.html">
-									<img src="images/s6.jpg" alt="">
-								</a>
-							</div>
-							<div class="product-name-w3l">
-								<h4>
-									<a href="single2.html">Fair & Lovely, 80 g</a>
-								</h4>
-								<div class="w3l-pricehkj">
-									<h6>$121.60</h6>
-									<p>Save $30.00</p>
-								</div>
-								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-									<form action="#" method="post">
-										<fieldset>
-											<input type="hidden" name="cmd" value="_cart" />
-											<input type="hidden" name="add" value="1" />
-											<input type="hidden" name="business" value=" " />
-											<input type="hidden" name="item_name" value="Fair & Lovely, 80 g" />
-											<input type="hidden" name="amount" value="121.60" />
-											<input type="hidden" name="discount_amount" value="1.00" />
-											<input type="hidden" name="currency_code" value="USD" />
-											<input type="hidden" name="return" value=" " />
-											<input type="hidden" name="cancel_return" value=" " />
-											<input type="submit" name="submit" value="Add to cart" class="button" />
-										</fieldset>
-									</form>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="w3l-specilamk">
-							<div class="speioffer-agile">
-								<a href="single.html">
-									<img src="images/s5.jpg" alt="">
-								</a>
-							</div>
-							<div class="product-name-w3l">
-								<h4>
-									<a href="single.html">Sprite, 2.25L (Pack of 2)</a>
-								</h4>
-								<div class="w3l-pricehkj">
-									<h6>$180.00</h6>
-									<p>Save $30.00</p>
-								</div>
-								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-									<form action="#" method="post">
-										<fieldset>
-											<input type="hidden" name="cmd" value="_cart" />
-											<input type="hidden" name="add" value="1" />
-											<input type="hidden" name="business" value=" " />
-											<input type="hidden" name="item_name" value="Sprite, 2.25L (Pack of 2)" />
-											<input type="hidden" name="amount" value="180.00" />
-											<input type="hidden" name="discount_amount" value="1.00" />
-											<input type="hidden" name="currency_code" value="USD" />
-											<input type="hidden" name="return" value=" " />
-											<input type="hidden" name="cancel_return" value=" " />
-											<input type="submit" name="submit" value="Add to cart" class="button" />
-										</fieldset>
-									</form>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="w3l-specilamk">
-							<div class="speioffer-agile">
-								<a href="single2.html">
-									<img src="images/s9.jpg" alt="">
-								</a>
-							</div>
-							<div class="product-name-w3l">
-								<h4>
-									<a href="single2.html">Lakme Eyeconic Kajal, 0.35 g</a>
-								</h4>
-								<div class="w3l-pricehkj">
-									<h6>$153.00</h6>
-									<p>Save $40.00</p>
-								</div>
-								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-									<form action="#" method="post">
-										<fieldset>
-											<input type="hidden" name="cmd" value="_cart" />
-											<input type="hidden" name="add" value="1" />
-											<input type="hidden" name="business" value=" " />
-											<input type="hidden" name="item_name" value="Lakme Eyeconic Kajal, 0.35 g" />
-											<input type="hidden" name="amount" value="153.00" />
-											<input type="hidden" name="discount_amount" value="1.00" />
-											<input type="hidden" name="currency_code" value="USD" />
-											<input type="hidden" name="return" value=" " />
-											<input type="hidden" name="cancel_return" value=" " />
-											<input type="submit" name="submit" value="Add to cart" class="button" />
-										</fieldset>
-									</form>
-								</div>
-							</div>
-						</div>
-					</li>
+					  </div>
+					</div>
+				  </li>
+				  <li></li>
+				  <li></li>
 				</ul>
+			  </div>
 			</div>
-		</div>
-	</div>
-	<!-- //special offers -->
-	
-	<!-- //footer -->
+		  </div>
+    <!-- //special offers -->
 
-	<!-- js-files -->
-	<!-- jquery -->
-	<script src="js/jquery-2.1.4.min.js"></script>
-	<!-- //jquery -->
+    <!-- //footer -->
 
-	<!-- popup modal (for signin & signup)-->
-	<script src="js/jquery.magnific-popup.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
+    <!-- js-files -->
+    <!-- jquery -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!-- //jquery -->
 
-		});
-	</script>
-	<!-- Large modal -->
-	<!-- <script>
+    <!-- popup modal (for signin & signup)-->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".popup-with-zoom-anim").magnificPopup({
+          type: "inline",
+          fixedContentPos: false,
+          fixedBgPos: true,
+          overflowY: "auto",
+          closeBtnInside: true,
+          preloader: false,
+          midClick: true,
+          removalDelay: 300,
+          mainClass: "my-mfp-zoom-in",
+        });
+      });
+    </script>
+    <!-- Large modal -->
+    <!-- <script>
 		$('#').modal('show');
 	</script> -->
-	<!-- //popup modal (for signin & signup)-->
+    <!-- //popup modal (for signin & signup)-->
 
-	<!-- cart-js -->
-	<script src="js/minicart.js"></script>
-	<script>
-		paypalm.minicartk.render(); //use only unique class names other than paypal1.minicart1.Also Replace same class name in css and minicart.min.js
+    <!-- cart-js -->
+    <script src="js/minicart.js"></script>
+    <script>
+      paypalm.minicartk.render(); //use only unique class names other than paypal1.minicart1.Also Replace same class name in css and minicart.min.js
 
-		paypalm.minicartk.cart.on('checkout', function (evt) {
-			var items = this.items(),
-				len = items.length,
-				total = 0,
-				i;
+      paypalm.minicartk.cart.on("checkout", function (evt) {
+        var items = this.items(),
+          len = items.length,
+          total = 0,
+          i;
 
-			// Count the number of each item in the cart
-			for (i = 0; i < len; i++) {
-				total += items[i].get('quantity');
-			}
+        // Count the number of each item in the cart
+        for (i = 0; i < len; i++) {
+          total += items[i].get("quantity");
+        }
 
-			if (total < 3) {
-				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
-				evt.preventDefault();
-			}
-		});
-	</script>
-	<!-- //cart-js -->
+        if (total < 3) {
+          alert(
+            "The minimum order quantity is 3. Please add more to your shopping cart before checking out"
+          );
+          evt.preventDefault();
+        }
+      });
+    </script>
+    <!-- //cart-js -->
 
-	<!-- password-script -->
-	<script>
-		window.onload = function () {
-			document.getElementById("password1").onchange = validatePassword;
-			document.getElementById("password2").onchange = validatePassword;
-		}
+    <!-- password-script -->
+    <script>
+      window.onload = function () {
+        document.getElementById("password1").onchange = validatePassword;
+        document.getElementById("password2").onchange = validatePassword;
+      };
 
-		function validatePassword() {
-			var pass2 = document.getElementById("password2").value;
-			var pass1 = document.getElementById("password1").value;
-			if (pass1 != pass2)
-				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-			else
-				document.getElementById("password2").setCustomValidity('');
-			//empty string means no validation error
-		}
-	</script>
-	<!-- //password-script -->
+      function validatePassword() {
+        var pass2 = document.getElementById("password2").value;
+        var pass1 = document.getElementById("password1").value;
+        if (pass1 != pass2)
+          document
+            .getElementById("password2")
+            .setCustomValidity("Passwords Don't Match");
+        else document.getElementById("password2").setCustomValidity("");
+        //empty string means no validation error
+      }
+    </script>
+    <!-- //password-script -->
 
-	<!-- smoothscroll -->
-	<script src="js/SmoothScroll.min.js"></script>
-	<!-- //smoothscroll -->
+    <!-- smoothscroll -->
+    <script src="js/SmoothScroll.min.js"></script>
+    <!-- //smoothscroll -->
 
-	<!-- start-smooth-scrolling -->
-	<script src="js/move-top.js"></script>
-	<script src="js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
+    <!-- start-smooth-scrolling -->
+    <script src="js/move-top.js"></script>
+    <script src="js/easing.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+          event.preventDefault();
 
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<!-- //end-smooth-scrolling -->
+          $("html,body").animate(
+            {
+              scrollTop: $(this.hash).offset().top,
+            },
+            1000
+          );
+        });
+      });
+    </script>
+    <!-- //end-smooth-scrolling -->
 
-	<!-- smooth-scrolling-of-move-up -->
-	<script>
-		$(document).ready(function () {
-			/*
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+      $(document).ready(function () {
+        /*
 			var defaults = {
 				containerID: 'toTop', // fading element id
 				containerHoverID: 'toTopHover', // fading element hover id
@@ -882,67 +720,63 @@
 				easingType: 'linear' 
 			};
 			*/
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
+        $().UItoTop({
+          easingType: "easeOutQuart",
+        });
+      });
+    </script>
+    <!-- //smooth-scrolling-of-move-up -->
 
-		});
-	</script>
-	<!-- //smooth-scrolling-of-move-up -->
+    <!-- imagezoom -->
+    <script src="js/imagezoom.js"></script>
+    <!-- //imagezoom -->
 
-	<!-- imagezoom -->
-	<script src="js/imagezoom.js"></script>
-	<!-- //imagezoom -->
+    <!-- FlexSlider -->
+    <script src="js/jquery.flexslider.js"></script>
+    <script>
+      // Can also be used with $(document).ready()
+      $(window).load(function () {
+        $(".flexslider").flexslider({
+          animation: "slide",
+          controlNav: "thumbnails",
+        });
+      });
+    </script>
+    <!-- //FlexSlider-->
 
-	<!-- FlexSlider -->
-	<script src="js/jquery.flexslider.js"></script>
-	<script>
-		// Can also be used with $(document).ready()
-		$(window).load(function () {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				controlNav: "thumbnails"
-			});
-		});
-	</script>
-	<!-- //FlexSlider-->
+    <!-- flexisel (for special offers) -->
+    <script src="js/jquery.flexisel.js"></script>
+    <script>
+      $(window).load(function () {
+        $("#flexiselDemo1").flexisel({
+          visibleItems: 3,
+          animationSpeed: 1000,
+          autoPlay: true,
+          autoPlaySpeed: 3000,
+          pauseOnHover: true,
+          enableResponsiveBreakpoints: true,
+          responsiveBreakpoints: {
+            portrait: {
+              changePoint: 480,
+              visibleItems: 1,
+            },
+            landscape: {
+              changePoint: 640,
+              visibleItems: 2,
+            },
+            tablet: {
+              changePoint: 768,
+              visibleItems: 2,
+            },
+          },
+        });
+      });
+    </script>
+    <!-- //flexisel (for special offers) -->
 
-	<!-- flexisel (for special offers) -->
-	<script src="js/jquery.flexisel.js"></script>
-	<script>
-		$(window).load(function () {
-			$("#flexiselDemo1").flexisel({
-				visibleItems: 3,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-				responsiveBreakpoints: {
-					portrait: {
-						changePoint: 480,
-						visibleItems: 1
-					},
-					landscape: {
-						changePoint: 640,
-						visibleItems: 2
-					},
-					tablet: {
-						changePoint: 768,
-						visibleItems: 2
-					}
-				}
-			});
-
-		});
-	</script>
-	<!-- //flexisel (for special offers) -->
-
-	<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
-	<!-- //for bootstrap working -->
-	<!-- //js-files -->
-
-</body>
-
+    <!-- for bootstrap working -->
+    <script src="js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+    <!-- //js-files -->
+  </body>
 </html>
