@@ -1197,9 +1197,11 @@ h3.tittle-w3l:after {
   border: 1px solid #cacaca;
   padding: 20px;
   margin: 0 10px;
+ 
 }
 .speioffer-agile {
   text-align: center;
+  height: 150px;
 }
 .product-name-w3l {
   margin-top: 20px;
@@ -1476,9 +1478,9 @@ p.footer-main span {
   z-index: 999;
   width: 64px;
   height: 64px;
-  border: none;
+  border-radius: 50%;
   text-indent: 100%;
-  background: url("../images/move-up.png") no-repeat 0px 0px;
+  background: url("../images/move-up.png") no-repeat 17px 15pxpx;
 }
 #toTopHover {
   width: 64px;
