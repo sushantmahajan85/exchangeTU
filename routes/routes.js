@@ -102,5 +102,8 @@ router.get("/TFF", function (req, res) {
 router.get("/newDeal", function (req, res) {
   res.render("newDeal");
 });
+router.get("/wishlist", function (req, res) {
+  res.render("wishlist");
+});
 
 module.exports = router;
