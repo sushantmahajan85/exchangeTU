@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
-const User = require("../schema/models/userModel");
+const User = require("../models/userModel");
 const AppError = require("../utils/appError");
 const Email = require("../utils/email");
 const random = require("../utils/utils");
@@ -14,91 +14,88 @@ const signToken = (id) =>
 
 exports.signUp = async (req, res) => {
   try {
-    const newz = await User.findOne({ gSignin: req.body.gSignin });
-    console.log(newz);
-    if (newz && req.body.gSignin != null) {
-      res.cookie("one", "cleared", {
-        expires: new Date(Date.now() + 1),
-        // secure: true,
-        httpOnly: true,
-      });
-      res.cookie("two", "cleared", {
-        expires: new Date(Date.now() + 1),
-        // secure: true,
-        httpOnly: true,
-      });
-      res.cookie("three", "cleared", {
-        expires: new Date(Date.now() + 1),
-        // secure: true,
-        httpOnly: true,
-      });
-      res.cookie("four", "cleared", {
-        expires: new Date(Date.now() + 1),
-        // secure: true,
-        httpOnly: true,
-      });
-      res.cookie("five", "cleared", {
-        expires: new Date(Date.now() + 1),
-        // secure: true,
-        httpOnly: true,
-      });
+    // const newz = await User.findOne({ gSignin: req.body.gSignin });
+    // console.log(newz);
+    // if (newz && req.body.gSignin != null) {
+    //   res.cookie("one", "cleared", {
+    //     expires: new Date(Date.now() + 1),
+    //     // secure: true,
+    //     httpOnly: true,
+    //   });
+    //   res.cookie("two", "cleared", {
+    //     expires: new Date(Date.now() + 1),
+    //     // secure: true,
+    //     httpOnly: true,
+    //   });
+    //   res.cookie("three", "cleared", {
+    //     expires: new Date(Date.now() + 1),
+    //     // secure: true,
+    //     httpOnly: true,
+    //   });
+    //   res.cookie("four", "cleared", {
+    //     expires: new Date(Date.now() + 1),
+    //     // secure: true,
+    //     httpOnly: true,
+    //   });
+    //   res.cookie("five", "cleared", {
+    //     expires: new Date(Date.now() + 1),
+    //     // secure: true,
+    //     httpOnly: true,
+    //   });
 
-      const token = signToken(newz._id);
-      const cookieOptions = {
-        expires: new Date(
-          Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
-        ),
-        // secure: true,
-        httpOnly: true,
-      };
-      if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+    //   const token = signToken(newz._id);
+    //   const cookieOptions = {
+    //     expires: new Date(
+    //       Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
+    //     ),
+    //     // secure: true,
+    //     httpOnly: true,
+    //   };
+    //   if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
-      res.cookie("jwt", token, cookieOptions);
-      res.status(200).json({
-        status: "success",
-        token,
-        data: {
-          newz,
-        },
-      });
-    }else{
+    //   res.cookie("jwt", token, cookieOptions);
+    //   res.status(200).json({
+    //     status: "success",
+    //     token,
+    //     data: {
+    //       newz,
+    //     },
+    //   });
+    // } else {
+    //   /////////////////////////////////Error in Production/////////////////////////////////////////////
+    //   try {
+    //     const url = "amazon.in";
+    //     await new Email(user, url).sendWelcome();
+    //     // }catch (err) {
+    //     //   console.log(err);
+    //     // }
+    //     //////////////////////////////////////////////////////////////////////////////////////////////////
+    const newUser = await User.create({
+      name: req.body.name,
+      password: req.body.password,
+      // gSignin: req.body.gSignin,
+      email: req.body.email,
+      // phoneNo: req.body.phoneNo,
+      passwordConfirm: req.body.passwordConfirm,
+    });
+    const token = signToken(newUser._id);
+    const cookieOptions = {
+      expires: new Date(
+        Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
+      ),
+      // secure: true,
+      httpOnly: true,
+    };
+    if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
-      //   /////////////////////////////////Error in Production/////////////////////////////////////////////
-      //   try {
-      //     const url = "amazon.in";
-      //     await new Email(user, url).sendWelcome();
-      //     // }catch (err) {
-      //     //   console.log(err);
-      //     // }
-      //     //////////////////////////////////////////////////////////////////////////////////////////////////
-
-      const newUser = await User.create({
-        name: req.body.name,
-        password: req.body.password,
-        gSignin: req.body.gSignin,
-        email: req.body.email,
-        phoneNo: req.body.phoneNo,
-        passwordConfirm: req.body.passwordConfirm,
-      });
-      const token = signToken(newUser._id);
-      const cookieOptions = {
-        expires: new Date(
-          Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
-        ),
-        // secure: true,
-        httpOnly: true,
-      };
-      if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
-
-      res.cookie("jwt", token, cookieOptions);
-      res.status(201).json({
-        status: "success",
-        token,
-        data: {
-          newUser,
-        },
-      });
-    }
+    res.cookie("jwt", token, cookieOptions);
+    res.status(201).json({
+      status: "success",
+      token,
+      data: {
+        newUser,
+      },
+    });
   } catch (error) {
     console.log(error);
     res.status(404).json({
@@ -280,7 +277,7 @@ exports.login = async (req, res, next) => {
 };
 
 exports.logout = (req, res) => {
-  console.log('fdfdfdfdfdfd');
+  console.log("fdfdfdfdfdfd");
   res.cookie("jwt", "loggedout", {
     expires: new Date(Date.now() + 1),
     // secure: true,

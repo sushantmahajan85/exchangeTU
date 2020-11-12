@@ -1,6 +1,5 @@
 const express = require("express");
 const multer = require("multer");
-const subscribeRouter = require("../routes/subscribeRoutes");
 const userController = require("../controllers/userController");
 const authController = require("../controllers/authController");
 
@@ -8,9 +7,8 @@ const dealRouter = require("../routes/dealRoutes");
 // const upload = multer({ dest: "/public/img/users" });
 // bring back the user router from appjs
 const router = express.Router();
-router.use(authController.isLoggedIn);
+// router.use(authController.isLoggedIn);
 router.use("/:userId/deals", dealRouter);
-router.use("/:userId/subscriber", subscribeRouter);
 
 router
   .route("/signup")
