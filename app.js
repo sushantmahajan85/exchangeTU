@@ -22,7 +22,7 @@ app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
 //Connection To Database
 mongoose.connect(
-  "mongodb+srv://payasjain:Payasjain@21@attendance-9wmmr.mongodb.net/test",
+  "mongodb+srv://exchangeTU:LHK3SfOv6Bxbuv54@cluster0.zzzpu.mongodb.net/test",
   { useNewUrlParser: true, useUnifiedTopology: true },
   (error) => {
     if (!error) {
