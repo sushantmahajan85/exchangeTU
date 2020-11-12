@@ -10,12 +10,12 @@ var express = require("express"),
   // apiroutes = require("");
 
   // const app = express();
-  // app.use(express.json());
-  // app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(express.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
 
-  // Including Routes!
+// Including Routes!
 
-  app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
