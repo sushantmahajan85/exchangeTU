@@ -10,8 +10,8 @@ const router = express.Router({ mergeParams: true });
 router.use("/:dealId/likedDeals", likedDealRouter);
 router.route("/trending").get(dealController.getTrending);
 router.route("/").get(dealController.getAllDeals).post(
-  // authController.protect,
-  // dealController.uploadDealImages,
+  authController.protect,
+  dealController.uploadDealImages,
   dealController.resizeDealImages,
   // dealController.setDealUserIds,
   dealController.createDeal
