@@ -85,7 +85,7 @@ exports.signUp = async (req, res) => {
         Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
       ),
       // secure: true,
-      httpOnly: true,
+      httpOnly: false,
     };
     if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 

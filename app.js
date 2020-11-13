@@ -1,4 +1,5 @@
 var express = require("express"),
+  dotenv = require("dotenv"),
   app = express(),
   mongoose = require("mongoose"),
   cookieParser = require("cookie-parser"),
@@ -35,6 +36,8 @@ mongoose.connect(
 );
 
 app.use(cookieParser());
+
+dotenv.config({ path: "./config.env" });
 
 // //Including Model
 // var Team = require("./models/team.js");
