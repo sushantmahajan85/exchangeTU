@@ -1,6 +1,7 @@
 var express = require("express"),
   app = express(),
   mongoose = require("mongoose"),
+  cookieParser = require("cookie-parser"),
   routes = require("./routes/routes");
 (userRoute = require("./routes/userRoutes")),
   (dealRoute = require("./routes/dealRoutes")),
@@ -32,6 +33,8 @@ mongoose.connect(
     }
   }
 );
+
+app.use(cookieParser());
 
 // //Including Model
 // var Team = require("./models/team.js");

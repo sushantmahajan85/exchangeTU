@@ -78,6 +78,7 @@ exports.signUp = async (req, res) => {
       // phoneNo: req.body.phoneNo,
       passwordConfirm: req.body.passwordConfirm,
     });
+    console.log(newUser._id);
     const token = signToken(newUser._id);
     const cookieOptions = {
       expires: new Date(
