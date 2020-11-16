@@ -6,6 +6,7 @@ var express = require("express"),
   routes = require("./routes/routes");
 (userRoute = require("./routes/userRoutes")),
   (dealRoute = require("./routes/dealRoutes")),
+  (likedDealRoute = require("./routes/likedDealRoutes")),
   (methodOverride = require("method-override")),
   (bodyParser = require("body-parser")),
   ({ check, validationResult } = require("express-validator")),
@@ -39,12 +40,13 @@ app.use(cookieParser());
 
 dotenv.config({ path: "./config.env" });
 
-// //Including Model
+// Including Model
 // var Team = require("./models/team.js");
 // var Recruit = require("./models/recruit.js");
 app.use("/", routes);
 app.use("/api/v1/deals", dealRoute);
 app.use("/api/v1/users", userRoute);
+app.use("/api/v1/likedDeal", likedDealRoute);
 // app.use("/api/recruit", apiroutes);
 
 app.listen(5000, function () {
