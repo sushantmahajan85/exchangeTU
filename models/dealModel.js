@@ -8,7 +8,7 @@ const dealSchema = new mongoose.Schema(
     },
     titleImg: {
       type: String,
-      required: true,
+      // required: true,
       // default: "corona.jpg",
     },
     createdAt: {
