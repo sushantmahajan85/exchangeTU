@@ -29,6 +29,7 @@ const passvaluehaha = async (username, email, password, passwordConfirm) => {
       data: {
         email,
         name: username,
+        phoneNo,
         password,
         passwordConfirm,
       },
@@ -49,7 +50,7 @@ document.getElementById("signupForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const username = document.getElementById("username").value;
   const email = document.getElementById("email").value;
-  //const phoneNo = document.getElementById('phoneNo').value;
+  const phoneNo = document.getElementById("phoneNo").value;
   const password = document.getElementById("password").value;
   console.log(password);
   const passwordConfirm = document.getElementById("passwordConfirm").value;

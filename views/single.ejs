@@ -22,27 +22,27 @@
     </script>
     <!--//tags -->
     <link
-      href="css/bootstrap.css"
+      href="/css/bootstrap.css"
       rel="stylesheet"
       type="text/css"
       media="all"
     />
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/font-awesome.css" rel="stylesheet" />
     <!--pop-up-box-->
     <link
-      href="css/popuo-box.css"
+      href="/css/popuo-box.css"
       rel="stylesheet"
       type="text/css"
       media="all"
     />
     <!--//pop-up-box-->
     <!-- price range -->
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui1.css" />
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui1.css" />
     <!-- flexslider -->
     <link
       rel="stylesheet"
-      href="css/flexslider.css"
+      href="/css/flexslider.css"
       type="text/css"
       media="screen"
     />
@@ -60,8 +60,8 @@
         <!-- header-bot-->
         <div class="col-md-4 logo_agile">
           <h1>
-            <a href="index.ejs">
-              <img src="images\logo.png" alt=" " />
+            <a href="/">
+              <img src="\images\logo.png" alt=" " />
             </a>
           </h1>
         </div>
@@ -315,7 +315,7 @@
         <div class="container">
           <ul class="w3_short">
             <li>
-              <a href="/index">Home</a>
+              <a href="/">Home</a>
               <i>|</i>
             </li>
             <li>Product Page</li>
@@ -341,30 +341,30 @@
           <div class="grid images_3_of_2">
             <div class="flexslider">
               <ul class="slides">
-                <li data-thumb="images/thin mattress.jpg">
+                <li data-thumb="/images/thin mattress.jpg">
                   <div class="thumb-image">
                     <img
-                      src="images/thin mattress.jpg"
+                      src="/images/thin mattress.jpg"
                       data-imagezoom="true"
                       class="img-responsive"
                       alt=""
                     />
                   </div>
                 </li>
-                <li data-thumb="images/thin mattress1.jpg">
+                <li data-thumb="/images/thin mattress1.jpg">
                   <div class="thumb-image">
                     <img
-                      src="images/thin mattress1.jpg"
+                      src="/images/thin mattress1.jpg"
                       data-imagezoom="true"
                       class="img-responsive"
                       alt=""
                     />
                   </div>
                 </li>
-                <li data-thumb="images/thin mattress.jpg">
+                <li data-thumb="/images/thin mattress.jpg">
                   <div class="thumb-image">
                     <img
-                      src="images/thin mattress.jpg"
+                      src="/images/thin mattress.jpg"
                       data-imagezoom="true"
                       class="img-responsive"
                       alt=""
@@ -377,18 +377,20 @@
           </div>
         </div>
         <div class="col-md-7 single-right-left simpleCart_shelfItem">
-          <h3>Thin Foam Mattress</h3>
+          <h3><%= deal.dealName%></h3>
           
           <p>
-            <span class="item_price">Rs. 100</span>
-            <del>Rs. 500</del>
+            <span class="item_price">₹<%= deal.dealPrice%></span>
+            <del>₹<%= deal.mrp%></del>
       </p>
       <p><strong>Seller's Information</strong></p>
       <p>
-        <li>Sushant Mahajan</li>
-        <li>Hostel Name</li>
-        <li>Duartion of use</li>
-        <li>Product Description</li>
+        <li><%= user.name%></li>
+        <li><%= user.email%></li>
+        <li><%= user.phoneNo%></li>
+        <li>Hostel <%= deal.hostelName%></li>
+        <li><%= deal.duration%> years</li>
+        <li><%= deal.description%></li>
       
     </p>
       
@@ -447,7 +449,7 @@
 					<div class="w3l-specilamk">
 					  <div class="speioffer-agile">
 						<a href="/single">
-						  <img src="images/drafter1.jpg" alt="" />
+						  <img src="/images/drafter1.jpg" alt="" />
 						</a>
 					  </div>
 					  <div class="product-name-w3l">
@@ -480,7 +482,7 @@
 					<div class="w3l-specilamk">
 					  <div class="speioffer-agile">
 						<a href="/single">
-						  <img src="images/cycle7.JPG" alt="" />
+						  <img src="/images/cycle7.JPG" alt="" />
 						</a>
 					  </div>
 					  <div class="product-name-w3l">
@@ -506,14 +508,14 @@
 							</fieldset>
 						  </form>
 						</div>
-					  </div>
+            </div>
 					</div>
 				  </li>
 				  <li>
 					<div class="w3l-specilamk">
 					  <div class="speioffer-agile">
 						<a href="/single">
-						  <img src="images/labcoat1.jpg" alt="" />
+						  <img src="/images/labcoat1.jpg" alt="" />
 						</a>
 					  </div>
 					  <div class="product-name-w3l">
@@ -546,7 +548,7 @@
 					<div class="w3l-specilamk">
 					  <div class="speioffer-agile">
 						<a href="/single2">
-						  <img src="images/cooler1.jpg" alt="" />
+						  <img src="/images/cooler1.jpg" alt="" />
 						</a>
 					  </div>
 					  <div class="product-name-w3l">
@@ -580,7 +582,7 @@
 					<div class="w3l-specilamk">
 					  <div class="speioffer-agile">
 						<a href="/single2">
-						  <img src="images/mattress1.jpg" alt="" />
+						  <img src="/images/mattress1.jpg" alt="" />
 						</a>
 					  </div>
 					  <div class="product-name-w3l">
@@ -626,11 +628,11 @@
 
     <!-- js-files -->
     <!-- jquery -->
-    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="/js/jquery-2.1.4.min.js"></script>
     <!-- //jquery -->
 
     <!-- popup modal (for signin & signup)-->
-    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="/js/jquery.magnific-popup.js"></script>
     <script>
       $(document).ready(function () {
         $(".popup-with-zoom-anim").magnificPopup({
@@ -653,7 +655,7 @@
     <!-- //popup modal (for signin & signup)-->
 
     <!-- cart-js -->
-    <script src="js/minicart.js"></script>
+    <script src="/js/minicart.js"></script>
     <script>
       paypalm.minicartk.render(); //use only unique class names other than paypal1.minicart1.Also Replace same class name in css and minicart.min.js
 
@@ -699,12 +701,12 @@
     <!-- //password-script -->
 
     <!-- smoothscroll -->
-    <script src="js/SmoothScroll.min.js"></script>
+    <script src="/js/SmoothScroll.min.js"></script>
     <!-- //smoothscroll -->
 
     <!-- start-smooth-scrolling -->
-    <script src="js/move-top.js"></script>
-    <script src="js/easing.js"></script>
+    <script src="/js/move-top.js"></script>
+    <script src="/js/easing.js"></script>
     <script>
       jQuery(document).ready(function ($) {
         $(".scroll").click(function (event) {
@@ -740,11 +742,11 @@
     <!-- //smooth-scrolling-of-move-up -->
 
     <!-- imagezoom -->
-    <script src="js/imagezoom.js"></script>
+    <script src="/js/imagezoom.js"></script>
     <!-- //imagezoom -->
 
     <!-- FlexSlider -->
-    <script src="js/jquery.flexslider.js"></script>
+    <script src="/js/jquery.flexslider.js"></script>
     <script>
       // Can also be used with $(document).ready()
       $(window).load(function () {
@@ -757,7 +759,7 @@
     <!-- //FlexSlider-->
 
     <!-- flexisel (for special offers) -->
-    <script src="js/jquery.flexisel.js"></script>
+    <script src="/js/jquery.flexisel.js"></script>
     <script>
       $(window).load(function () {
         $("#flexiselDemo1").flexisel({
@@ -787,7 +789,7 @@
     <!-- //flexisel (for special offers) -->
 
     <!-- for bootstrap working -->
-    <script src="js/bootstrap.js"></script>
+    <script src="/js/bootstrap.js"></script>
     <!-- //for bootstrap working -->
     <!-- //js-files -->
   </body>
