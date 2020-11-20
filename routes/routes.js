@@ -105,5 +105,11 @@ router.get("/newDeal", function (req, res) {
 router.get("/wishlist", function (req, res) {
   res.render("wishlist");
 });
+router.get("/login", function (req, res) {
+  res.render("login");
+});
+router.get("/signup", function (req, res) {
+  res.render("signup");
+});
 
 module.exports = router;

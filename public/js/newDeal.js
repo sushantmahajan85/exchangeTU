@@ -38,8 +38,9 @@ const passvaluec = async (data) => {
   }
 };
 
-document.getElementById("regForm").addEventListener("submit", (e) => {
+document.getElementById("newDealForm").addEventListener("submit", (e) => {
   e.preventDefault();
+  console.log("Hello!");
   const form = new FormData();
   form.append("dealName", document.getElementById("pname").value);
   form.append("dealPrice", document.getElementById("sprice").value);
@@ -55,29 +56,27 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   if (document.getElementById("img").files[0]) {
     form.append("titleImg", document.getElementById("img").files[0]);
   }
-  if (document.getElementById("corousel1").files[0]) {
-    form.append("corouselImgs", document.getElementById("corousel1").files[0]);
-  }
-  if (document.getElementById("corousel2").files[0]) {
-    form.append("corouselImgs", document.getElementById("corousel2").files[0]);
-  }
-  if (document.getElementById("corousel3").files[0]) {
-    form.append("corouselImgs", document.getElementById("corousel3").files[0]);
-  }
-  if (document.getElementById("corousel4").files[0]) {
-    form.append("corouselImgs", document.getElementById("corousel4").files[0]);
-  }
+  // if (document.getElementById("corousel1").files[0]) {
+  //   form.append("corouselImgs", document.getElementById("corousel1").files[0]);
+  // }
+  // if (document.getElementById("corousel2").files[0]) {
+  //   form.append("corouselImgs", document.getElementById("corousel2").files[0]);
+  // }
+  // if (document.getElementById("corousel3").files[0]) {
+  //   form.append("corouselImgs", document.getElementById("corousel3").files[0]);
+  // }
+  // if (document.getElementById("corousel4").files[0]) {
+  //   form.append("corouselImgs", document.getElementById("corousel4").files[0]);
+  // }
 
   // form.append("corousel", document.getElementById("corousel").files[0]);
-  form.append("titleDis", document.getElementById("titleDis").value);
-  form.append("biggerDis", document.getElementById("biggerDis").value);
   // form.append("tags", document.getElementById("tags").value);
-  if (document.getElementById("tags").value) {
-    var tags = JSON.parse(document.getElementById("tags").value);
-    for (var key in tags) {
-      form.append("tags", tags[key].value);
-    }
-  }
+  // if (document.getElementById("tags").value) {
+  //   var tags = JSON.parse(document.getElementById("tags").value);
+  //   for (var key in tags) {
+  //     form.append("tags", tags[key].value);
+  //   }
+  // }
 
   // console.log(document.getElementById("photo").files[0]);
   // passvaluec(form);
