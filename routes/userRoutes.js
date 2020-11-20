@@ -12,7 +12,7 @@ router.use("/:userId/deals", dealRouter);
 
 router
   .route("/signup")
-  .delete(authController.resend)
+  // .delete(authController.resend)
   .post(authController.signUp);
 router.post("/verify", authController.verify);
 

@@ -37,7 +37,6 @@ const dealSchema = new mongoose.Schema(
     saveLater: Number,
     owner: {
       type: String,
-      default: "Couper Deals",
     },
     buyNow: {
       type: Number,

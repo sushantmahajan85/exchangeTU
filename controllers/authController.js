@@ -12,70 +12,14 @@ const signToken = (id) =>
     expiresIn: process.env.JWT_EXPIRESIN,
   });
 
-exports.signUp = async (req, res) => {
-  try {
-    // const newz = await User.findOne({ gSignin: req.body.gSignin });
-    // console.log(newz);
-    // if (newz && req.body.gSignin != null) {
-    //   res.cookie("one", "cleared", {
-    //     expires: new Date(Date.now() + 1),
-    //     // secure: true,
-    //     httpOnly: true,
-    //   });
-    //   res.cookie("two", "cleared", {
-    //     expires: new Date(Date.now() + 1),
-    //     // secure: true,
-    //     httpOnly: true,
-    //   });
-    //   res.cookie("three", "cleared", {
-    //     expires: new Date(Date.now() + 1),
-    //     // secure: true,
-    //     httpOnly: true,
-    //   });
-    //   res.cookie("four", "cleared", {
-    //     expires: new Date(Date.now() + 1),
-    //     // secure: true,
-    //     httpOnly: true,
-    //   });
-    //   res.cookie("five", "cleared", {
-    //     expires: new Date(Date.now() + 1),
-    //     // secure: true,
-    //     httpOnly: true,
-    //   });
+exports.signUp =catchAsync(async (req, res) => {
+  
 
-    //   const token = signToken(newz._id);
-    //   const cookieOptions = {
-    //     expires: new Date(
-    //       Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
-    //     ),
-    //     // secure: true,
-    //     httpOnly: true,
-    //   };
-    //   if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
-
-    //   res.cookie("jwt", token, cookieOptions);
-    //   res.status(200).json({
-    //     status: "success",
-    //     token,
-    //     data: {
-    //       newz,
-    //     },
-    //   });
-    // } else {
-    //   /////////////////////////////////Error in Production/////////////////////////////////////////////
-    //   try {
-    //     const url = "amazon.in";
-    //     await new Email(user, url).sendWelcome();
-    //     // }catch (err) {
-    //     //   console.log(err);
-    //     // }
-    //     //////////////////////////////////////////////////////////////////////////////////////////////////
+  console.log("gygy");
     const newUser = await User.create({
       name: req.body.name,
       password: req.body.password,
-      // gSignin: req.body.gSignin,
       email: req.body.email,
-      // phoneNo: req.body.phoneNo,
       passwordConfirm: req.body.passwordConfirm,
     });
     console.log(newUser._id);
@@ -97,14 +41,8 @@ exports.signUp = async (req, res) => {
         newUser,
       },
     });
-  } catch (error) {
-    console.log(error);
-    res.status(404).json({
-      status: "fail",
-      message: error,
-    });
-  }
-};
+  
+});
 
 // exports.signUpApp = catchAsync(async (req, res) => {
 //   //try {

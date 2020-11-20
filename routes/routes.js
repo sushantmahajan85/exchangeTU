@@ -1,9 +1,11 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var path = require("path");
-
+const catchAsync = require("../utils/catchAsync");
 var router = express.Router();
-// var Team = require("../models/team");
+var Deal = require("../models/dealModel");
+var User = require("../models/userModel");
+var LikedDeal = require("../models/likedDealModel");
 // const recruit = require("../models/recruit");
 const { check, validationResult } = require("express-validator");
 
@@ -69,9 +71,16 @@ router.put("/:id", async function (req, res) {
   );
   console.log(updated);
 });
-router.get("/", function (req, res) {
-  res.render("index");
-});
+router.get(
+  "/",
+  catchAsync(async function (req, res) {
+    const deals = await Deal.find()
+      .sort([["createdAt", -1]])
+      .limit(100);
+    // console.log(deals);
+    res.render("index", { deals });
+  })
+);
 router.get("/about", function (req, res) {
   res.render("about");
 });
@@ -90,9 +99,16 @@ router.get("/product", function (req, res) {
 router.get("/product2", function (req, res) {
   res.render("product2");
 });
-router.get("/single", function (req, res) {
-  res.render("single");
-});
+router.get(
+  "/deal/:id/postedBy/:userid",
+  catchAsync(async function (req, res) {
+    const user = await User.findById(req.params.userid);
+    const deal = await Deal.findById(req.params.id);
+    // console.log(deal);
+    // console.log(user);
+    res.render("single", { deal, user });
+  })
+);
 router.get("/single2", function (req, res) {
   res.render("single2");
 });
@@ -102,9 +118,14 @@ router.get("/TFF", function (req, res) {
 router.get("/newDeal", function (req, res) {
   res.render("newDeal");
 });
-router.get("/wishlist", function (req, res) {
-  res.render("wishlist");
-});
+router.get(
+  "/wishlist",
+  catchAsync(async function (req, res) {
+    const likedDeals = await LikedDeal.find();
+    console.log(likedDeals);
+    res.render("wishlist", { likedDeals });
+  })
+);
 router.get("/login", function (req, res) {
   res.render("login");
 });
