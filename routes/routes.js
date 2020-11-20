@@ -1,9 +1,9 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var path = require("path");
-
+const catchAsync = require("../utils/catchAsync");
 var router = express.Router();
-// var Team = require("../models/team");
+var Deal = require("../models/dealModel");
 // const recruit = require("../models/recruit");
 const { check, validationResult } = require("express-validator");
 
@@ -69,9 +69,11 @@ router.put("/:id", async function (req, res) {
   );
   console.log(updated);
 });
-router.get("/", function (req, res) {
-  res.render("index");
-});
+router.get("/", catchAsync( async function (req, res) {
+  const deals = await Deal.find().sort([['createdAt',-1]]).limit(100);
+  console.log(deals);
+  res.render("index",{deals});
+}));
 router.get("/about", function (req, res) {
   res.render("about");
 });
