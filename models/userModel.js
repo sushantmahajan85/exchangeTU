@@ -94,7 +94,7 @@ userSchema.pre("save", async function (next) {
 userSchema.pre("save", async function (next) {
   // this.password = await bcrypt.hash(this.password, 12);
   // this.verification_token = random();
-  this.verification_token_time = Date.now() + 10 * 60 * 1000;
+  // this.verification_token_time = Date.now() + 10 * 60 * 1000;
   this.timeStamp = Date.now();
 
   next();

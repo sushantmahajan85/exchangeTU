@@ -5,8 +5,11 @@
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="icon" href="images/favicon.png" type="image/png" sizes="18x12" />
+
     <meta name="keywords" content="website" />
+
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="18x12" />
+
     <script>
       addEventListener(
         "load",
@@ -39,13 +42,6 @@
     <!--//pop-up-box-->
     <!-- price range -->
     <link rel="stylesheet" type="text/css" href="css/jquery-ui1.css" />
-    <!-- flexslider -->
-    <link
-      rel="stylesheet"
-      href="css/flexslider.css"
-      type="text/css"
-      media="screen"
-    />
     <!-- fonts -->
     <link
       href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800"
@@ -57,15 +53,13 @@
     <!-- header-bot-->
     <div class="header-bot">
       <div class="header-bot_inner_wthreeinfo_header_mid">
-        <!-- header-bot-->
         <div class="col-md-4 logo_agile">
           <h1>
-            <a href="index.ejs">
+            <a href="/">
               <img src="images\logo.png" alt=" " />
             </a>
           </h1>
         </div>
-        <!-- header-bot -->
         <div class="col-md-8 header">
           <!-- header lists -->
           <ul>
@@ -108,7 +102,7 @@
               <form action="#" method="post" class="last">
                 <input type="hidden" name="cmd" value="_cart" />
                 <input type="hidden" name="display" value="1" />
-                <a href="#">
+                <a href="/wishlist">
                   <i style="font-size: 24px" class="fa"
                     >&#xf08a;
                     <span>
@@ -125,6 +119,7 @@
         <div class="clearfix"></div>
       </div>
     </div>
+
     <!-- signin Model -->
     <!-- Modal1 -->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
@@ -143,8 +138,7 @@
             <div class="modal_body_left modal_body_left1">
               <h3 class="agileinfo_sign">Sign In</h3>
               <p>
-                Sign In now, Let's start your Grocery Shopping. Don't have an
-                account?
+                Sign In now to view the products. Don't have an account?
                 <a href="#" data-toggle="modal" data-target="#myModal2">
                   Sign Up Now</a
                 >
@@ -195,7 +189,7 @@
             </div>
             <div class="modal_body_left modal_body_left1">
               <h3 class="agileinfo_sign">Sign Up</h3>
-              <p>Let's set up your Account.</p>
+
               <form action="#" method="post">
                 <div class="styled-input agile-styled-input-top">
                   <input
@@ -255,11 +249,12 @@
               name="agileinfo_search"
               required=""
             >
+              -->
               <option value="">All Categories</option>
-              <option value="Drafters">Drafters</option>
+              <option value="drafters">Drafters</option>
               <option value="labcoat">Lab Coats</option>
-              <option value="Bread &amp; Bakery">Cycles</option>
-              <option value="Sweets">Mattress</option>
+              <option value="cycle">Cycles</option>
+              <option value="mattress" id="#mattress_id">Mattress</option>
               <option value="others">Others</option>
             </select>
           </form>
@@ -288,17 +283,17 @@
                 id="bs-example-navbar-collapse-1"
               >
                 <ul class="nav navbar-nav menu__list">
-                  <li>
+                  <li class="active">
                     <a class="nav-stylehead" href="/">Home </a>
                   </li>
                   <li>
                     <a class="nav-stylehead" href="/about">About Us</a>
                   </li>
                   <li>
-                    <a class="nav-stylehead" href="/contact">Contact</a>
+                    <a class="" href="/contact">Contact</a>
                   </li>
                   <li>
-                    <a class="nav-stylehead" href="/newDeal">Post A Deal</a>
+                    <a class="" href="/newDeal">Post A Deal</a>
                   </li>
                 </ul>
               </div>
@@ -307,29 +302,11 @@
         </div>
       </div>
     </div>
-    <!-- //navigation -->
-
-    <!-- page -->
-    <div class="services-breadcrumb">
-      <div class="agile_inner_breadcrumb">
-        <div class="container">
-          <ul class="w3_short">
-            <li>
-              <a href="/index">Home</a>
-              <i>|</i>
-            </li>
-            <li>Product Page</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- //page -->
-    <!-- Single Page -->
-    <div class="banner-bootom-w3-agileits">
+    <div class="contact-w3l">
       <div class="container">
         <!-- tittle heading -->
         <h3 class="tittle-w3l">
-          Product Page
+          Sign In
           <span class="heading-style">
             <i></i>
             <i></i>
@@ -337,297 +314,56 @@
           </span>
         </h3>
         <!-- //tittle heading -->
-        <div class="col-md-5 single-right-left">
-          <div class="grid images_3_of_2">
-            <div class="flexslider">
-              <ul class="slides">
-                <li data-thumb="images/thin mattress.jpg">
-                  <div class="thumb-image">
-                    <img
-                      src="images/thin mattress.jpg"
-                      data-imagezoom="true"
-                      class="img-responsive"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li data-thumb="images/thin mattress1.jpg">
-                  <div class="thumb-image">
-                    <img
-                      src="images/thin mattress1.jpg"
-                      data-imagezoom="true"
-                      class="img-responsive"
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li data-thumb="images/thin mattress.jpg">
-                  <div class="thumb-image">
-                    <img
-                      src="images/thin mattress.jpg"
-                      data-imagezoom="true"
-                      class="img-responsive"
-                      alt=""
-                    />
-                  </div>
-                </li>
-              </ul>
+        <!-- contact -->
+        <div class="contact agileits">
+          <div class="contact-agileinfo">
+            <div class="contact-form wthree">
+              <form id="loginForm" method="POST">
+                <div class="">
+                  <label for="email">Email Id</label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required=""
+                  />
+                </div>
+                <div class="">
+                  <label for="password">Password</label>
+                  <input
+                    type="text"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    required=""
+                  />
+                </div>
+                <input type="submit" value="Submit" /><br /><br />
+                <h7>
+                  Don't have an account ?
+                  <a href="/signup"><strong>Sign Up</strong></a> !
+                </h7>
+              </form>
+            </div>
+            <div class="contact-right wthree">
               <div class="clearfix"></div>
             </div>
           </div>
         </div>
-        <div class="col-md-7 single-right-left simpleCart_shelfItem">
-          <h3>Thin Foam Mattress</h3>
-          
-          <p>
-            <span class="item_price">Rs. 100</span>
-            <del>Rs. 500</del>
-      </p>
-      <p><strong>Seller's Information</strong></p>
-      <p>
-        <li>Sushant Mahajan</li>
-        <li>Hostel Name</li>
-        <li>Duartion of use</li>
-        <li>Product Description</li>
-      
-    </p>
-      
-          <div class="occasion-cart">
-            <div
-              class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-            >
-              <form action="#" method="post">
-                <fieldset>
-                  <input type="hidden" name="cmd" value="_cart" />
-                  <input type="hidden" name="add" value="1" />
-                  <input type="hidden" name="business" value=" " />
-                  <input
-                    type="hidden"
-                    name="item_name"
-                    value="Zeeba Premium Basmati Rice - 5 KG"
-                  />
-                  <input type="hidden" name="amount" value="950.00" />
-                  <input type="hidden" name="discount_amount" value="1.00" />
-                  <input type="hidden" name="currency_code" value="USD" />
-                  <input type="hidden" name="return" value=" " />
-                  <input type="hidden" name="cancel_return" value=" " />
-                  <input
-                    type="submit"
-                    name="submit"
-                    value="Add to wishlist"
-                    class="button"
-                  />
-                </fieldset>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"></div>
+        <!-- //contact -->
       </div>
     </div>
-    <!-- //Single Page -->
-    <!-- special offers -->
-    <div class="featured-section" id="projects">
-      <div class="container">
-        <!-- tittle heading -->
-        <h3 class="tittle-w3l">
-          Add More
-          <span class="heading-style">
-            <i></i>
-            <i></i>
-            <i></i>
-          </span>
-        </h3>
-        <!-- //tittle heading -->
-        <div class="featured-section" id="projects">
-			<div class="container">
-			  <div class="content-bottom-in">
-				<ul id="flexiselDemo1">
-				  <li>
-					<div class="w3l-specilamk">
-					  <div class="speioffer-agile">
-						<a href="/single">
-						  <img src="images/drafter1.jpg" alt="" />
-						</a>
-					  </div>
-					  <div class="product-name-w3l">
-						<h4>
-						  <a href="/single">Drafter</a>
-						</h4>
-						<div
-						  class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-						>
-						  <form action="#" method="post">
-							<fieldset>
-							  <input type="hidden" name="cmd" value="_wishlist" />
-							  <input type="hidden" name="add" value="1" />
-							  <input type="hidden" name="business" value=" " />
-							  <input type="hidden" name="item_name" value="Drafter" />
-							  <input type="hidden" name="amount" value="220.00" />
-							  <input
-								type="submit"
-								name="submit"
-								value="Add to wishlist"
-								class="button"
-							  />
-							</fieldset>
-						  </form>
-						</div>
-					  </div>
-					</div>
-				  </li>
-				  <li>
-					<div class="w3l-specilamk">
-					  <div class="speioffer-agile">
-						<a href="/single">
-						  <img src="images/cycle7.JPG" alt="" />
-						</a>
-					  </div>
-					  <div class="product-name-w3l">
-						<h4>
-						  <a href="/single">Cycle</a>
-						</h4>
-						<div
-						  class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-						>
-						  <form action="#" method="post">
-							<fieldset>
-							  <input type="hidden" name="cmd" value="_wishlist" />
-							  <input type="hidden" name="add" value="1" />
-							  <input type="hidden" name="business" value=" " />
-							  <input type="hidden" name="item_name" value="cycle" />
-							  <input type="hidden" name="amount" value="99.00" />
-							  <input
-								type="submit"
-								name="submit"
-								value="Add to wishlist"
-								class="button"
-							  />
-							</fieldset>
-						  </form>
-						</div>
-					  </div>
-					</div>
-				  </li>
-				  <li>
-					<div class="w3l-specilamk">
-					  <div class="speioffer-agile">
-						<a href="/single">
-						  <img src="images/labcoat1.jpg" alt="" />
-						</a>
-					  </div>
-					  <div class="product-name-w3l">
-						<h4>
-						  <a href="/single">Labcoat</a>
-						</h4>
-						<div
-						  class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-						>
-						  <form action="#" method="post">
-							<fieldset>
-							  <input type="hidden" name="cmd" value="_wishlist" />
-							  <input type="hidden" name="add" value="1" />
-							  <input type="hidden" name="business" value=" " />
-							  <input type="hidden" name="item_name" value="labcoat" />
-							  <input type="hidden" name="amount" value="69.00" />
-							  <input
-								type="submit"
-								name="submit"
-								value="Add to wishlist"
-								class="button"
-							  />
-							</fieldset>
-						  </form>
-						</div>
-					  </div>
-					</div>
-				  </li>
-				  <li>
-					<div class="w3l-specilamk">
-					  <div class="speioffer-agile">
-						<a href="/single2">
-						  <img src="images/cooler1.jpg" alt="" />
-						</a>
-					  </div>
-					  <div class="product-name-w3l">
-						<h4>
-						  <a href="/single2">Cooler</a>
-						</h4>
-						<div
-						  class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-						>
-						  <form action="#" method="post">
-							<fieldset>
-							  <input type="hidden" name="cmd" value="_wishlist" />
-							  <input type="hidden" name="add" value="1" />
-							  <input type="hidden" name="business" value=" " />
-							  <input type="hidden" name="item_name" value="cooler" />
-							  <input type="hidden" name="amount" value="187.00" />
-							  <input
-								type="submit"
-								name="submit"
-								value="Add to wishlist"
-								class="button"
-							  />
-							</fieldset>
-						  </form>
-						</div>
-					  </div>
-					</div>
-				  </li>
-				  <li></li>
-				  <li>
-					<div class="w3l-specilamk">
-					  <div class="speioffer-agile">
-						<a href="/single2">
-						  <img src="images/mattress1.jpg" alt="" />
-						</a>
-					  </div>
-					  <div class="product-name-w3l">
-						<h4>
-						  <a href="/single2">Mattress</a>
-						</h4>
-						<div
-						  class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-						>
-						  <form action="#" method="post">
-							<fieldset>
-							  <input type="hidden" name="cmd" value="_wishlist" />
-							  <input type="hidden" name="add" value="1" />
-							  <input type="hidden" name="business" value=" " />
-							  <input
-								type="hidden"
-								name="item_name"
-								value="Mattress
-							  "
-							  />
-							  <input type="hidden" name="amount" value="121.60" />
-							  <input
-								type="submit"
-								name="submit"
-								value="Add to wishlist"
-								class="button"
-							  />
-							</fieldset>
-						  </form>
-						</div>
-					  </div>
-					</div>
-				  </li>
-				  <li></li>
-				  <li></li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-    <!-- //special offers -->
-
-    <!-- //footer -->
-
     <!-- js-files -->
     <!-- jquery -->
+    <script src="js/login.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <!-- //jquery -->
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+    ></script>
 
     <!-- popup modal (for signin & signup)-->
     <script src="js/jquery.magnific-popup.js"></script>
@@ -652,31 +388,59 @@
 	</script> -->
     <!-- //popup modal (for signin & signup)-->
 
-    <!-- cart-js -->
-    <script src="js/minicart.js"></script>
+    <!-- price range (top products) -->
+    <script src="js/jquery-ui.js"></script>
     <script>
-      paypalm.minicartk.render(); //use only unique class names other than paypal1.minicart1.Also Replace same class name in css and minicart.min.js
+      //<![CDATA[
+      $(window).load(function () {
+        $("#slider-range").slider({
+          range: true,
+          min: 0,
+          max: 9000,
+          values: [50, 6000],
+          slide: function (event, ui) {
+            $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+          },
+        });
+        $("#amount").val(
+          "$" +
+            $("#slider-range").slider("values", 0) +
+            " - $" +
+            $("#slider-range").slider("values", 1)
+        );
+      }); //]]>
+    </script>
+    <!-- //price range (top products) -->
 
-      paypalm.minicartk.cart.on("checkout", function (evt) {
-        var items = this.items(),
-          len = items.length,
-          total = 0,
-          i;
-
-        // Count the number of each item in the cart
-        for (i = 0; i < len; i++) {
-          total += items[i].get("quantity");
-        }
-
-        if (total < 3) {
-          alert(
-            "The minimum order quantity is 3. Please add more to your shopping cart before checking out"
-          );
-          evt.preventDefault();
-        }
+    <!-- flexisel (for special offers) -->
+    <script src="js/jquery.flexisel.js"></script>
+    <script>
+      $(window).load(function () {
+        $("#flexiselDemo1").flexisel({
+          visibleItems: 3,
+          animationSpeed: 1000,
+          autoPlay: true,
+          autoPlaySpeed: 3000,
+          pauseOnHover: true,
+          enableResponsiveBreakpoints: true,
+          responsiveBreakpoints: {
+            portrait: {
+              changePoint: 480,
+              visibleItems: 1,
+            },
+            landscape: {
+              changePoint: 640,
+              visibleItems: 2,
+            },
+            tablet: {
+              changePoint: 768,
+              visibleItems: 2,
+            },
+          },
+        });
       });
     </script>
-    <!-- //cart-js -->
+    <!-- //flexisel (for special offers) -->
 
     <!-- password-script -->
     <script>
@@ -738,53 +502,6 @@
       });
     </script>
     <!-- //smooth-scrolling-of-move-up -->
-
-    <!-- imagezoom -->
-    <script src="js/imagezoom.js"></script>
-    <!-- //imagezoom -->
-
-    <!-- FlexSlider -->
-    <script src="js/jquery.flexslider.js"></script>
-    <script>
-      // Can also be used with $(document).ready()
-      $(window).load(function () {
-        $(".flexslider").flexslider({
-          animation: "slide",
-          controlNav: "thumbnails",
-        });
-      });
-    </script>
-    <!-- //FlexSlider-->
-
-    <!-- flexisel (for special offers) -->
-    <script src="js/jquery.flexisel.js"></script>
-    <script>
-      $(window).load(function () {
-        $("#flexiselDemo1").flexisel({
-          visibleItems: 3,
-          animationSpeed: 1000,
-          autoPlay: true,
-          autoPlaySpeed: 3000,
-          pauseOnHover: true,
-          enableResponsiveBreakpoints: true,
-          responsiveBreakpoints: {
-            portrait: {
-              changePoint: 480,
-              visibleItems: 1,
-            },
-            landscape: {
-              changePoint: 640,
-              visibleItems: 2,
-            },
-            tablet: {
-              changePoint: 768,
-              visibleItems: 2,
-            },
-          },
-        });
-      });
-    </script>
-    <!-- //flexisel (for special offers) -->
 
     <!-- for bootstrap working -->
     <script src="js/bootstrap.js"></script>

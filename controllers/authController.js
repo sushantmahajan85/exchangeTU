@@ -22,14 +22,14 @@ exports.signUp =catchAsync(async (req, res) => {
       email: req.body.email,
       passwordConfirm: req.body.passwordConfirm,
     });
-    console.log("gygy");
+    console.log(newUser._id);
     const token = signToken(newUser._id);
     const cookieOptions = {
       expires: new Date(
         Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
       ),
       // secure: true,
-      httpOnly: true,
+      httpOnly: false,
     };
     if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
@@ -194,8 +194,8 @@ exports.login = async (req, res, next) => {
 
   /////////////////////////////////Error in Production/////////////////////////////////////////////
   try {
-    const url = "amazon.in";
-    await new Email(user, url).sendWelcome();
+    // const url = "amazon.in";
+    // await new Email(user, url).sendWelcome();
     // }catch (err) {
     //   console.log(err);
     // }
