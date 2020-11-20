@@ -315,26 +315,24 @@
                 <div class="men-pro-item simpleCart_shelfItem">
                   <div class="men-thumb-item">
                     <img
-                      src="images/thin mattress.jpg"
+                      src=<%= `/img/deals/${deal.titleImg}`%>
                       alt=""
                       width="200"
                       height="400"
                     />
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="/single" class="link-product-add-cart"
-                          >Quick View</a
-                        >
+                        <a class="link-product-add-cart" href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>Quick View</a>
                       </div>
                     </div>
                     <span class="product-new-top">New</span>
                   </div>
                   <div class="item-info-product">
                     <div class="info-product-price">
-                      <span class="item_price">Rs. 500</span>
-                      <del>Rs. 100</del>
+                      <span class="item_price">₹<%= deal.dealPrice %> </span>
+                      <del>₹<%= deal.mrp %> </del>
                     </div>
-                    <h4><a href="/single">Thin Foam Mattress</a></h4>
+                    <h4><a href="/single"><%= deal.dealName %></a></h4>
                     <div
                       class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
                     >
