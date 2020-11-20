@@ -341,30 +341,30 @@
           <div class="grid images_3_of_2">
             <div class="flexslider">
               <ul class="slides">
-                <li data-thumb="/images/thin mattress.jpg">
+                <li data-thumb=<%= `/img/deals/${deal.titleImg}`%>>
                   <div class="thumb-image">
                     <img
-                      src="/images/thin mattress.jpg"
+                      src=<%= `/img/deals/${deal.titleImg}`%>
                       data-imagezoom="true"
                       class="img-responsive"
                       alt=""
                     />
                   </div>
                 </li>
-                <li data-thumb="/images/thin mattress1.jpg">
+                <li data-thumb=<%= `/img/deals/${deal.titleImg}`%>>
                   <div class="thumb-image">
                     <img
-                      src="/images/thin mattress1.jpg"
+                      src=<%= `/img/deals/${deal.titleImg}`%>
                       data-imagezoom="true"
                       class="img-responsive"
                       alt=""
                     />
                   </div>
                 </li>
-                <li data-thumb="/images/thin mattress.jpg">
+                <li data-thumb=<%= `/img/deals/${deal.titleImg}`%>>
                   <div class="thumb-image">
                     <img
-                      src="/images/thin mattress.jpg"
+                      src=<%= `/img/deals/${deal.titleImg}`%>
                       data-imagezoom="true"
                       class="img-responsive"
                       alt=""
@@ -414,6 +414,7 @@
                   <input type="hidden" name="return" value=" " />
                   <input type="hidden" name="cancel_return" value=" " />
                   <input
+                    id="addToWishlist"
                     type="submit"
                     name="submit"
                     value="Add to wishlist"
@@ -628,8 +629,14 @@
 
     <!-- js-files -->
     <!-- jquery -->
+    <script src="/js/likedDeal.js"></script>
     <script src="/js/jquery-2.1.4.min.js"></script>
     <!-- //jquery -->
+
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+  ></script>
 
     <!-- popup modal (for signin & signup)-->
     <script src="/js/jquery.magnific-popup.js"></script>

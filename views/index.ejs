@@ -329,10 +329,10 @@
                   </div>
                   <div class="item-info-product">
                     <div class="info-product-price">
-                      <span class="item_price">₹<%= deal.dealPrice %> </span>
-                      <del>₹<%= deal.mrp %> </del>
+                      <span class="item_price">₹<%= deal.dealPrice %></span>
+                      <del>₹<%= deal.mrp %></del>
                     </div>
-                    <h4><a href="/single"><%= deal.dealName %></a></h4>
+                    <h4><a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>><%= deal.dealName %></a></h4>
                     <div
                       class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
                     >

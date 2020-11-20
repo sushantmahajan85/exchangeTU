@@ -272,18 +272,21 @@
 			<!--products-->
             <div class="product-sec1">
 				<h3 class="heading-tittle" id = "mattress_id">Mattress</h3>
+
+				<% for(var likeddeal of likedDeals ) { %>
+
 				<div class="col-md-4 product-men">
 				  <div class="men-pro-item simpleCart_shelfItem">
 					<div class="men-thumb-item">
 					  <img
-						src="images/thin mattress.jpg"
+						src=<%= `/img/deals/${likeddeal.deal.titleImg}`%>
 						alt=""
 						width="200"
 						height="400"
 					  />
 					  <div class="men-cart-pro">
 						<div class="inner-men-cart-pro">
-						  <a href="/single" class="link-product-add-cart"
+						  <a href=<%= `/deal/${likeddeal.deal._id}/postedBy/${likeddeal.user._id}` %> class="link-product-add-cart"
 							>Quick View</a
 						  >
 						</div>
@@ -292,10 +295,10 @@
 					</div>
 					<div class="item-info-product">
 					  <div class="info-product-price">
-						<span class="item_price">Rs. 500</span>
-						<del>Rs. 100</del>
+						<span class="item_price">₹<%= likeddeal.deal.dealPrice %></span>
+						<del>₹<%= likeddeal.deal.mrp %></del>
 					  </div>
-					  <h4><a href="/single">Thin Foam Mattress</a></h4>
+					  <h4><a href=<%= `/deal/${likeddeal.deal._id}/postedBy/${likeddeal.deal.user}` %>><%= likeddeal.deal.dealName %></a></h4>
 					  <div
 						class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
 					  >
@@ -329,7 +332,8 @@
 					</div>
 				  </div>
 				</div>
-				<div class="col-md-4 product-men">
+				<% } %>
+				<!-- <div class="col-md-4 product-men">
 				  <div class="men-pro-item simpleCart_shelfItem">
 					<div class="men-thumb-item">
 					  <img
@@ -387,8 +391,8 @@
 					  </div>
 					</div>
 				  </div>
-				</div>
-				<div class="col-md-4 product-men">
+				</div> -->
+				<!-- <div class="col-md-4 product-men">
 				  <div class="men-pro-item simpleCart_shelfItem">
 					<div class="men-thumb-item">
 					  <img
@@ -446,7 +450,7 @@
 					  </div>
 					</div>
 				  </div>
-				</div>
+				</div> -->
 				<div class="clearfix"></div>
 			  </div>
 			<!--//products-->

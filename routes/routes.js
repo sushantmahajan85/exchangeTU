@@ -5,6 +5,7 @@ const catchAsync = require("../utils/catchAsync");
 var router = express.Router();
 var Deal = require("../models/dealModel");
 var User = require("../models/userModel");
+var LikedDeal = require("../models/likedDealModel");
 // const recruit = require("../models/recruit");
 const { check, validationResult } = require("express-validator");
 
@@ -76,7 +77,7 @@ router.get(
     const deals = await Deal.find()
       .sort([["createdAt", -1]])
       .limit(100);
-    console.log(deals);
+    // console.log(deals);
     res.render("index", { deals });
   })
 );
@@ -104,7 +105,7 @@ router.get(
     const user = await User.findById(req.params.userid);
     const deal = await Deal.findById(req.params.id);
     // console.log(deal);
-    console.log(user);
+    // console.log(user);
     res.render("single", { deal, user });
   })
 );
@@ -117,9 +118,14 @@ router.get("/TFF", function (req, res) {
 router.get("/newDeal", function (req, res) {
   res.render("newDeal");
 });
-router.get("/wishlist", function (req, res) {
-  res.render("wishlist");
-});
+router.get(
+  "/wishlist",
+  catchAsync(async function (req, res) {
+    const likedDeals = await LikedDeal.find();
+    console.log(likedDeals);
+    res.render("wishlist", { likedDeals });
+  })
+);
 router.get("/login", function (req, res) {
   res.render("login");
 });
