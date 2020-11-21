@@ -152,5 +152,5 @@ router.get(
     res.render("search", { user });
   })
 );
-
+router.get("/logout", authController.logout);
 module.exports = router;
