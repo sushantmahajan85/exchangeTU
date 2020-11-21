@@ -13,10 +13,7 @@ body a {
   -o-transition: 0.5s all;
   -ms-transition: 0.5s all;
 }
-/* a:hover {
-  text-decoration: none;
-  box-shadow: 8px 8px 8px lightgrey;
-} */
+
 input[type="button"],
 input[type="submit"] {
   transition: 0.5s all;
@@ -104,7 +101,7 @@ label {
 }
 .agileits_search input[type="search"] {
   outline: none;
-  border: 1px solid #191e21;
+  border: -2px solid #191e21;
   background: #fff;
   border-right-color: transparent;
   color: #191e21;
@@ -1416,6 +1413,33 @@ ul.w3_short {
   -webkit-box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
   box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+#aboutUsPage{
+  margin: -18px auto;
+}
+.about_2{
+  width:80%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+#circle{
+  border-radius: 50%;
+}
+#style_text{
+  text-align: center;
+}
+.about_us{
+  margin: 20px auto;
+  width:81%;
+  height:50%;
+  background-color:#fff;
+  display:grid;
+  grid-template-columns: 208px 200px;
+  grid-row: auto auto;
+  grid-column-gap: 28%;
+  grid-row-gap: 3%;
 }
 .contact_2{
   width:50%;
@@ -5300,6 +5324,3 @@ color: #ff5e14;
     font-weight:600
   }
 }
-
-
-/*--//responsive--*/
