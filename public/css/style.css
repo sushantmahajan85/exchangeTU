@@ -42,11 +42,15 @@ p {
   line-height: 1.9;
   color: #999;
 }
+#right_align{
+  text-align:right;
+}
 ul {
   margin: 0;
   padding: 0;
   text-align: left;
 }
+
 label {
   margin: 0;
 }
@@ -1407,12 +1411,17 @@ ul.w3_short {
 }
 /*-- contact --*/
 .contact-form.wthree {
-  width: 30%;
+  width: 70%;
   margin: 0 auto;
   padding: 40px;
   -webkit-box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
   box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
+}
+.contact_2{
+  width:50%;
+  margin: 0 auto;
+  padding: 40px;
 }
 .contact input[type="text"],
 .contact input[type="email"],
@@ -4982,6 +4991,7 @@ ul {
   margin: 0px;
   padding: 0px;
 }
+
 .footer-section {
 background: #151414;
 position: relative;
