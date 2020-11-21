@@ -924,7 +924,6 @@ h3.w3l-nut-middle {
 }
 /*-- //nuts --*/
 .ads-grid,
-footer,
 .contact-w3l,
 .w3_wthree_agileits_icons,
 .typo,
@@ -1411,7 +1410,7 @@ ul.w3_short {
 }
 /*-- contact --*/
 .contact-form.wthree {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   padding: 40px;
   -webkit-box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
