@@ -242,18 +242,19 @@
     <div class="ban-top">
       <div class="container">
         <div class="agileits-navi_search">
-          <form action="#" method="post">
-           
-            <select id="agileinfo-nav_search" name="agileinfo_search" required=""> -->
-              <option value="">All Categories</option>
-              <option value="drafters"> Drafters</option>
-              <option value="labcoat">Lab Coats</option>
-              <option value="cycle">Cycles</option>
-              <option value="mattress" id="#mattress_id" >Mattress</option>
-              <option value="others">Others</option>
-            </select>
+          <form action="#" method="post">                              
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">All categories
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#mattress_id">Mattress</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#cycle_id">Cycle</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#drafter_id">Drafter</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#labcoat_id">Labcoat</a></li>
+                </ul>
+              </div>
+            </div>
           </form>
-        </div>
         <div class="top_nav_left">
           <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -489,7 +490,7 @@
             <!-- //first section (mattress) -->
             <!-- second section (cycle) -->
             <div class="product-sec1">
-              <h3 class="heading-tittle">Cycles</h3>
+              <h3 class="heading-tittle" id = "cycle_id">Cycles</h3>
               <div class="col-md-4 product-men">
                 <div class="men-pro-item simpleCart_shelfItem">
                   <div class="men-thumb-item">
@@ -663,7 +664,7 @@
           </div>
           <!-- second section (cycle) -->
           <div class="product-sec1">
-            <h3 class="heading-tittle">Drafter</h3>
+            <h3 class="heading-tittle" id ="drafter_id">Drafter</h3>
             <div class="col-md-4 product-men">
               <div class="men-pro-item simpleCart_shelfItem">
                 <div class="men-thumb-item">
@@ -834,7 +835,7 @@
           </div>
           <!-- second section (cycle) -->
           <div class="product-sec1">
-            <h3 class="heading-tittle">Labcoat</h3>
+            <h3 class="heading-tittle" id = "labcoat_id">Labcoat</h3>
             <div class="col-md-4 product-men">
               <div class="men-pro-item simpleCart_shelfItem">
                 <div class="men-thumb-item">

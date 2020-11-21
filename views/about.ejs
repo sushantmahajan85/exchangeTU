@@ -179,15 +179,16 @@
 		<div class="container">
 			<div class="agileits-navi_search">
 				<form action="#" method="post">
-					<select id="agileinfo-nav_search" name="agileinfo_search" required="">
-						<option value="">All Categories</option>
-						<option value="Drafters">Drafters</option>
-						<option value="labcoat">Lab Coats</option>
-						<option value="Bread &amp; Bakery">Cycles</option>
-						<option value="Sweets">Mattress</option>
-						<option value="others">Others</option>
-						</select>
-					</select>
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">All categories
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+						  <li role="presentation"><a role="menuitem" tabindex="-1" href="#mattress_id">Mattress</a></li>
+						  <li role="presentation"><a role="menuitem" tabindex="-1" href="#cycle_id">Cycle</a></li>
+						  <li role="presentation"><a role="menuitem" tabindex="-1" href="#drafter_id">Drafter</a></li>
+						  <li role="presentation"><a role="menuitem" tabindex="-1" href="#labcoat_id">Labcoat</a></li>
+						</ul>
+					  </div>
 				</form>
 			</div>
 			<div class="top_nav_left">

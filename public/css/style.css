@@ -135,7 +135,7 @@ label {
 }
 .agileits-navi_search {
   float: left;
-  width: 23%;
+  width: 40%;
 }
 #agileinfo-nav_search {
   outline: none;
@@ -5291,5 +5291,6 @@ color: #ff5e14;
     font-weight:600
   }
 }
+
 
 /*--//responsive--*/
