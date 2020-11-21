@@ -77,6 +77,15 @@ router.put("/:id", async function (req, res) {
 router.get(
   "/",
   catchAsync(async function (req, res) {
+    if (req.query.search) {
+      console.log(req.query.search);
+      const deals = await Deal.find(
+        { $text: { $search: req.query.search } },
+        { score: { $meta: "textScore" } }
+      ).sort([[{ score: { $meta: "textScore" } }]]);
+      console.log(deals);
+      res.status(200).render("search", { deals /*recommendedDeals*/ });
+    }
     const deals = await Deal.find()
       .sort([["createdAt", -1]])
       .limit(100);
@@ -136,5 +145,12 @@ router.get("/login", function (req, res) {
 router.get("/signup", function (req, res) {
   res.render("signup");
 });
-
+router.get(
+  "/search",
+  catchAsync(async function (req, res) {
+    const user = await User.findById(req.logged);
+    res.render("search", { user });
+  })
+);
+router.get("/logout", authController.logout);
 module.exports = router;

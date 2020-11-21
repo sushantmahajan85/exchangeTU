@@ -64,7 +64,7 @@
           <% if(user){ %>
             <ul>
             <li>
-              <a href="/login">
+              <a href="/logout">
                 <span class="fa fa-unlock-alt" aria-hidden="true"></span> Logout
               </a>
             </li>
@@ -90,12 +90,12 @@
           <!-- //header lists -->
           <!-- search -->
           <div class="agileits_search">
-            <form action="#" method="post">
+            <form action="/" method="GET" class="search">
               <input
-                name="Search"
-                type="search"
+                name="search"
+                type="text"
+                id="search"
                 placeholder="How can we help you today?"
-                required=""
               />
               <button
                 type="submit"
@@ -1076,6 +1076,7 @@
           </ul>
         </div>
       </div>
+    </div>
     </div>
     <!-- //special offers -->
       <!-- Site footer -->
