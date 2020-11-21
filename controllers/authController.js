@@ -12,36 +12,33 @@ const signToken = (id) =>
     expiresIn: process.env.JWT_EXPIRESIN,
   });
 
-exports.signUp =catchAsync(async (req, res) => {
-  
-
+exports.signUp = catchAsync(async (req, res) => {
   console.log("gygy");
-    const newUser = await User.create({
-      name: req.body.name,
-      password: req.body.password,
-      email: req.body.email,
-      passwordConfirm: req.body.passwordConfirm,
-    });
-    console.log(newUser._id);
-    const token = signToken(newUser._id);
-    const cookieOptions = {
-      expires: new Date(
-        Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
-      ),
-      // secure: true,
-      httpOnly: false,
-    };
-    if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+  const newUser = await User.create({
+    name: req.body.name,
+    password: req.body.password,
+    email: req.body.email,
+    passwordConfirm: req.body.passwordConfirm,
+  });
+  console.log(newUser._id);
+  const token = signToken(newUser._id);
+  const cookieOptions = {
+    expires: new Date(
+      Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
+    ),
+    // secure: true,
+    httpOnly: false,
+  };
+  if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
-    res.cookie("jwt", token, cookieOptions);
-    res.status(201).json({
-      status: "success",
-      token,
-      data: {
-        newUser,
-      },
-    });
-  
+  res.cookie("jwt", token, cookieOptions);
+  res.status(201).json({
+    status: "success",
+    token,
+    data: {
+      newUser,
+    },
+  });
 });
 
 // exports.signUpApp = catchAsync(async (req, res) => {
@@ -299,10 +296,7 @@ exports.isLoggedIn = async (req, res, next) => {
         res.locals.user = undefined;
         return next();
       }
-
-      const freshUser = await User.findById(decoded.id).populate({
-        path: "subscribers",
-      });
+      const freshUser = await User.findById(decoded.id);
 
       if (!freshUser) {
         // res.locals.user = null;
