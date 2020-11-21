@@ -383,6 +383,7 @@
             <span class="item_price">₹<%= deal.dealPrice%></span>
             <del>₹<%= deal.mrp%></del>
       </p>
+      <% if(localUser) { %>
       <p><strong>Seller's Information</strong></p>
       <p>
         <li><%= user.name%></li>
@@ -391,8 +392,12 @@
         <li>Hostel <%= deal.hostelName%></li>
         <li><%= deal.duration%> years</li>
         <li><%= deal.description%></li>
-      
-    </p>
+      </p>
+      <% } else { %>
+        <p>
+          <a href="/login">Login</a> or <a href="/signup">Signup</a> to get Seller Information!
+        </p>
+      <% }%>
       
           <div class="occasion-cart">
             <div

@@ -6,8 +6,11 @@ var router = express.Router();
 var Deal = require("../models/dealModel");
 var User = require("../models/userModel");
 var LikedDeal = require("../models/likedDealModel");
+var authController = require("../controllers/authController");
 // const recruit = require("../models/recruit");
 const { check, validationResult } = require("express-validator");
+
+router.use(authController.isLoggedIn);
 
 router.post(
   "/recsubmit",
@@ -78,7 +81,9 @@ router.get(
       .sort([["createdAt", -1]])
       .limit(100);
     // console.log(deals);
-    res.render("index", { deals });
+    const user = await User.findById(req.logged);
+    // console.log(user);
+    res.render("index", { deals, user });
   })
 );
 router.get("/about", function (req, res) {
@@ -104,9 +109,8 @@ router.get(
   catchAsync(async function (req, res) {
     const user = await User.findById(req.params.userid);
     const deal = await Deal.findById(req.params.id);
-    // console.log(deal);
-    // console.log(user);
-    res.render("single", { deal, user });
+    const localUser = await User.findById(req.logged);
+    res.render("single", { deal, user, localUser });
   })
 );
 router.get("/single2", function (req, res) {

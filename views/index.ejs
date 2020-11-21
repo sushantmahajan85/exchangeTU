@@ -61,20 +61,32 @@
           </h1>
         </div>
         <div class="col-md-8 header">
-          <!-- header lists -->
-          <ul>
+          <% if(user){ %>
+            <ul>
             <li>
               <a href="/login">
-                <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In
+                <span class="fa fa-unlock-alt" aria-hidden="true"></span> Logout
               </a>
             </li>
             <li>
-              <a href="/signup">
-                <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
-                Sign Up
-              </a>
+                <span class="fa fa-unlock-alt" aria-hidden="true"></span> Welcome Back, <%= user.name%>!
             </li>
-          </ul>
+          </ul> 
+          <% } else {%>
+            <ul>
+              <li>
+                <a href="/login">
+                  <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In
+                </a>
+              </li>
+              <li>
+                <a href="/signup">
+                  <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
+                  Sign Up
+                </a>
+              </li>
+            </ul>
+          <% }%>
           <!-- //header lists -->
           <!-- search -->
           <div class="agileits_search">
