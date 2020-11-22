@@ -92,12 +92,14 @@ label {
   margin: 0 auto;
   width: 90%;
 }
+
 /*-- //Header Lists --*/
 /*-- search --*/
 .agileits_search {
   margin-top: 16px;
   float: left;
   width: 80%;
+  border: -2px solid #191e21;
 }
 .agileits_search input[type="search"] {
   outline: none;
@@ -118,7 +120,7 @@ label {
   outline: none;
   box-shadow: none;
   background: #1accfd;
-  padding: 0;
+  padding: 10px;
   border-radius: inherit;
   -webkit-appearance: none;
   -webkit-transition: 0.5s all;
