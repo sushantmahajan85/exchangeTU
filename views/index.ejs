@@ -62,7 +62,7 @@
         </div>
         <div class="col-md-8 header">
           <% if(user){ %>
-            <ul>
+            <ul id = "right_align">
             <li>
               <a href="/logout">
                 <span class="fa fa-unlock-alt" aria-hidden="true"></span> Logout
@@ -257,12 +257,14 @@
           <form action="#" method="post">                              
               <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">All categories
-                <span class="caret"></span></button>
+                  <span class="caret"></span>
+                </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#mattress_id">Mattress</a></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#cycle_id">Cycle</a></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#drafter_id">Drafter</a></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#labcoat_id">Labcoat</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#other_id">Others</a></li>
                 </ul>
               </div>
             </div>

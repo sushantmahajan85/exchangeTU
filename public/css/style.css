@@ -1450,6 +1450,8 @@ ul.w3_short {
 }
 .contact input[type="text"],
 .contact input[type="email"],
+.contact input[type="password"],
+.contact input[type="number"],
 .contact textarea {
   width: 100%;
   color: #000;

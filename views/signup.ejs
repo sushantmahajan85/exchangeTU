@@ -62,15 +62,15 @@
         </div>
         <div class="col-md-8 header">
           <!-- header lists -->
-          <ul>
+          <ul id = "right_align">
             <li>
-              <a href="#" data-toggle="modal" data-target="#myModal1">
+              <a href="/login" >
                 <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign
                 In
               </a>
             </li>
             <li>
-              <a href="#" data-toggle="modal" data-target="#myModal2">
+              <a href="/signup">
                 <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
                 Sign Up
               </a>
@@ -155,7 +155,7 @@
                 <div class="styled-input">
                   <input
                     type="password"
-                    placeholder="Password"
+                    placeholder="Password should be of length 8"
                     name="password"
                     required=""
                   />
@@ -243,21 +243,17 @@
     <div class="ban-top">
       <div class="container">
         <div class="agileits-navi_search">
-          <form action="#" method="post">
-            <select
-              id="agileinfo-nav_search"
-              name="agileinfo_search"
-              required=""
-            >
-              -->
-              <option value="">All Categories</option>
-              <option value="drafters">Drafters</option>
-              <option value="labcoat">Lab Coats</option>
-              <option value="cycle">Cycles</option>
-              <option value="mattress" id="#mattress_id">Mattress</option>
-              <option value="others">Others</option>
-            </select>
-          </form>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">All categories
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#mattress_id">Mattress</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#cycle_id">Cycle</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#drafter_id">Drafter</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#labcoat_id">Labcoat</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#other_id">Others</a></li>
+            </ul>
+          </div>
         </div>
         <div class="top_nav_left">
           <nav class="navbar navbar-default">
@@ -319,61 +315,64 @@
           <div class="contact-agileinfo">
             <div class="contact-form wthree">
               <form id="signupForm" method="POST">
-                <div class="">
+                <div>
                   <label for="username">Username</label>
                   <input
                     type="text"
                     id="username"
                     name="username"
                     placeholder="Username"
-                    required=""
+                    required="true"
                   />
                 </div>
-                <div class="">
+                <div>
                   <label for="email">Email Id</label>
                   <input
                     type="text"
                     id="email"
                     name="email"
                     placeholder="Email Address"
-                    required=""
+                    required="true"
                   />
                 </div>
-                <div class="">
+                <div>
                   <label for="phoneNo">Phone Number</label>
+                  <br>
                   <input
                     type="number"
                     id="phoneNo"
                     name="phoneNo"
                     placeholder="Phone Number"
-                    required=""
+                    required="true"
                   />
                 </div>
-                <div class="">
+                <div>
                   <label for="password">Password</label>
+                  <br>
                   <input
-                    type="text"
+                    type="password"
                     id="password"
                     name="password"
-                    placeholder="Password"
-                    required=""
+                    placeholder="Password should be of length 8"
+                    required="true"
                   />
                 </div>
-                <div class="">
-                  <label for="passwordConfirm">Password</label>
+                <div>
+                  <label for="passwordConfirm">Confirm Password</label>
+                  <br>
                   <input
-                    type="text"
+                    type="password"
                     id="passwordConfirm"
                     name="passwordConfirm"
                     placeholder="Confirm your Password"
-                    required=""
+                    required="true"
                   />
                 </div>
                 <input type="submit" value="Submit" />
                 <br /><br />
                 <h7>
-                  Already have an account ?
-                  <a href="/login"><strong>Sign In</strong></a> !
+                  Already have an account? 
+                  <a href="/login"><strong> Sign In</strong></a> !
                 </h7>
               </form>
             </div>
