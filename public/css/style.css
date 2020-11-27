@@ -1417,6 +1417,9 @@ ul.w3_short {
   box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
 }
+#height_search{
+  height:600px;
+}
 #aboutUsPage{
   margin: -18px auto;
 }
