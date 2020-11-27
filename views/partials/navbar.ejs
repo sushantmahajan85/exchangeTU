@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="header-bot">
+      <div class="header-bot_inner_wthreeinfo_header_mid">
+        <div class="col-md-4 logo_agile">
+          <h1>
+            <a href="/">
+              <img src="images\logo.png" alt=" " />
+            </a>
+          </h1>
+        </div>
+        <div class="col-md-8 header">
+          <% if(user){ %>
+          <ul id="right_align">
+            <li>
+              <a href="/logout">
+                <span class="fa fa-unlock-alt" aria-hidden="true"></span> Logout
+              </a>
+            </li>
+            <li>
+              <span class="fa fa-unlock-alt" aria-hidden="true"></span> Welcome
+              Back, <%= user.name%>!
+            </li>
+          </ul>
+          <% } else {%>
+          <ul id="right_align">
+            <li>
+              <a href="/login">
+                <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign
+                In
+              </a>
+            </li>
+            <li>
+              <a href="/signup">
+                <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
+                Sign Up
+              </a>
+            </li>
+          </ul>
+          <% }%>
+          <div class="agileits_search">
+            <form action="/" method="GET" class="search">
+              <input
+                name="search"
+                type="search"
+                id="search"
+                placeholder="How can we help you today?"
+              />
+              <button
+                type="submit"
+                class="btn btn-default"
+                aria-label="Left Align"
+              >
+                <span class="fa fa-search" aria-hidden="true"> </span>
+              </button>
+            </form>
+          </div>
+          <div class="top_nav_right">
+            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+              <form action="#" method="post" class="last">
+                <input type="hidden" name="cmd" value="_cart" />
+                <input type="hidden" name="display" value="1" />
+                <a href="/wishlist">
+                  <i style="font-size: 24px" class="fa"
+                    >&#xf08a;
+                    <span>
+                      <h4>My Wishlist</h4>
+                      <a href="/wishlist"></a></span></i
+                ></a>
+              </form>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="ban-top">
+        <div class="container">
+          <div class="agileits-navi_search">
+            <form action="#" method="post">                              
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">All categories
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/#mattress_id">Mattress</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/#cycle_id">Cycle</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/#drafter_id">Drafter</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/#labcoat_id">Labcoat</a></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          <div class="top_nav_left">
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button
+                    type="button"
+                    class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false"
+                  >
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div
+                  class="collapse navbar-collapse menu--shylock"
+                  id="bs-example-navbar-collapse-1"
+                >
+                  <ul class="nav navbar-nav menu__list">
+                    <li class="active">
+                      <a class="nav-stylehead" href="/">Home </a>
+                    </li>
+                    <li>
+                      <a class="nav-stylehead" href="/about">About Us</a>
+                    </li>
+                    <li>
+                      <a class="" href="/contact">Contact</a>
+                    </li>
+                    <li>
+                      <a class="" href="/newDeal">Post A Deal</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
