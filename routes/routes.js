@@ -86,13 +86,27 @@ router.get(
       console.log(deals);
       res.status(200).render("search", { deals /*recommendedDeals*/ });
     }
-    const deals = await Deal.find()
+    const drafters = await Deal.find({ category: "drafter" })
       .sort([["createdAt", -1]])
-      .limit(100);
-    // console.log(deals);
-    const user = await User.findById(req.logged);
-    // console.log(user);
-    res.render("index", { deals, user });
+      .limit(10);
+
+    const books = await Deal.find({ category: "books" })
+      .sort([["createdAt", -1]])
+      .limit(10);
+    const labcoat = await Deal.find({ category: "labcoat" })
+      .sort([["createdAt", -1]])
+      .limit(10);
+    const cycle = await Deal.find({ category: "cycle" })
+      .sort([["createdAt", -1]])
+      .limit(10);
+    const mattress = await Deal.find({ category: "mattress" })
+      .sort([["createdAt", -1]])
+      .limit(10);
+    const others = await Deal.find({ category: "others" })
+      .sort([["createdAt", -1]])
+      .limit(10);
+    console.log(labcoat);
+    res.render("index", { drafters, books, labcoat, cycle, mattress, others });
   })
 );
 router.get("/about", function (req, res) {
@@ -116,10 +130,10 @@ router.get("/product2", function (req, res) {
 router.get(
   "/deal/:id/postedBy/:userid",
   catchAsync(async function (req, res) {
-    const user = await User.findById(req.params.userid);
+    const seller = await User.findById(req.params.userid);
     const deal = await Deal.findById(req.params.id);
-    const localUser = await User.findById(req.logged);
-    res.render("single", { deal, user, localUser });
+    const user = await User.findById(req.logged);
+    res.render("single", { deal, user, seller });
   })
 );
 router.get("/single2", function (req, res) {

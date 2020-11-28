@@ -51,11 +51,21 @@
       href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
   </head>
 
   <body>
     <%- include('partials/navbar.ejs') %>
     
+    <div class="success-alert hide">
+      <span class="fas fa-exclamation-circle"></span>
+      <span class="alert-msg">Product Wishlisted!</span>
+      <span class="alert-close-btn">
+        <span class="fas fa-times"></span>
+      </span>
+    </div>
+
     <!-- Modal1 -->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
       <div class="modal-dialog">
@@ -247,12 +257,12 @@
             <span class="item_price">₹<%= deal.dealPrice%></span>
             <del>₹<%= deal.mrp%></del>
       </p>
-      <% if(localUser) { %>
+      <% if(user) { %>
       <p><strong>Seller's Information</strong></p>
       <p>
-        <li><%= user.name%></li>
-        <li><%= user.email%></li>
-        <li><%= user.phoneNo%></li>
+        <li><%= seller.name%></li>
+        <li><%= seller.email%></li>
+        <li><%= seller.phoneNo%></li>
         <li>Hostel <%= deal.hostelName%></li>
         <li><%= deal.duration%> years</li>
         <li><%= deal.description%></li>
@@ -264,6 +274,7 @@
       <% }%>
       
           <div class="occasion-cart">
+            <% if(user) {%>
             <div
               class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
             >
@@ -292,6 +303,21 @@
                 </fieldset>
               </form>
             </div>
+            <% } else {%>
+              <a href="/signup">
+              <div
+              class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+            >
+                  <input
+                    id="addToWishlistSignup"
+                    type="submit"
+                    name="submit"
+                    value="Add to wishlist"
+                    class="button"
+                  />
+            </div>
+          </a>
+              <% } %>
           </div>
         </div>
         <div class="clearfix"></div>
@@ -506,6 +532,21 @@
     defer
     src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
   ></script>
+
+      <script>
+        $('#addToWishlist').click(function(){
+          $('.success-alert').removeClass("hide");
+          $('.success-alert').addClass("show");
+          setTimeout(function(){
+            $('.success-alert').addClass("hide");
+            $('.success-alert').removeClass("show");
+          }, 5000);
+        });
+        $('.alert-close-btn').click(function(){
+          $('.success-alert').addClass("hide");
+          $('.success-alert').removeClass("show");
+        });
+      </script>
 
     <!-- popup modal (for signin & signup)-->
     <script src="/js/jquery.magnific-popup.js"></script>
