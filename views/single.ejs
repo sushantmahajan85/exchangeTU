@@ -247,12 +247,12 @@
             <span class="item_price">₹<%= deal.dealPrice%></span>
             <del>₹<%= deal.mrp%></del>
       </p>
-      <% if(localUser) { %>
+      <% if(user) { %>
       <p><strong>Seller's Information</strong></p>
       <p>
-        <li><%= user.name%></li>
-        <li><%= user.email%></li>
-        <li><%= user.phoneNo%></li>
+        <li><%= seller.name%></li>
+        <li><%= seller.email%></li>
+        <li><%= seller.phoneNo%></li>
         <li>Hostel <%= deal.hostelName%></li>
         <li><%= deal.duration%> years</li>
         <li><%= deal.description%></li>
@@ -264,6 +264,7 @@
       <% }%>
       
           <div class="occasion-cart">
+            <% if(user) {%>
             <div
               class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
             >
@@ -292,6 +293,21 @@
                 </fieldset>
               </form>
             </div>
+            <% } else {%>
+              <a href="/signup">
+              <div
+              class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+            >
+                  <input
+                    id="addToWishlistSignup"
+                    type="submit"
+                    name="submit"
+                    value="Add to wishlist"
+                    class="button"
+                  />
+            </div>
+          </a>
+              <% } %>
           </div>
         </div>
         <div class="clearfix"></div>
