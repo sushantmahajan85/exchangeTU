@@ -280,19 +280,6 @@
             >
               <form action="#" method="post">
                 <fieldset>
-                  <input type="hidden" name="cmd" value="_cart" />
-                  <input type="hidden" name="add" value="1" />
-                  <input type="hidden" name="business" value=" " />
-                  <input
-                    type="hidden"
-                    name="item_name"
-                    value="Zeeba Premium Basmati Rice - 5 KG"
-                  />
-                  <input type="hidden" name="amount" value="950.00" />
-                  <input type="hidden" name="discount_amount" value="1.00" />
-                  <input type="hidden" name="currency_code" value="USD" />
-                  <input type="hidden" name="return" value=" " />
-                  <input type="hidden" name="cancel_return" value=" " />
                   <input
                     id="addToWishlist"
                     type="submit"
@@ -524,7 +511,7 @@
 
     <!-- js-files -->
     <!-- jquery -->
-    <script src="/js/likedDeal.js"></script>
+    <!-- <script src="/js/likedDeal.js"></script> -->
     <script src="/js/jquery-2.1.4.min.js"></script>
     <!-- //jquery -->
 
@@ -532,6 +519,66 @@
     defer
     src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
   ></script>
+
+      <script>
+        var test = '<%- user._id %>';
+        // console.log(test);
+        const passvalueliked = async (username, email, password, passwordConfirm) => {
+  const hideAlert = () => {
+    const el = document.querySelector(".alerts");
+    if (el) {
+      el.parentElement.removeChild(el);
+    }
+  };
+
+  const showAlert = (type, msg) => {
+    hideAlert();
+
+    const markup = `<div class="alerts alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
+
+    window.setTimeout(hideAlert, 5000);
+  };
+  try {
+    // await axios({
+    //   method: "DELETE",
+    //   url: "/api/v1/users/signup",
+    //   data: {
+    //     email,
+    //   },
+    // });
+    var full_url = window.location.pathname;
+    var url_array = full_url.split("/");
+    var deal = url_array[url_array.length - 3];
+    console.log(deal);
+    // var user = url_array[url_array.length - 1];
+    // console.log(user);
+    const result = await axios({
+      method: "POST",
+      url: "/api/v1/likedDeal",
+      data: {
+        deal,
+        user: test,
+      },
+    });
+    if (result.data.status === "success") {
+      // alert("sign up successful");
+      showAlert("success", "Product Wishlisted!");
+      window.setTimeout(() => {
+        location.assign("/");
+      }, 2000);
+    }
+  } catch (err) {
+    showAlert("error", "Something went wrong. Please try again later");
+  }
+};
+
+document.getElementById("addToWishlist").addEventListener("click", (e) => {
+  e.preventDefault();
+  passvalueliked();
+});
+
+      </script>
 
       <script>
         $('#addToWishlist').click(function(){
