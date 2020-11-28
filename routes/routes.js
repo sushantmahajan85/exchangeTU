@@ -70,9 +70,14 @@ router.put("/:id", async function (req, res) {
   console.log(updated);
 });
 router.get("/", catchAsync( async function (req, res) {
-  const deals = await Deal.find().sort([['createdAt',-1]]).limit(100);
-  console.log(deals);
-  res.render("index",{deals});
+  const drafters = await Deal.find({category:"drafter"}).sort([['createdAt',-1]]).limit(10);
+  
+  const books = await Deal.find({category:"books"}).sort([['createdAt',-1]]).limit(10);
+  const labcoat = await Deal.find({category:"labcoat"}).sort([['createdAt',-1]]).limit(10);
+  const cycle = await Deal.find({category:"cycle"}).sort([['createdAt',-1]]).limit(10);
+  const mattress = await Deal.find({category:"mattress"}).sort([['createdAt',-1]]).limit(10);
+  console.log(labcoat);
+  res.render("index",{drafters,books,labcoat,cycle,mattress});
 }));
 router.get("/about", function (req, res) {
   res.render("about");
