@@ -932,8 +932,10 @@ h3.w3l-nut-middle {
 .about,
 .banner-bootom-w3-agileits,
 .privacy {
-  padding: 5em 0;
+  padding: 5rem 0;
 }
+
+
 /*-- tittle heading --*/
 h3.tittle-w3l {
   color: #000;
@@ -1410,15 +1412,23 @@ ul.w3_short {
 /*-- contact --*/
 .contact-form.wthree {
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 40px;
   -webkit-box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
   box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
 }
-#height_search{
-  height:600px;
+.submit button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    margin-top: 15px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 #aboutUsPage{
   margin: -18px auto;
