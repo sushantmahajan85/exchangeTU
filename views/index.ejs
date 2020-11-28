@@ -5,10 +5,10 @@
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="keywords" content="website" />
-
-    <link rel="icon" href="images/favicon.png" type="image/png" sizes="18x12" />
+    
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="14x14" />
 
     <script>
       addEventListener(
@@ -50,77 +50,8 @@
   </head>
 
   <body>
-    <!-- header-bot-->
-    <div class="header-bot">
-      <div class="header-bot_inner_wthreeinfo_header_mid">
-        <div class="col-md-4 logo_agile">
-          <h1>
-            <a href="/">
-              <img src="images\logo.png" alt=" " />
-            </a>
-          </h1>
-        </div>
-        <div class="col-md-8 header">
-          <!-- header lists -->
-          <ul>
-            <li>
-              <a href="/login">
-                <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign
-                In
-              </a>
-            </li>
-            <li>
-              <a href="/signup">
-                <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
-                Sign Up
-              </a>
-            </li>
-          </ul>
-          <!-- //header lists -->
-          <!-- search -->
-          <div class="agileits_search">
-            <form action="#" method="post">
-              <input
-                name="Search"
-                type="search"
-                placeholder="How can we help you today?"
-                required=""
-              />
-              <button
-                type="submit"
-                class="btn btn-default"
-                aria-label="Left Align"
-              >
-                <span class="fa fa-search" aria-hidden="true"> </span>
-              </button>
-            </form>
-          </div>
-          <!-- //search -->
-          <!-- wishlist -->
-          <div class="top_nav_right">
-            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
-              <form action="#" method="post" class="last">
-                <input type="hidden" name="cmd" value="_cart" />
-                <input type="hidden" name="display" value="1" />
-                <a href="/wishlist">
-                  <i style="font-size: 24px" class="fa"
-                    >&#xf08a;
-                    <span>
-                      <h4>My Wishlist</h4>
-                      <a href="/wishlist"></a></span></i
-                ></a>
-              </form>
-            </div>
-          </div>
+    <%- include('partials/navbar.ejs') %>
 
-          <!-- //wishlist details -->
-          <div class="clearfix"></div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-
-    <!-- signin Model -->
     <!-- Modal1 -->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
       <div class="modal-dialog">
@@ -173,131 +104,6 @@
     <!-- //Modal1 -->
     <!-- //signin Model -->
     <!-- signup Model -->
-    <!-- Modal2 -->
-    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">
-              &times;
-            </button>
-          </div>
-          <div class="modal-body modal-body-sub_agile">
-            <div class="main-mailposi">
-              <span class="fa fa-envelope-o" aria-hidden="true"></span>
-            </div>
-            <div class="modal_body_left modal_body_left1">
-              <h3 class="agileinfo_sign">Sign Up</h3>
-
-              <form action="#" method="post">
-                <div class="styled-input agile-styled-input-top">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    name="Name"
-                    required=""
-                  />
-                </div>
-                <div class="styled-input">
-                  <input
-                    type="email"
-                    placeholder="E-mail"
-                    name="Email"
-                    required=""
-                  />
-                </div>
-                <div class="styled-input">
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    id="password1"
-                    required=""
-                  />
-                </div>
-                <div class="styled-input">
-                  <input
-                    type="password"
-                    placeholder="Confirm Password"
-                    name="Confirm Password"
-                    id="password2"
-                    required=""
-                  />
-                </div>
-                <input type="submit" value="Sign Up" />
-              </form>
-              <p>
-                <a href="#">By clicking register, I agree to your terms</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- //Modal content-->
-      </div>
-    </div>
-    <!-- //Modal2 -->
-    <!-- //signup Model -->
-    <!-- //header-bot -->
-    <!-- navigation -->
-    <div class="ban-top">
-      <div class="container">
-        <div class="agileits-navi_search">
-          <form action="#" method="post">
-           
-            <select id="agileinfo-nav_search" name="agileinfo_search" required=""> -->
-              <option value="">All Categories</option>
-              <option value="drafters"> Drafters</option>
-              <option value="labcoat">Lab Coats</option>
-              <option value="cycle">Cycles</option>
-              <option value="mattress" id="#mattress_id" >Mattress</option>
-              <option value="others">Others</option>
-            </select>
-          </form>
-        </div>
-        <div class="top_nav_left">
-          <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button
-                  type="button"
-                  class="navbar-toggle collapsed"
-                  data-toggle="collapse"
-                  data-target="#bs-example-navbar-collapse-1"
-                  aria-expanded="false"
-                >
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div
-                class="collapse navbar-collapse menu--shylock"
-                id="bs-example-navbar-collapse-1"
-              >
-                <ul class="nav navbar-nav menu__list">
-                  <li class="active">
-                    <a class="nav-stylehead" href="/">Home </a>
-                  </li>
-                  <li>
-                    <a class="nav-stylehead" href="/about">About Us</a>
-                  </li>
-                  <li>
-                    <a class="" href="/contact">Contact</a>
-                  </li>
-                  <li>
-                    <a class="" href="/newDeal">Post A Deal</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div>
     <!-- top Products -->
     <div class="ads-grid">
       <div class="container">
@@ -308,33 +114,30 @@
             <div class="product-sec1">
               <h3 class="heading-tittle" id = "mattress_id">Mattress</h3>
               
-              <% for(var deal of deals ) { %>
+              <% for(var deal of mattress ) { %>
               
               
               <div class="col-md-4 product-men">
                 <div class="men-pro-item simpleCart_shelfItem">
                   <div class="men-thumb-item">
                     <img
-                      src="images/thin mattress.jpg"
+                      src=<%= `/img/deals/${deal.titleImg}`%>
                       alt=""
                       width="200"
-                      height="400"
+                      height="200"
                     />
                     <div class="men-cart-pro">
                       <div class="inner-men-cart-pro">
-                        <a href="/single" class="link-product-add-cart"
-                          >Quick View</a
-                        >
+                        <a class="link-product-add-cart" href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>Quick View</a>
                       </div>
                     </div>
-                    <span class="product-new-top">New</span>
                   </div>
                   <div class="item-info-product">
                     <div class="info-product-price">
-                      <span class="item_price">Rs. 500</span>
-                      <del>Rs. 100</del>
+                      <span class="item_price">₹<%= deal.dealPrice %></span>
+                      <del>₹<%= deal.mrp %></del>
                     </div>
-                    <h4><a href="/single">Thin Foam Mattress</a></h4>
+                    <h4><a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>><%= deal.dealName %></a></h4>
                     <div
                       class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
                     >
@@ -369,648 +172,275 @@
                 </div>
               </div>
               <% } %>
-              <!-- <div class="col-md-4 product-men">
-                <div class="men-pro-item simpleCart_shelfItem">
-                  <div class="men-thumb-item">
-                    <img
-                      src="images/foam mattress.jpg"
-                      alt=""
-                      width="200"
-                      height="400"
-                    />
-                    <div class="men-cart-pro">
-                      <div class="inner-men-cart-pro">
-                        <a href="/single" class="link-product-add-cart"
-                          >Quick View</a
-                        >
-                      </div>
-                    </div>
-                    <span class="product-new-top">New</span>
-                  </div>
-                  <div class="item-info-product">
-                    <div class="info-product-price">
-                      <span class="item_price">Rs. 300</span>
-                      <del>Rs. 600</del>
-                    </div>
-                    <h4>
-                      <a href="/single">Thick Foam Mattress</a>
-                    </h4>
-                    <div
-                      class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                    >
-                      <br />
-                      <form action="#" method="post">
-                        <fieldset>
-                          <input type="hidden" name="cmd" value="_cart" />
-                          <input type="hidden" name="add" value="1" />
-                          <input type="hidden" name="business" value=" " />
-                          <input
-                            type="hidden"
-                            name="item_name"
-                            value="Cashew Nuts, 100g"
-                          />
-                          <input type="hidden" name="amount" value="200.00" />
-                          <input
-                            type="hidden"
-                            name="discount_amount"
-                            value="1.00"
-                          />
-                          <input
-                            type="hidden"
-                            name="currency_code"
-                            value="USD"
-                          />
-                          <input type="hidden" name="return" value=" " />
-                          <input type="hidden" name="cancel_return" value=" " />
-                        </fieldset>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-              <!-- <div class="col-md-4 product-men">
-                <div class="men-pro-item simpleCart_shelfItem">
-                  <div class="men-thumb-item">
-                    <img
-                      src="images/cottonmattress.jpg"
-                      alt=""
-                      width="200"
-                      height="400"
-                    />
-                    <div class="men-cart-pro">
-                      <div class="inner-men-cart-pro">
-                        <a href="/single" class="link-product-add-cart"
-                          >Quick View</a
-                        >
-                      </div>
-                    </div>
-                    <span class="product-new-top">New</span>
-                  </div>
-                  <div class="item-info-product">
-                    <div class="info-product-price">
-                      <span class="item_price">Rs. 200</span>
-                      <del>Rs. 500</del>
-                    </div>
-                    <h4>
-                      <a href="/single">Cotton Mattress</a>
-                    </h4>
-                    <div
-                      class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                    >
-                      <br />
-                      <form action="#" method="post">
-                        <fieldset>
-                          <input type="hidden" name="cmd" value="_cart" />
-                          <input type="hidden" name="add" value="1" />
-                          <input type="hidden" name="business" value=" " />
-                          <input
-                            type="hidden"
-                            name="item_name"
-                            value="Pista, 250g"
-                          />
-                          <input type="hidden" name="amount" value="520.99" />
-                          <input
-                            type="hidden"
-                            name="discount_amount"
-                            value="1.00"
-                          />
-                          <input
-                            type="hidden"
-                            name="currency_code"
-                            value="USD"
-                          />
-                          <input type="hidden" name="return" value=" " />
-                          <input type="hidden" name="cancel_return" value=" " />
-                        </fieldset>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
               <div class="clearfix"></div>
             </div>
+
             <!-- //first section (mattress) -->
             <!-- second section (cycle) -->
             <div class="product-sec1">
-              <h3 class="heading-tittle">Cycles</h3>
-              <div class="col-md-4 product-men">
-                <div class="men-pro-item simpleCart_shelfItem">
-                  <div class="men-thumb-item">
-                    <img
-                      src="images/cycle4.jpg"
-                      alt=""
-                      width="200"
-                      height="200"
-                    />
-                    <div class="men-cart-pro">
-                      <div class="inner-men-cart-pro">
-                        <a href="/single" class="link-product-add-cart"
-                          >Quick View</a
-                        >
+              <h3 class="heading-tittle" id = "cycle_id">Cycles</h3>
+              <% for(var deal of cycle ) { %>
+              
+              
+                <div class="col-md-4 product-men">
+                  <div class="men-pro-item simpleCart_shelfItem">
+                    <div class="men-thumb-item">
+                      <img
+                        src=<%= `/img/deals/${deal.titleImg}`%>
+                        alt=""
+                        width="200"
+                        height="200"
+                      />
+                      <div class="men-cart-pro">
+                        <div class="inner-men-cart-pro">
+                          <a class="link-product-add-cart" href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>Quick View</a>
+                        </div>
                       </div>
                     </div>
-                    <span class="product-new-top">New</span>
-                  </div>
-                  <div class="item-info-product">
-                    <div class="info-product-price">
-                      <span class="item_price">Rs. 1000</span>
-                      <del>Rs. 3500</del>
-                    </div>
-                    <div
-                      class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                    >
-                      <form action="#" method="post">
-                        <fieldset>
-                          <input type="hidden" name="cmd" value="_cart" />
-                          <input type="hidden" name="add" value="1" />
-                          <input type="hidden" name="business" value=" " />
-                          <input
-                            type="hidden"
-                            name="item_name"
-                            value="Freedom Sunflower Oil, 1L"
-                          />
-                          <input type="hidden" name="amount" value="78.00" />
-                          <input
-                            type="hidden"
-                            name="discount_amount"
-                            value="1.00"
-                          />
-                          <input
-                            type="hidden"
-                            name="currency_code"
-                            value="USD"
-                          />
-                          <input type="hidden" name="return" value=" " />
-                          <input type="hidden" name="cancel_return" value=" " />
-                        </fieldset>
-                      </form>
+                    <div class="item-info-product">
+                      <div class="info-product-price">
+                        <span class="item_price">₹<%= deal.dealPrice %></span>
+                        <del>₹<%= deal.mrp %></del>
+                      </div>
+                      <h4><a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>><%= deal.dealName %></a></h4>
+                      <div
+                        class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+                      >
+                        <br />
+                        <form action="#" method="post">
+                          <fieldset>
+                            <input type="hidden" name="cmd" value="_cart" />
+                            <input type="hidden" name="add" value="1" />
+                            <input type="hidden" name="business" value=" " />
+                            <input
+                              type="hidden"
+                              name="item_name"
+                              value="Almonds, 100g"
+                            />
+                            <input type="hidden" name="amount" value="149.00" />
+                            <input
+                              type="hidden"
+                              name="discount_amount"
+                              value="1.00"
+                            />
+                            <input
+                              type="hidden"
+                              name="currency_code"
+                              value="USD"
+                            />
+                            <input type="hidden" name="return" value=" " />
+                            <input type="hidden" name="cancel_return" value=" " />
+                          </fieldset>
+                        </form>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4 product-men">
-                <div class="men-pro-item simpleCart_shelfItem">
-                  <div class="men-thumb-item">
-                    <img
-                      src="images/cycle 3.jpg"
-                      alt=""
-                      width="200"
-                      height="200"
-                    />
-                    <div class="men-cart-pro">
-                      <div class="inner-men-cart-pro">
-                        <a href="/single" class="link-product-add-cart"
-                          >Quick View</a
-                        >
-                      </div>
-                    </div>
-                    <span class="product-new-top">New</span>
-                  </div>
-                  <div class="item-info-product">
-                    <div class="info-product-price">
-                      <span class="item_price">Rs. 1500</span>
-                      <del>Rs. 2000</del>
-                    </div>
-                    <div
-                      class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                    >
-                      <form action="#" method="post">
-                        <fieldset>
-                          <input type="hidden" name="cmd" value="_cart" />
-                          <input type="hidden" name="add" value="1" />
-                          <input type="hidden" name="business" value=" " />
-                          <input
-                            type="hidden"
-                            name="item_name"
-                            value="Saffola Gold, 1L"
-                          />
-                          <input type="hidden" name="amount" value="130.00" />
-                          <input
-                            type="hidden"
-                            name="discount_amount"
-                            value="1.00"
-                          />
-                          <input
-                            type="hidden"
-                            name="currency_code"
-                            value="USD"
-                          />
-                          <input type="hidden" name="return" value=" " />
-                          <input type="hidden" name="cancel_return" value=" " />
-                        </fieldset>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 product-men">
-                <div class="men-pro-item simpleCart_shelfItem">
-                  <div class="men-thumb-item">
-                    <img
-                      src="images/cycle5.jpg"
-                      alt=""
-                      widht="100"
-                      height="200"
-                    />
-                    <div class="men-cart-pro">
-                      <div class="inner-men-cart-pro">
-                        <a href="/single" class="link-product-add-cart"
-                          >Quick View</a
-                        >
-                      </div>
-                    </div>
-                    <span class="product-new-top">New</span>
-                  </div>
-                  <div class="item-info-product">
-                    <div class="info-product-price">
-                      <span class="item_price">Rs. 2000</span>
-                      <del>Rs. 2500</del>
-                    </div>
-                    <div
-                      class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                    >
-                      <form action="#" method="post">
-                        <fieldset>
-                          <input type="hidden" name="cmd" value="_cart" />
-                          <input type="hidden" name="add" value="1" />
-                          <input type="hidden" name="business" value=" " />
-                          <input
-                            type="hidden"
-                            name="item_name"
-                            value="Fortune Oil, 5L"
-                          />
-                          <input type="hidden" name="amount" value="399.99" />
-                          <input
-                            type="hidden"
-                            name="discount_amount"
-                            value="1.00"
-                          />
-                          <input
-                            type="hidden"
-                            name="currency_code"
-                            value="USD"
-                          />
-                          <input type="hidden" name="return" value=" " />
-                          <input type="hidden" name="cancel_return" value=" " />
-                        </fieldset>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <% } %>
+                
               <div class="clearfix"></div>
               
             </div>
             <!-- //second section (cycle) -->
             
           </div>
-          <!-- second section (cycle) -->
+          <!-- third section (drafter) -->
           <div class="product-sec1">
-            <h3 class="heading-tittle">Drafter</h3>
-            <div class="col-md-4 product-men">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <img
-                    src="images/Draft1.jpg"
-                    alt=""
-                    width="200"
-                    height="200"
-                  />
-                  <div class="men-cart-pro">
-                    <div class="inner-men-cart-pro">
-                      <a href="/single" class="link-product-add-cart"
-                        >Quick View</a
-                      >
+            <h3 class="heading-tittle" id ="drafter_id">Drafter</h3>
+            <% for(var deal of drafters ) { %>
+              
+              
+              <div class="col-md-4 product-men">
+                <div class="men-pro-item simpleCart_shelfItem">
+                  <div class="men-thumb-item">
+                    <img
+                      src=<%= `/img/deals/${deal.titleImg}`%>
+                      alt=""
+                      width="200"
+                      height="200"
+                    />
+                    <div class="men-cart-pro">
+                      <div class="inner-men-cart-pro">
+                        <a class="link-product-add-cart" href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>Quick View</a>
+                      </div>
                     </div>
                   </div>
-                  <span class="product-new-top">New</span>
-                </div>
-                <div class="item-info-product">
-                  <div class="info-product-price">
-                    <span class="item_price">Rs. 400</span>
-                    <del>Rs. 500</del>
-                  </div>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input
-                          type="hidden"
-                          name="item_name"
-                          value="Freedom Sunflower Oil, 1L"
-                        />
-                        <input type="hidden" name="amount" value="78.00" />
-                        <input
-                          type="hidden"
-                          name="discount_amount"
-                          value="1.00"
-                        />
-                        <input
-                          type="hidden"
-                          name="currency_code"
-                          value="USD"
-                        />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                      </fieldset>
-                    </form>
+                  <div class="item-info-product">
+                    <div class="info-product-price">
+                      <span class="item_price">₹<%= deal.dealPrice %></span>
+                      <del>₹<%= deal.mrp %></del>
+                    </div>
+                    <h4><a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>><%= deal.dealName %></a></h4>
+                    <div
+                      class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+                    >
+                      <br />
+                      <form action="#" method="post">
+                        <fieldset>
+                          <input type="hidden" name="cmd" value="_cart" />
+                          <input type="hidden" name="add" value="1" />
+                          <input type="hidden" name="business" value=" " />
+                          <input
+                            type="hidden"
+                            name="item_name"
+                            value="Almonds, 100g"
+                          />
+                          <input type="hidden" name="amount" value="149.00" />
+                          <input
+                            type="hidden"
+                            name="discount_amount"
+                            value="1.00"
+                          />
+                          <input
+                            type="hidden"
+                            name="currency_code"
+                            value="USD"
+                          />
+                          <input type="hidden" name="return" value=" " />
+                          <input type="hidden" name="cancel_return" value=" " />
+                        </fieldset>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 product-men">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <img
-                    src="images/draft2.jpg"
-                    alt=""
-                    width="200"
-                    height="200"
-                  />
-                  <div class="men-cart-pro">
-                    <div class="inner-men-cart-pro">
-                      <a href="/single" class="link-product-add-cart"
-                        >Quick View</a
-                      >
-                    </div>
-                  </div>
-                  <span class="product-new-top">New</span>
-                </div>
-                <div class="item-info-product">
-                  <div class="info-product-price">
-                    <span class="item_price">Rs. 550</span>
-                    <del>Rs. 600</del>
-                  </div>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input
-                          type="hidden"
-                          name="item_name"
-                          value="Saffola Gold, 1L"
-                        />
-                        <input type="hidden" name="amount" value="130.00" />
-                        <input
-                          type="hidden"
-                          name="discount_amount"
-                          value="1.00"
-                        />
-                        <input
-                          type="hidden"
-                          name="currency_code"
-                          value="USD"
-                        />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 product-men">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <img
-                    src="images/draft3.jpg"
-                    alt=""
-                    widht="100"
-                    height="200"
-                  />
-                  <div class="men-cart-pro">
-                    <div class="inner-men-cart-pro">
-                      <a href="/single" class="link-product-add-cart"
-                        >Quick View</a
-                      >
-                    </div>
-                  </div>
-                  <span class="product-new-top">New</span>
-                </div>
-                <div class="item-info-product">
-                  <div class="info-product-price">
-                    <span class="item_price">Rs. 600</span>
-                    <del>Rs. 700</del>
-                  </div>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input
-                          type="hidden"
-                          name="item_name"
-                          value="Fortune Oil, 5L"
-                        />
-                        <input type="hidden" name="amount" value="399.99" />
-                        <input
-                          type="hidden"
-                          name="discount_amount"
-                          value="1.00"
-                        />
-                        <input
-                          type="hidden"
-                          name="currency_code"
-                          value="USD"
-                        />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <% } %>
+              
             <div class="clearfix"></div>
             
           </div>
-          <!-- second section (cycle) -->
+          <!-- //third section (drafter) -->
+          
+          <!-- fourth section labcoat-->
           <div class="product-sec1">
-            <h3 class="heading-tittle">Labcoat</h3>
-            <div class="col-md-4 product-men">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <img
-                    src="images/coat1.jpg"
-                    alt=""
-                    width="200"
-                    height="200"
-                  />
-                  <div class="men-cart-pro">
-                    <div class="inner-men-cart-pro">
-                      <a href="/single" class="link-product-add-cart"
-                        >Quick View</a
-                      >
+            <h3 class="heading-tittle" id = "labcoat_id">Labcoat</h3>
+            <% for(var deal of labcoat ) { %>
+              
+              
+              <div class="col-md-4 product-men">
+                <div class="men-pro-item simpleCart_shelfItem">
+                  <div class="men-thumb-item">
+                    <img
+                      src=<%= `/img/deals/${deal.titleImg}`%>
+                      alt=""
+                      width="200"
+                      height="200"
+                    />
+                    <div class="men-cart-pro">
+                      <div class="inner-men-cart-pro">
+                        <a class="link-product-add-cart" href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>Quick View</a>
+                      </div>
                     </div>
                   </div>
-                  <span class="product-new-top">New</span>
-                </div>
-                <div class="item-info-product">
-                  <div class="info-product-price">
-                    <span class="item_price">Rs. 200</span>
-                    <del>Rs. 500</del>
-                  </div>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input
-                          type="hidden"
-                          name="item_name"
-                          value="Freedom Sunflower Oil, 1L"
-                        />
-                        <input type="hidden" name="amount" value="78.00" />
-                        <input
-                          type="hidden"
-                          name="discount_amount"
-                          value="1.00"
-                        />
-                        <input
-                          type="hidden"
-                          name="currency_code"
-                          value="USD"
-                        />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                      </fieldset>
-                    </form>
+                  <div class="item-info-product">
+                    <div class="info-product-price">
+                      <span class="item_price">₹<%= deal.dealPrice %></span>
+                      <del>₹<%= deal.mrp %></del>
+                    </div>
+                    <h4><a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>><%= deal.dealName %></a></h4>
+                    <div
+                      class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+                    >
+                      <br />
+                      <form action="#" method="post">
+                        <fieldset>
+                          <input type="hidden" name="cmd" value="_cart" />
+                          <input type="hidden" name="add" value="1" />
+                          <input type="hidden" name="business" value=" " />
+                          <input
+                            type="hidden"
+                            name="item_name"
+                            value="Almonds, 100g"
+                          />
+                          <input type="hidden" name="amount" value="149.00" />
+                          <input
+                            type="hidden"
+                            name="discount_amount"
+                            value="1.00"
+                          />
+                          <input
+                            type="hidden"
+                            name="currency_code"
+                            value="USD"
+                          />
+                          <input type="hidden" name="return" value=" " />
+                          <input type="hidden" name="cancel_return" value=" " />
+                        </fieldset>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 product-men">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <img
-                    src="images/coat2.jpg"
-                    alt=""
-                    width="200"
-                    height="200"
-                  />
-                  <div class="men-cart-pro">
-                    <div class="inner-men-cart-pro">
-                      <a href="/single" class="link-product-add-cart"
-                        >Quick View</a
-                      >
+              <% } %>
+              
+            <div class="clearfix"></div>
+          </div>
+          <!-- <div class="product-sec1 col-md-9">
+            <h3 class="heading-tittle" id ="others_id">Others</h3>
+            <% for(var deal of others ) { %>
+              
+              
+              <div class="col-md-4 product-men">
+                <div class="men-pro-item simpleCart_shelfItem">
+                  <div class="men-thumb-item">
+                    <img
+                      src=<%= `/img/deals/${deal.titleImg}`%>
+                      alt=""
+                      width="200"
+                      height="200"
+                    />
+                    <div class="men-cart-pro">
+                      <div class="inner-men-cart-pro">
+                        <a class="link-product-add-cart" href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>Quick View</a>
+                      </div>
                     </div>
                   </div>
-                  <span class="product-new-top">New</span>
-                </div>
-                <div class="item-info-product">
-                  <div class="info-product-price">
-                    <span class="item_price">Rs. 250</span>
-                    <del>Rs. 350</del>
-                  </div>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input
-                          type="hidden"
-                          name="item_name"
-                          value="Saffola Gold, 1L"
-                        />
-                        <input type="hidden" name="amount" value="130.00" />
-                        <input
-                          type="hidden"
-                          name="discount_amount"
-                          value="1.00"
-                        />
-                        <input
-                          type="hidden"
-                          name="currency_code"
-                          value="USD"
-                        />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                      </fieldset>
-                    </form>
+                  <div class="item-info-product">
+                    <div class="info-product-price">
+                      <span class="item_price">₹<%= deal.dealPrice %></span>
+                      <del>₹<%= deal.mrp %></del>
+                    </div>
+                    <h4><a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>><%= deal.dealName %></a></h4>
+                    <div
+                      class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+                    >
+                      <br />
+                      <form action="#" method="post">
+                        <fieldset>
+                          <input type="hidden" name="cmd" value="_cart" />
+                          <input type="hidden" name="add" value="1" />
+                          <input type="hidden" name="business" value=" " />
+                          <input
+                            type="hidden"
+                            name="item_name"
+                            value="Almonds, 100g"
+                          />
+                          <input type="hidden" name="amount" value="149.00" />
+                          <input
+                            type="hidden"
+                            name="discount_amount"
+                            value="1.00"
+                          />
+                          <input
+                            type="hidden"
+                            name="currency_code"
+                            value="USD"
+                          />
+                          <input type="hidden" name="return" value=" " />
+                          <input type="hidden" name="cancel_return" value=" " />
+                        </fieldset>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 product-men">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <img
-                    src="images/coat3.jpg"
-                    alt=""
-                    widht="100"
-                    height="200"
-                  />
-                  <div class="men-cart-pro">
-                    <div class="inner-men-cart-pro">
-                      <a href="/single" class="link-product-add-cart"
-                        >Quick View</a
-                      >
-                    </div>
-                  </div>
-                  <span class="product-new-top">New</span>
-                </div>
-                <div class="item-info-product">
-                  <div class="info-product-price">
-                    <span class="item_price">Rs. 200</span>
-                    <del>Rs. 300</del>
-                  </div>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input
-                          type="hidden"
-                          name="item_name"
-                          value="Fortune Oil, 5L"
-                        />
-                        <input type="hidden" name="amount" value="399.99" />
-                        <input
-                          type="hidden"
-                          name="discount_amount"
-                          value="1.00"
-                        />
-                        <input
-                          type="hidden"
-                          name="currency_code"
-                          value="USD"
-                        />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <% } %>
+              
             <div class="clearfix"></div>
             
-          </div>
-          <!-- //second section (cycle) -->
-          <!-- //second section (cycle) -->
+          </div> -->
+          <!-- //fourth section (labcoat) -->
         </div>
-        
-        <!-- //product right -->
       </div>    
     <!-- //top products -->
     <!-- special offers -->
@@ -1018,297 +448,105 @@
       <div class="container">
         <div class="content-bottom-in">
           <ul id="flexiselDemo1">
-            <li>
-              <div class="w3l-specilamk">
-                <div class="speioffer-agile">
-                  <a href="/single">
-                    <img src="images/drafter1.jpg" alt="" />
-                  </a>
-                </div>
-                <div class="product-name-w3l">
-                  <h4>
-                    <a href="/single">Drafter</a>
-                  </h4>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_wishlist" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input type="hidden" name="item_name" value="Drafter" />
-                        <input type="hidden" name="amount" value="220.00" />
-                        <input
-                          type="submit"
-                          name="submit"
-                          value="Add to wishlist"
-                          class="button"
-                        />
-                      </fieldset>
-                    </form>
+            <% for(var deal of others ) { %>
+              <li>
+                <div class="w3l-specilamk">
+                  <div class="speioffer-agile">
+                    <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %> >
+                      <img src=<%= `/img/deals/${deal.titleImg}` %>  alt="" />
+                    </a>
+                  </div>
+                  <div class="product-name-w3l">
+                    <h4>
+                      <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>><%= deal.dealName  %> </a>
+                    </h4>
+                    <div
+                      class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+                    >
+                      <form action="#" method="post">
+                        <fieldset>
+                          <input type="hidden" name="cmd" value="_wishlist" />
+                          <input type="hidden" name="add" value="1" />
+                          <input type="hidden" name="business" value=" " />
+                          <input type="hidden" name="item_name" value="Drafter" />
+                          <input type="hidden" name="amount" value="220.00" />
+                          <input
+                            type="submit"
+                            name="submit"
+                            value="Add to wishlist"
+                            class="button"
+                          />
+                        </fieldset>
+                      </form>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="w3l-specilamk">
-                <div class="speioffer-agile">
-                  <a href="/single">
-                    <img src="images/cycle7.JPG" alt="" />
-                  </a>
-                </div>
-                <div class="product-name-w3l">
-                  <h4>
-                    <a href="/single">Cycle</a>
-                  </h4>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_wishlist" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input type="hidden" name="item_name" value="cycle" />
-                        <input type="hidden" name="amount" value="99.00" />
-                        <input
-                          type="submit"
-                          name="submit"
-                          value="Add to wishlist"
-                          class="button"
-                        />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="w3l-specilamk">
-                <div class="speioffer-agile">
-                  <a href="/single">
-                    <img src="images/labcoat1.jpg" alt="" />
-                  </a>
-                </div>
-                <div class="product-name-w3l">
-                  <h4>
-                    <a href="/single">Labcoat</a>
-                  </h4>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_wishlist" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input type="hidden" name="item_name" value="labcoat" />
-                        <input type="hidden" name="amount" value="69.00" />
-                        <input
-                          type="submit"
-                          name="submit"
-                          value="Add to wishlist"
-                          class="button"
-                        />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="w3l-specilamk">
-                <div class="speioffer-agile">
-                  <a href="/single">
-                    <img src="images/cooler1.jpg" alt="" />
-                  </a>
-                </div>
-                <div class="product-name-w3l">
-                  <h4>
-                    <a href="/single">Cooler</a>
-                  </h4>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_wishlist" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input type="hidden" name="item_name" value="cooler" />
-                        <input type="hidden" name="amount" value="187.00" />
-                        <input
-                          type="submit"
-                          name="submit"
-                          value="Add to wishlist"
-                          class="button"
-                        />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li></li>
-            <li>
-              <div class="w3l-specilamk">
-                <div class="speioffer-agile">
-                  <a href="/single">
-                    <img src="images/mattress1.jpg" alt="" />
-                  </a>
-                </div>
-                <div class="product-name-w3l">
-                  <h4>
-                    <a href="/single">Mattress</a>
-                  </h4>
-                  <div
-                    class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
-                  >
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_wishlist" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input
-                          type="hidden"
-                          name="item_name"
-                          value="Mattress
-						"
-                        />
-                        <input type="hidden" name="amount" value="121.60" />
-                        <input
-                          type="submit"
-                          name="submit"
-                          value="Add to wishlist"
-                          class="button"
-                        />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li></li>
-            <li></li>
+              </li>
+              
+            <% } %>
           </ul>
         </div>
       </div>
     </div>
+    </div>
     <!-- //special offers -->
-      <footer class="footer-section">
+      <!-- Site footer -->
+      <footer class="site-footer">
         <div class="container">
-            <div class="footer-cta pt-5 pb-5">
-                <div class="row">
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="cta-text">
-                                <h4>Find us</h4>
-                                <span>1010 Avenue, sw 54321, chandigarh</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="fas fa-phone"></i>
-                            <div class="cta-text">
-                                <h4>Call us</h4>
-                                <span>9876543210 0</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="far fa-envelope-open"></i>
-                            <div class="cta-text">
-                                <h4>Mail us</h4>
-                                <span>mail@info.com</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <br>
+              <p class="text-justify"><b>ExchangeTU</b> is a platform for the students of TIET where students can purchase or sell products
+               according to one's requirements. A platform to ease exchange of items within students at nominal rate.
+              </p>
             </div>
-            <div class="footer-content pt-5 pb-5">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"></a>
-                            </div>
-                            <div class="footer-text">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                elit,Lorem ipsum dolor sit amet.</p>
-                            </div>
-                            <div class="footer-social-icon">
-                                <span>Follow us</span>
-                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Useful Links</h3>
-                            </div>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">about</a></li>
-                                <li><a href="#">services</a></li>
-                                <li><a href="#">portfolio</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Expert Team</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Latest News</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Subscribe</h3>
-                            </div>
-                            <div class="footer-text mb-25">
-                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-                            </div>
-                            <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <br>
+              <ul class="footer-links">
+                <li><a href="/">Mattress</a></li>
+                <li><a href="/">Cycle</a></li>
+                <li><a href="/">Drafter</a></li>
+                <li><a href="/">LabCoat</a></li>
+                <li><a href="/">Others</a></li>
+              </ul>
             </div>
+
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <br>
+              <ul class="footer-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/newDeal">Post a Deal</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
         </div>
-        <div class="copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                        <div class="copyright-text">
-                            <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                        <div class="footer-menu">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Policy</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+           <a href="/">ExchangeTU</a>.
+              </p>
             </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
         </div>
-    </footer>
+  </footer> 
+                          
     <!-- js-files -->
     <!-- jquery -->
     <script src="js/jquery-2.1.4.min.js"></script>
@@ -1442,14 +680,6 @@
     <!-- smooth-scrolling-of-move-up -->
     <script>
       $(document).ready(function () {
-        /*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			*/
         $().UItoTop({
           easingType: "easeOutQuart",
         });

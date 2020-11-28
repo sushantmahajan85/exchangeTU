@@ -1,4 +1,4 @@
-const passvaluehaha = async (username, email, password, passwordConfirm) => {
+const passvalueliked = async (username, email, password, passwordConfirm) => {
   const hideAlert = () => {
     const el = document.querySelector(".alerts");
     if (el) {
@@ -22,16 +22,19 @@ const passvaluehaha = async (username, email, password, passwordConfirm) => {
     //     email,
     //   },
     // });
+    var full_url = window.location.pathname;
+    var url_array = full_url.split("/");
+    var deal = url_array[url_array.length - 3];
+    console.log(deal);
+    var user = url_array[url_array.length - 1];
+    console.log(user);
     const result = await axios({
       method: "POST",
 
-      url: "/api/v1/users/signup",
+      url: "/api/v1/likedDeal",
       data: {
-        email,
-        name: username,
-        phoneNo,
-        password,
-        passwordConfirm,
+        deal,
+        user,
       },
     });
     if (result.data.status === "success") {
@@ -46,14 +49,7 @@ const passvaluehaha = async (username, email, password, passwordConfirm) => {
   }
 };
 
-document.getElementById("signupForm").addEventListener("submit", (e) => {
+document.getElementById("addToWishlist").addEventListener("click", (e) => {
   e.preventDefault();
-  const username = document.getElementById("username").value;
-  const email = document.getElementById("email").value;
-  const phoneNo = document.getElementById("phoneNo").value;
-  const password = document.getElementById("password").value;
-  console.log(password);
-  const passwordConfirm = document.getElementById("passwordConfirm").value;
-  console.log(passwordConfirm);
-  passvaluehaha(username, email, password, passwordConfirm);
+  passvalueliked();
 });

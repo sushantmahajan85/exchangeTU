@@ -4,8 +4,13 @@ var path = require("path");
 const catchAsync = require("../utils/catchAsync");
 var router = express.Router();
 var Deal = require("../models/dealModel");
+var User = require("../models/userModel");
+var LikedDeal = require("../models/likedDealModel");
+var authController = require("../controllers/authController");
 // const recruit = require("../models/recruit");
 const { check, validationResult } = require("express-validator");
+
+router.use(authController.isLoggedIn);
 
 router.post(
   "/recsubmit",
@@ -76,8 +81,9 @@ router.get("/", catchAsync( async function (req, res) {
   const labcoat = await Deal.find({category:"labcoat"}).sort([['createdAt',-1]]).limit(10);
   const cycle = await Deal.find({category:"cycle"}).sort([['createdAt',-1]]).limit(10);
   const mattress = await Deal.find({category:"mattress"}).sort([['createdAt',-1]]).limit(10);
+  const others = await Deal.find({category:"others"}).sort([['createdAt',-1]]).limit(10);
   console.log(labcoat);
-  res.render("index",{drafters,books,labcoat,cycle,mattress});
+  res.render("index",{drafters,books,labcoat,cycle,mattress,others});
 }));
 router.get("/about", function (req, res) {
   res.render("about");
@@ -97,9 +103,15 @@ router.get("/product", function (req, res) {
 router.get("/product2", function (req, res) {
   res.render("product2");
 });
-router.get("/single", function (req, res) {
-  res.render("single");
-});
+router.get(
+  "/deal/:id/postedBy/:userid",
+  catchAsync(async function (req, res) {
+    const user = await User.findById(req.params.userid);
+    const deal = await Deal.findById(req.params.id);
+    const localUser = await User.findById(req.logged);
+    res.render("single", { deal, user, localUser });
+  })
+);
 router.get("/single2", function (req, res) {
   res.render("single2");
 });
@@ -109,14 +121,26 @@ router.get("/TFF", function (req, res) {
 router.get("/newDeal", function (req, res) {
   res.render("newDeal");
 });
-router.get("/wishlist", function (req, res) {
-  res.render("wishlist");
-});
+router.get(
+  "/wishlist",
+  catchAsync(async function (req, res) {
+    const likedDeals = await LikedDeal.find();
+    console.log(likedDeals);
+    res.render("wishlist", { likedDeals });
+  })
+);
 router.get("/login", function (req, res) {
   res.render("login");
 });
 router.get("/signup", function (req, res) {
   res.render("signup");
 });
-
+router.get(
+  "/search",
+  catchAsync(async function (req, res) {
+    const user = await User.findById(req.logged);
+    res.render("search", { user });
+  })
+);
+router.get("/logout", authController.logout);
 module.exports = router;

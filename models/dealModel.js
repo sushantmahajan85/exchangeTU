@@ -37,7 +37,6 @@ const dealSchema = new mongoose.Schema(
     saveLater: Number,
     owner: {
       type: String,
-      default: "Couper Deals",
     },
     buyNow: {
       type: Number,
@@ -66,5 +65,6 @@ const dealSchema = new mongoose.Schema(
 //   this.long = `127.0.0.1:5000/deal/${this._id}/postedBy/${this.user}`;
 //   this.save();
 // });
+
 const Deal = mongoose.model("Deal", dealSchema);
 module.exports = Deal;

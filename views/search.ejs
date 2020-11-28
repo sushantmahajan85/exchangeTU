@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SignUp - ExchangeTU</title>
+    <title>ExchangeTU</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="keywords" content="website" />
-
-    <link rel="icon" href="images/favicon.png" type="image/png" sizes="18x12" />
+    
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="14x14" />
 
     <script>
       addEventListener(
@@ -61,21 +61,32 @@
           </h1>
         </div>
         <div class="col-md-8 header">
-          <!-- header lists -->
-          <ul id = "right_align">
+          <% if(user){ %>
+            <ul>
             <li>
-              <a href="/login" >
-                <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign
-                In
+              <a href="/login">
+                <span class="fa fa-unlock-alt" aria-hidden="true"></span> Logout
               </a>
             </li>
             <li>
-              <a href="/signup">
-                <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
-                Sign Up
-              </a>
+                <span class="fa fa-unlock-alt" aria-hidden="true"></span> Welcome Back, <%= user.name%>!
             </li>
-          </ul>
+          </ul> 
+          <% } else {%>
+            <ul id = "right_align">
+              <li>
+                <a href="/login">
+                  <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In
+                </a>
+              </li>
+              <li>
+                <a href="/signup">
+                  <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
+                  Sign Up
+                </a>
+              </li>
+            </ul>
+          <% }%>
           <!-- //header lists -->
           <!-- search -->
           <div class="agileits_search">
@@ -120,6 +131,7 @@
       </div>
     </div>
 
+    <!-- signin Model -->
     <!-- Modal1 -->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
       <div class="modal-dialog">
@@ -154,7 +166,7 @@
                 <div class="styled-input">
                   <input
                     type="password"
-                    placeholder="Password should be of length 8"
+                    placeholder="Password"
                     name="password"
                     required=""
                   />
@@ -242,18 +254,19 @@
     <div class="ban-top">
       <div class="container">
         <div class="agileits-navi_search">
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">All categories
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#mattress_id">Mattress</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#cycle_id">Cycle</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#drafter_id">Drafter</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#labcoat_id">Labcoat</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#other_id">Others</a></li>
-            </ul>
-          </div>
-        </div>
+          <form action="#" method="post">                              
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">All categories
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#mattress_id">Mattress</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#cycle_id">Cycle</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#drafter_id">Drafter</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#labcoat_id">Labcoat</a></li>
+                </ul>
+              </div>
+            </div>
+          </form>
         <div class="top_nav_left">
           <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -297,95 +310,136 @@
         </div>
       </div>
     </div>
-    <div class="contact-w3l">
+    <!-- top Products -->
+    <div class="ads-grid"> 
       <div class="container">
-        <!-- tittle heading -->
-        <h3 class="tittle-w3l">
-          Sign Up
-          <span class="heading-style">
-            <i></i>
-            <i></i>
-            <i></i>
-          </span>
-        </h3>
-        <!-- //tittle heading -->
-        <!-- contact -->
         <div class="contact agileits">
           <div class="contact-agileinfo">
-            <div class="contact-form wthree">
-              <form id="signupForm" method="POST">
-                <div>
-                  <label for="username">Username</label>
-                  <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Username"
-                    required="true"
-                  />
-                </div>
-                <div>
-                  <label for="email">Email Id</label>
-                  <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="Email Address"
-                    required="true"
-                  />
-                </div>
-                <div>
-                  <label for="phoneNo">Phone Number</label>
-                  <br>
-                  <input
-                    type="number"
-                    id="phoneNo"
-                    name="phoneNo"
-                    placeholder="Phone Number"
-                    required="true"
-                  />
-                </div>
-                <div>
-                  <label for="password">Password</label>
-                  <br>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Password should be of length 8"
-                    required="true"
-                  />
-                </div>
-                <div>
-                  <label for="passwordConfirm">Confirm Password</label>
-                  <br>
-                  <input
-                    type="password"
-                    id="passwordConfirm"
-                    name="passwordConfirm"
-                    placeholder="Confirm your Password"
-                    required="true"
-                  />
-                </div>
-                <input type="submit" value="Submit" />
-                <br /><br />
-                <h7>
-                  Already have an account? 
-                  <a href="/login"><strong> Sign In</strong></a> !
-                </h7>
-              </form>
+            <div class="contact-form wthree" id = "height_search">
+              <h3 class="heading-tittle" id = "mattress_id">Search Results</h3>
+              <% for(var deal of deals ) { %>
+                <div class="col-md-4 product-men">
+                    <div class="men-thumb-item">
+                      <img
+                        src=<%= `/img/deals/${deal.titleImg}`%>
+                        alt="image"
+                        width="200"
+                        height="200"
+                      />
+                      <div class="men-cart-pro">
+                        <div class="inner-men-cart-pro">
+                          <a class="link-product-add-cart" href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>Quick View</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-info-product">
+                      <div class="info-product-price">
+                        <span class="item_price">₹<%= deal.dealPrice %></span>
+                        <del>₹<%= deal.mrp %></del>
+                      </div>
+                      <h4><a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>><%= deal.dealName %></a></h4>
+                      <div
+                        class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out"
+                      >
+                        <br />
+                        <form action="#" method="post">
+                          <fieldset>
+                            <input type="hidden" name="cmd" value="_cart" />
+                            <input type="hidden" name="add" value="1" />
+                            <input type="hidden" name="business" value=" " />
+                            <input
+                              type="hidden"
+                              name="item_name"
+                              value="Almonds, 100g"
+                            />
+                            <input type="hidden" name="amount" value="149.00" />
+                            <input
+                              type="hidden"
+                              name="discount_amount"
+                              value="1.00"
+                            />
+                            <input
+                              type="hidden"
+                              name="currency_code"
+                              value="USD"
+                            />
+                            <input type="hidden" name="return" value=" " />
+                            <input type="hidden" name="cancel_return" value=" " />
+                          </fieldset>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                <% } %>
             </div>
-            <div class="contact-right wthree">
-              <div class="clearfix"></div>
             </div>
           </div>
         </div>
-        <!-- //contact -->
       </div>
     </div>
+    <!-- //top products -->
+    <!-- special offers -->
+    <!-- //special offers -->
+      <!-- Site footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <br>
+              <p class="text-justify"><b>ExchangeTU</b> is a platform for the students of TIET where students can purchase or sell products
+               according to one's requirements. A platform to ease exchange of items within students at nominal rate.
+              </p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <br>
+              <ul class="footer-links">
+                <li><a href="/">Mattress</a></li>
+                <li><a href="/">Cycle</a></li>
+                <li><a href="/">Drafter</a></li>
+                <li><a href="/">LabCoat</a></li>
+              </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <br>
+              <ul class="footer-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/newDeal">Post a Deal</a></li>
+              </ul>
+            </div>
+
+
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+           <a href="/">ExchangeTU</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer> 
+                          
     <!-- js-files -->
     <!-- jquery -->
-    <script src="js/signup.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <!-- //jquery -->
 
@@ -517,14 +571,6 @@
     <!-- smooth-scrolling-of-move-up -->
     <script>
       $(document).ready(function () {
-        /*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			*/
         $().UItoTop({
           easingType: "easeOutQuart",
         });
