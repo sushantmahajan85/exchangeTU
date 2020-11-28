@@ -313,21 +313,18 @@
     <!-- top Products -->
     <div class="ads-grid"> 
       <div class="container">
-        <div class="agileinfo-ads-display col-md-9">
-          <div class="wrapper">
-            <div class="product-sec1">
+        <div class="contact agileits">
+          <div class="contact-agileinfo">
+            <div class="contact-form wthree" id = "height_search">
               <h3 class="heading-tittle" id = "mattress_id">Search Results</h3>
               <% for(var deal of deals ) { %>
-              
-              
                 <div class="col-md-4 product-men">
-                  <div class="men-pro-item simpleCart_shelfItem">
                     <div class="men-thumb-item">
                       <img
                         src=<%= `/img/deals/${deal.titleImg}`%>
-                        alt=""
+                        alt="image"
                         width="200"
-                        height="400"
+                        height="200"
                       />
                       <div class="men-cart-pro">
                         <div class="inner-men-cart-pro">
@@ -373,8 +370,8 @@
                       </div>
                     </div>
                   </div>
-                </div>
                 <% } %>
+            </div>
             </div>
           </div>
         </div>
