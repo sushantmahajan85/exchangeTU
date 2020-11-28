@@ -51,11 +51,21 @@
       href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
   </head>
 
   <body>
     <%- include('partials/navbar.ejs') %>
     
+    <div class="success-alert hide">
+      <span class="fas fa-exclamation-circle"></span>
+      <span class="alert-msg">Product Wishlisted!</span>
+      <span class="alert-close-btn">
+        <span class="fas fa-times"></span>
+      </span>
+    </div>
+
     <!-- Modal1 -->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
       <div class="modal-dialog">
@@ -522,6 +532,21 @@
     defer
     src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
   ></script>
+
+      <script>
+        $('#addToWishlist').click(function(){
+          $('.success-alert').removeClass("hide");
+          $('.success-alert').addClass("show");
+          setTimeout(function(){
+            $('.success-alert').addClass("hide");
+            $('.success-alert').removeClass("show");
+          }, 5000);
+        });
+        $('.alert-close-btn').click(function(){
+          $('.success-alert').addClass("hide");
+          $('.success-alert').removeClass("show");
+        });
+      </script>
 
     <!-- popup modal (for signin & signup)-->
     <script src="/js/jquery.magnific-popup.js"></script>
