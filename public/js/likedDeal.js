@@ -26,23 +26,22 @@ const passvalueliked = async (username, email, password, passwordConfirm) => {
     var url_array = full_url.split("/");
     var deal = url_array[url_array.length - 3];
     console.log(deal);
-    var user = url_array[url_array.length - 1];
+    // var user = url_array[url_array.length - 1];
     console.log(user);
     const result = await axios({
       method: "POST",
-
       url: "/api/v1/likedDeal",
       data: {
         deal,
-        user,
+        // user,
       },
     });
     if (result.data.status === "success") {
       // alert("sign up successful");
-      showAlert("success", "Signup successful");
+      showAlert("success", "Product Wishlisted!");
       window.setTimeout(() => {
         location.assign("/");
-      }, 800);
+      }, 2000);
     }
   } catch (err) {
     showAlert("error", "Something went wrong. Please try again later");

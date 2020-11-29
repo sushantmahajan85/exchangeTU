@@ -1418,7 +1418,6 @@ ul.w3_short {
   box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
 }
-<<<<<<< HEAD
 .submit button{
     background-color: #4CAF50;
     border: none;
@@ -1429,10 +1428,8 @@ ul.w3_short {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-=======
 #height_search {
   height: 600px;
->>>>>>> d5e395f0128c766f2900aafec4837bc5b4cf3b6e
 }
 #aboutUsPage {
   margin: -18px auto;
