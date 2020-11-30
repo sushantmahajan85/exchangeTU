@@ -3,6 +3,7 @@ var express = require("express"),
   app = express(),
   mongoose = require("mongoose"),
   cookieParser = require("cookie-parser"),
+  compression = require("compression"),
   routes = require("./routes/routes");
 (userRoute = require("./routes/userRoutes")),
   (dealRoute = require("./routes/dealRoutes")),
@@ -17,7 +18,6 @@ var express = require("express"),
 // app.use(bodyParser.urlencoded({ extended: true }));
 
 // Including Routes!
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
@@ -37,6 +37,8 @@ mongoose.connect(
 );
 
 app.use(cookieParser());
+
+app.use(compression());
 
 dotenv.config({ path: "./config.env" });
 

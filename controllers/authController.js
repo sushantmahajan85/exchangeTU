@@ -13,14 +13,14 @@ const signToken = (id) =>
   });
 
 exports.signUp = catchAsync(async (req, res) => {
-  console.log("gygy");
+  // console.log("gygy");
   const newUser = await User.create({
     name: req.body.name,
     password: req.body.password,
     email: req.body.email,
     passwordConfirm: req.body.passwordConfirm,
   });
-  console.log(newUser._id);
+  // console.log(newUser._id);
   const token = signToken(newUser._id);
   const cookieOptions = {
     expires: new Date(

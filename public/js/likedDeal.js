@@ -25,9 +25,9 @@ const passvalueliked = async (username, email, password, passwordConfirm) => {
     var full_url = window.location.pathname;
     var url_array = full_url.split("/");
     var deal = url_array[url_array.length - 3];
-    console.log(deal);
+    // console.log(deal);
     var user = url_array[url_array.length - 1];
-    console.log(user);
+    // console.log(user);
     const result = await axios({
       method: "POST",
 
