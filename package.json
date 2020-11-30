@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sushantmahajan85/attendance.git"
+    "url": "git+https://github.com/sushantmahajan85/exchangeTU.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sushantmahajan85/attendance/issues"
+    "url": "https://github.com/sushantmahajan85/exchangeTU/issues"
   },
-  "homepage": "https://github.com/sushantmahajan85/attendance#readme",
+  "homepage": "https://github.com/sushantmahajan85/exchangeTU",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
