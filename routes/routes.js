@@ -85,7 +85,7 @@ router.get(
       // console.log(deals);
       res.status(200).render("search", { deals /*recommendedDeals*/ });
     }
-    const drafters = await Deal.find({ category: "drafter" })
+    const drafters = await Deal.find({ category: "drafters" })
       .sort([["createdAt", -1]])
       .limit(10);
 
