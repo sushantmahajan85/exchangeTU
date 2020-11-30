@@ -134,9 +134,15 @@
                     <li>
                       <a class="" href="/contact">Contact</a>
                     </li>
+                    <% if(user) { %>
                     <li>
                       <a class="" href="/newDeal">Post A Deal</a>
                     </li>
+                    <% } else { %>
+                    <li>
+                      <a class="" href="/signup">Post A Deal</a>
+                    </li>
+                    <% } %>
                   </ul>
                 </div>
               </div>

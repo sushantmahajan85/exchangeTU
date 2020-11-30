@@ -31,7 +31,7 @@ const passvaluec = async (data) => {
       showAlert("success", "Deal successfully Created");
       window.setTimeout(() => {
         location.assign("/");
-      }, 800);
+      }, 1500);
     }
   } catch (err) {
     showAlert("error", err.response.data.message);
