@@ -51,6 +51,6 @@ app.use("/api/v1/users", userRoute);
 app.use("/api/v1/likedDeal", likedDealRoute);
 // app.use("/api/recruit", apiroutes);
 
-app.listen(5000 || process.env.PORT, function () {
+app.listen( process.env.PORT, function () {
   console.log("Server Started!");
 });
