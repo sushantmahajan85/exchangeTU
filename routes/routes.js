@@ -78,12 +78,12 @@ router.get(
   "/",
   catchAsync(async function (req, res) {
     if (req.query.search) {
-      console.log(req.query.search);
+      // console.log(req.query.search);
       const deals = await Deal.find(
         { $text: { $search: req.query.search } },
         { score: { $meta: "textScore" } }
       ).sort([[{ score: { $meta: "textScore" } }]]);
-      console.log(deals);
+      // console.log(deals);
       res.status(200).render("search", { deals /*recommendedDeals*/ });
     }
     const drafters = await Deal.find({ category: "drafter" })
@@ -105,7 +105,7 @@ router.get(
     const others = await Deal.find({ category: "others" })
       .sort([["createdAt", -1]])
       .limit(10);
-    console.log(labcoat);
+    // console.log(labcoat);
     res.render("index", { drafters, books, labcoat, cycle, mattress, others });
   })
 );
@@ -149,7 +149,7 @@ router.get(
   "/wishlist",
   catchAsync(async function (req, res) {
     const likedDeals = await LikedDeal.find();
-    console.log(likedDeals);
+    // console.log(likedDeals);
     res.render("wishlist", { likedDeals });
   })
 );

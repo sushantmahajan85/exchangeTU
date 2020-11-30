@@ -37,8 +37,8 @@ exports.getDeal = catchAsync(async (req, res) => {
     { _id: req.params.id },
     { $inc: { views: 1 } }
   ).populate({ path: "reviews" });
-  console.log(deal);
-  console.log(req.params.id);
+  // console.log(deal);
+  // console.log(req.params.id);
   res.status(200).json({
     status: "success",
     data: {
