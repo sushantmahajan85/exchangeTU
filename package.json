@@ -35,5 +35,8 @@
     "nodemailer": "^6.4.14",
     "nodemon": "^2.0.4",
     "sharp": "^0.26.2"
+  },
+  "devDependencies": {
+    "compression": "^1.7.4"
   }
 }
