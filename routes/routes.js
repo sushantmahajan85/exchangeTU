@@ -11,7 +11,6 @@ var authController = require("../controllers/authController");
 const { check, validationResult } = require("express-validator");
 
 router.use(authController.isLoggedIn);
-
 router.post(
   "/recsubmit",
   [
