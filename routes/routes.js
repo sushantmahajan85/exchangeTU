@@ -147,7 +147,7 @@ router.get("/newDeal", function (req, res) {
 router.get(
   "/wishlist",
   catchAsync(async function (req, res) {
-    const likedDeals = await LikedDeal.find();
+    const likedDeals = await LikedDeal.find({ user: req.logged });
     // console.log(likedDeals);
     res.render("wishlist", { likedDeals });
   })

@@ -69,6 +69,7 @@
               <form action="#" method="post" class="last">
                 <input type="hidden" name="cmd" value="_cart" />
                 <input type="hidden" name="display" value="1" />
+                <% if(user) { %>
                 <a href="/wishlist">
                   <i style="font-size: 24px" class="fa"
                     >&#xf08a;
@@ -76,6 +77,15 @@
                       <h4>My Wishlist</h4>
                       <a href="/wishlist"></a></span></i
                 ></a>
+                <% } else { %>
+                  <a href="/signup">
+                    <i style="font-size: 24px" class="fa"
+                      >&#xf08a;
+                      <span>
+                        <h4>My Wishlist</h4>
+                        <a href="/signup"></a></span></i
+                  ></a>
+                <% } %>
               </form>
             </div>
           </div>
