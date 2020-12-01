@@ -532,7 +532,7 @@
     defer
     src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
   ></script>
-
+      <% if(user) { %>
       <script>
         var test = '<%- user._id %>';
         // console.log(test);
@@ -587,6 +587,7 @@ document.getElementById("addToWishlist").addEventListener("click", (e) => {
   passvalueliked();
 });
       </script>
+      <% } %>
 
       <script>
         $('#addToWishlist').click(function(){
